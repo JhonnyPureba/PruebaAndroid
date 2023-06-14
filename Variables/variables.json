@@ -1,0 +1,8 @@
+﻿{
+  "BasePathApk": "C:\\Users\\EXPERIS- REAL PLAZA\\Desktop\\EXPERIS\\Proyecto Marketplace Mobile\\app-release.apk",
+  "BaseUriAppium": "http://localhost:4723",
+  "BaseDeviceName": "emulator -5554",
+  "BaseCommandTimeout": 3000,
+  "BaseTimeWait": 180
+}
+
