@@ -31,7 +31,7 @@ namespace SpecFlowProject1.PageObjects
         public LoginPage(AndroidDriver<AppiumWebElement> driver)
         {
             this.Driver = driver;
-            _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
+            _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             PageFactory.InitElements(driver, this);
         }
 
