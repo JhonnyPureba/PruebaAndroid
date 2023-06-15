@@ -24,5 +24,7 @@ namespace SpecFlowProject1.PageObjects
             _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
             PageFactory.InitElements(driver, this);
         }
+        
+
     }
 }

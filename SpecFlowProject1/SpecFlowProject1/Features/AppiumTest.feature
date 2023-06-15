@@ -8,7 +8,8 @@ Link to a feature: [Calculator](SpecFlowProject1/Features/Calculator.feature)
 @mytag
 Scenario: Prueba-Lanzar aplicacion real plaza
 	Given Probando app
-	And Prueba usuario inicia sesion como invitado
+	#And prueba usuario inicia sesion como invitado
+	And usuario inicia sesion
 	#And the second number is 70
 	#When the two numbers are added
 	#Then the result should be 120

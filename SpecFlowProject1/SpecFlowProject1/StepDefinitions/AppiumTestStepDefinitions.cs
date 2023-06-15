@@ -13,11 +13,13 @@ namespace SpecFlowProject1.StepDefinitions
     {
         TestContextSetup testContextSetup;
         StartPage startPage;
+        LoginPage loginPage;
 
         public AppiumTestStepDefinitions(ScenarioContext scenarioContext)
         {
             testContextSetup = new TestContextSetup(scenarioContext);
             startPage = testContextSetup.pageObjectManager.GetStartPage();
+            loginPage = testContextSetup.pageObjectManager.GetLoginPage();
         }
 
 
@@ -28,10 +30,15 @@ namespace SpecFlowProject1.StepDefinitions
             System.Console.WriteLine("HOLA MUNDO");
         }
 
-        [Given(@"Prueba usuario inicia sesion como invitado")]
+        [Given(@"usuario inicia sesion")]
         public void GivenPruebaUsuarioIniciaSesionComoInvitado()
         {
-            startPage.ClickSeguirComoInvitado();
+            startPage.ClickIniciarSesion();
+            loginPage.ClickIngresarConTuCorreo();
+            loginPage.IngresarEmail("pradoccorajhonnyangelo@gmail.com");
+            loginPage.IngresarContrasena("Manzanita17");
+            loginPage.ClickCheckBoxTyC();
+            loginPage.ClickIngresar();
         }
 
     }

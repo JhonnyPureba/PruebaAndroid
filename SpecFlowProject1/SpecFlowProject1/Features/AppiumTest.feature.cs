@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace SpecFlowProject1.Features
+namespace SpecFlowMarketplaceMobileProject.Features
 {
     using TechTalk.SpecFlow;
     using System;
@@ -99,8 +99,8 @@ this.ScenarioInitialize(scenarioInfo);
 #line 10
  testRunner.Given("Probando app", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 11
- testRunner.And("Prueba usuario inicia sesion como invitado", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 12
+ testRunner.And("usuario inicia sesion", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

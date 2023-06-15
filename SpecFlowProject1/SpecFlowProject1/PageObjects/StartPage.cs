@@ -20,30 +20,30 @@ namespace SpecFlowProject1.PageObjects
         private IWebElement botonInvitado;
 
         public AndroidDriver<AppiumWebElement> Driver;
-        private readonly WebDriverWait Wait;
+        private readonly WebDriverWait _wait;
 
         public StartPage(AndroidDriver<AppiumWebElement> driver)
         {
             this.Driver = driver;
-            Wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
+            _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
             PageFactory.InitElements(driver, this);
         }
 
         public void ClickRegistrarme()
         {
-            Wait.Until(ExpectedConditions.ElementToBeClickable(botonRegistrarme));
+            _wait.Until(ExpectedConditions.ElementToBeClickable(botonRegistrarme));
             botonRegistrarme.Click();
         }
 
         public void ClickIniciarSesion()
         {
-            Wait.Until(ExpectedConditions.ElementToBeClickable(botonIniciarSesion));
+            _wait.Until(ExpectedConditions.ElementToBeClickable(botonIniciarSesion));
             botonIniciarSesion.Click();
         }
 
         public void ClickSeguirComoInvitado()
         {
-            Wait.Until(ExpectedConditions.ElementToBeClickable(botonInvitado));
+            _wait.Until(ExpectedConditions.ElementToBeClickable(botonInvitado));
             botonInvitado.Click();
         }
     }
