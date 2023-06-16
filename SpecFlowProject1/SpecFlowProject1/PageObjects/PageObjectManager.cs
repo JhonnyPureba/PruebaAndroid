@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
+using SpecFlowMarketplaceMobileProject.PageObjects;
 
 namespace SpecFlowProject1.PageObjects
 {
@@ -10,6 +11,7 @@ namespace SpecFlowProject1.PageObjects
         private HomePage _homePage;
         private RegisterPage _registerPage;
         private LoginPage _loginPage;
+        private ParkingPage _parkingPage;
 
         public PageObjectManager(AndroidDriver<AppiumWebElement> driver)
         {
@@ -37,6 +39,12 @@ namespace SpecFlowProject1.PageObjects
         {
             _registerPage = new RegisterPage(Driver);
             return _registerPage;
+        }
+
+        public ParkingPage GetParkingPage()
+        {
+            _parkingPage = new ParkingPage(Driver);
+            return _parkingPage;
         }
     }
 }

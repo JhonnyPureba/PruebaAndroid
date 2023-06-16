@@ -5,6 +5,7 @@ using TechTalk.SpecFlow;
 using OpenQA.Selenium.Support.UI;
 using SpecFlowProject1.Utils;
 using SpecFlowProject1.PageObjects;
+using SpecFlowMarketplaceMobileProject.PageObjects;
 
 namespace SpecFlowProject1.StepDefinitions
 {
@@ -14,12 +15,16 @@ namespace SpecFlowProject1.StepDefinitions
         TestContextSetup testContextSetup;
         StartPage startPage;
         LoginPage loginPage;
+        HomePage homePage;
+        ParkingPage parkingPage;
 
         public AppiumTestStepDefinitions(ScenarioContext scenarioContext)
         {
             testContextSetup = new TestContextSetup(scenarioContext);
             startPage = testContextSetup.pageObjectManager.GetStartPage();
             loginPage = testContextSetup.pageObjectManager.GetLoginPage();
+            homePage = testContextSetup.pageObjectManager.GetHomePage();
+            parkingPage = testContextSetup.pageObjectManager.GetParkingPage();
         }
 
 
@@ -39,6 +44,8 @@ namespace SpecFlowProject1.StepDefinitions
             loginPage.IngresarContrasena("Manzanita17");
             loginPage.ClickCheckBoxTyC();
             loginPage.ClickIngresar();
+            homePage.ClickParking();
+            parkingPage.ClickSalaverry();
         }
 
     }
