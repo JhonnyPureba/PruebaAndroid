@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
+using SpecFlowMarketplaceMobileProject.PageObjects.Parking;
 
 namespace SpecFlowProject1.PageObjects
 {
@@ -10,6 +11,8 @@ namespace SpecFlowProject1.PageObjects
         private HomePage _homePage;
         private RegisterPage _registerPage;
         private LoginPage _loginPage;
+        private PagoEstacionamiento _pagoEstacionamiento;
+        private ScannerQR _scannerQR;
 
         public PageObjectManager(AndroidDriver<AppiumWebElement> driver)
         {
@@ -38,5 +41,18 @@ namespace SpecFlowProject1.PageObjects
             _registerPage = new RegisterPage(Driver);
             return _registerPage;
         }
+
+        public PagoEstacionamiento GetPagoEstacionamiento()
+        {
+            _pagoEstacionamiento = new PagoEstacionamiento(Driver);
+            return _pagoEstacionamiento;
+        }
+
+        public ScannerQR GetScannerQR()
+        {
+            _scannerQR = new ScannerQR(Driver);
+            return _scannerQR;
+        }
+
     }
 }
