@@ -22,7 +22,7 @@ namespace SpecFlowProject1.Drivers
 
             driverOptions.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
             driverOptions.AddAdditionalCapability(MobileCapabilityType.DeviceName, "emulator-5554");
-            driverOptions.AddAdditionalCapability(MobileCapabilityType.App, @"C:\Users\Kratos\Downloads\app-release.apk");
+            driverOptions.AddAdditionalCapability(MobileCapabilityType.App, @"C:\Users\Administrador\Downloads\app-release.apk");
             driverOptions.AddAdditionalCapability("appWaitPackage", "com.realplazago.app");
             driverOptions.AddAdditionalCapability("appWaitActivity", "com.realplazago.app.MainActivity");
             var AppiumService = new AppiumServiceBuilder().WithIPAddress("127.0.0.1").UsingPort(4723).Build();
