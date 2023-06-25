@@ -44,8 +44,24 @@ namespace SpecFlowProject1.StepDefinitions
             loginPage.IngresarContrasena("Manzanita17");
             loginPage.ClickCheckBoxTyC();
             loginPage.ClickIngresar();
+            
+        }
+
+        [When(@"el usuario selecciona parking")]
+        public void elusuarioseleccionaparking()
+        {
             homePage.ClickParking();
+            parkingPage.ClickPermitirUbicacion();
             parkingPage.ClickSalaverry();
+            parkingPage.ClickContinuarParking();
+        }
+
+        [When(@"el usuario selecciona imagen")]
+        public void WhenElUsuarioSeleccionaImagen()
+        {
+            parkingPage.ClicPermitirCamara();
+            parkingPage.ClickGaleria();
+            parkingPage.SeleccionarImagen();
         }
 
     }

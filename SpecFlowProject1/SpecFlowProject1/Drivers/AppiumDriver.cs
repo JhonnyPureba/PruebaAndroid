@@ -21,10 +21,10 @@ namespace SpecFlowProject1.Drivers
             var driverOptions = new AppiumOptions();
 
             driverOptions.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
-            driverOptions.AddAdditionalCapability(MobileCapabilityType.DeviceName, "emulator-5554");
-            driverOptions.AddAdditionalCapability(MobileCapabilityType.App, @"C:\Users\Administrador\Downloads\app-release.apk");
-            driverOptions.AddAdditionalCapability("appWaitPackage", "com.realplazago.app");
-            driverOptions.AddAdditionalCapability("appWaitActivity", "com.realplazago.app.MainActivity");
+            driverOptions.AddAdditionalCapability(MobileCapabilityType.DeviceName, "b0dbb66b");
+            //driverOptions.AddAdditionalCapability(MobileCapabilityType.App, @"C:\Users\Administrador\Downloads\app-release2.apk");
+            driverOptions.AddAdditionalCapability("appPackage", "com.realplazago.app");
+            driverOptions.AddAdditionalCapability("appActivity", "com.realplazago.app.MainActivity");
             var AppiumService = new AppiumServiceBuilder().WithIPAddress("127.0.0.1").UsingPort(4723).Build();
             AppiumService.Start();
             return new AndroidDriver<AppiumWebElement>(new Uri("http://localhost:4723/wd/hub"), driverOptions);
