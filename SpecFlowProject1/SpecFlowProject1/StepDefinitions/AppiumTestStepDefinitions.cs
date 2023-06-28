@@ -30,7 +30,7 @@ namespace SpecFlowProject1.StepDefinitions
             System.Console.WriteLine("HOLA MUNDO");
         }
 
-        [Given(@"usuario inicia sesion")]
+        [Given(@"El usuario ingresa al app")]
         public void GivenPruebaUsuarioIniciaSesionComoInvitado()
         {
             startPage.ClickIniciarSesion();

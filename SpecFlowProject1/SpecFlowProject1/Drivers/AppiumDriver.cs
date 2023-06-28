@@ -27,7 +27,7 @@ namespace SpecFlowProject1.Drivers
             driverOptions.AddAdditionalCapability("appWaitActivity", "com.realplazago.app.MainActivity");
             var AppiumService = new AppiumServiceBuilder().WithIPAddress("127.0.0.1").UsingPort(4723).Build();
             AppiumService.Start();
-            return new AndroidDriver<AppiumWebElement>(new Uri("http://localhost:4723/wd/hub"), driverOptions);
+            return new AndroidDriver<AppiumWebElement>(new Uri("http://127.0.0.1:4723/wd/hub"), driverOptions);
         }
     }
 }

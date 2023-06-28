@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium.Appium;
+﻿using Allure.Commons;
+using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
 using SpecFlowProject1.Drivers;
 using System;
@@ -13,10 +14,17 @@ namespace SpecFlowProject1.Hooks
     internal class InitializeHook
     {
         private readonly ScenarioContext _scenarioContext;
+        public static AllureLifecycle allure = AllureLifecycle.Instance;
 
         public InitializeHook(ScenarioContext scenarioContext)
         {
             _scenarioContext = scenarioContext;
+        }
+
+        [BeforeTestRun]
+        public static void BeforeTestRun()
+        {
+            allure.CleanupResultDirectory();
         }
 
         [BeforeScenario]
