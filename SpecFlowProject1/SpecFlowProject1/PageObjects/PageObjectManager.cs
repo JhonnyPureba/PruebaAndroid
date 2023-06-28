@@ -13,6 +13,7 @@ namespace SpecFlowProject1.PageObjects
         private LoginPage _loginPage;
         private PagoEstacionamiento _pagoEstacionamiento;
         private ScannerQR _scannerQR;
+        private HistorialPago _historialPago;
 
         public PageObjectManager(AndroidDriver<AppiumWebElement> driver)
         {
@@ -52,6 +53,12 @@ namespace SpecFlowProject1.PageObjects
         {
             _scannerQR = new ScannerQR(Driver);
             return _scannerQR;
+        }
+
+        public HistorialPago GetHistorialPago()
+        {
+            _historialPago = new HistorialPago(Driver);
+            return _historialPago;
         }
 
     }
