@@ -44,7 +44,7 @@ namespace SpecFlowProject1.StepDefinitions
             loginPage.IngresarContrasena("Manzanita17");
             loginPage.ClickCheckBoxTyC();
             loginPage.ClickIngresar();
-            
+
         }
 
         [When(@"el usuario selecciona parking")]
@@ -56,13 +56,90 @@ namespace SpecFlowProject1.StepDefinitions
             parkingPage.ClickContinuarParking();
         }
 
-        [When(@"el usuario selecciona imagen")]
+        [When(@"el usuario selecciona imagen de voucher")]
         public void WhenElUsuarioSeleccionaImagen()
         {
             parkingPage.ClicPermitirCamara();
             parkingPage.ClickGaleria();
-            parkingPage.SeleccionarImagen();
+            parkingPage.ClickImagenVoucher();
         }
+
+        [When(@"el usuario selecciona imagen Erronea de voucher")]
+        public void WhenElUsuarioSeleccionaImagenErroneaDeVoucher()
+        {
+            parkingPage.ClicPermitirCamara();
+            parkingPage.ClickGaleria();
+            parkingPage.ClickImagenError();
+        }
+
+        [When(@"seleccionar aplicar descuento")]
+        public void WhenSeleccionarAplicarDescuento()
+        {
+            parkingPage.ClicBotonDescuento();
+        }
+        
+
+        [Then(@"Verificar el monto y boton de descuento")]
+        public void ThenVerificarElMontoYBotonDeDescuento()
+        {
+            parkingPage.VerificarBotonDescuento();
+            parkingPage.VerificarMontoPagar();
+        }
+
+        [Then(@"Verificar modal sin imagen")]
+        public void ThenVerificarModalSinImagen()
+        {
+            parkingPage.VerificarModalAplicarDescuento();
+        }
+
+        [When(@"el usuario selecciona boton pagar")]
+        public void WhenElUsuarioSeleccionaBotonPagar()
+        {
+            parkingPage.ClicBotonPagar();
+        }
+        
+        [Then(@"Verificar que el boton de pagar este deshabilitado")]
+        public void ThenVerificarQueElBotonDePagarEsteDeshabilitado()
+        {
+            parkingPage.VerificarBotonPagarDeshabilitado();
+        }
+
+        [When(@"el usuario aceptar terminos y condiciones")]
+        public void WhenElUsuarioAceptarTerminosYCondiciones()
+        {
+            parkingPage.ClicTerminosCondiciones();
+        }
+
+        [Then(@"Verificar que el boton de pagar este habilitado")]
+        public void ThenVerificarQueElBotonDePagarEsteHabilitado()
+        {
+            parkingPage.VerificarBotonPagarHabilitado();
+        }
+
+        [When(@"el usuario selecciona aplicar un descuento")]
+        public void WhenElUsuarioSeleccionaAplicarUnDescuento()
+        {
+            parkingPage.ClicBotonDescuento();
+        }
+
+        [When(@"el usuario selecciona aplicar descuento")]
+        public void WhenElUsuarioSeleccionaAplicarDescuento()
+        {
+            parkingPage.ClickBotonAplicarDescuento();
+        }
+
+        [Then(@"Verificar que el descuento se aplique")]
+        public void ThenVerificarQueElDescuentoSeAplique()
+        {
+            parkingPage.VerificarDescuentoAplicado();
+        }
+
+        [Then(@"Verificar error de pantalla")]
+        public void ThenVerificarErrorDePantalla()
+        {
+            parkingPage.VerificarPantallaErrorPagoDescuento();
+        }
+
 
     }
 }

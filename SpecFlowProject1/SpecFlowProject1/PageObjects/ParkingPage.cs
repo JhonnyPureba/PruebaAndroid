@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Dynamitey.Internal.Optimization;
 using OpenQA.Selenium.Appium.Interfaces;
+using NUnit.Framework;
 
 namespace SpecFlowMarketplaceMobileProject.PageObjects
 {
@@ -26,6 +27,27 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
         private IWebElement selectpermitirCamara;
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[15]/android.view.ViewGroup\r\n")]
         private IWebElement selectGalery;
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView\r\n")]
+        private IWebElement MontoPagar;    
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.TextView\r\n")]
+        private IWebElement selectContentButonDescuento;
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]\r\n")]
+        private IWebElement selectButonDescuento;
+        [FindsBy(How = How.XPath, Using = "")]
+        private IWebElement ModalTextDescuento;
+        [FindsBy(How = How.XPath, Using = "")]
+        private IWebElement selectButonAplicarDescuento;
+        [FindsBy(How = How.XPath, Using = "")]
+        private IWebElement TextModalDescuento;
+        [FindsBy(How = How.XPath, Using = "")]
+        private IWebElement selectBotonPagar;
+        [FindsBy(How = How.XPath, Using = "")]
+        private IWebElement selectTyCPagar;
+        [FindsBy(How = How.XPath, Using = "")]
+        private IWebElement ModalTextPantallaErrorPagoDescuento;
+
+
+
 
         //MOBILE JHONNY CARPETAS DE SELECCION IMAGENES
         [FindsBy(How = How.XPath, Using = "//android.widget.ImageButton[@content-desc=\"Mostrar raíces\"]\r\n")]
@@ -34,9 +56,12 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
         private IWebElement SeleccionarCarpetaPadre;
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/androidx.cardview.widget.CardView[9]/androidx.cardview.widget.CardView/android.widget.LinearLayout\r\n")]
         private IWebElement SeleccionarCarpetaImagenes;
-        [FindsBy(How = How.XPath, Using = "//android.widget.LinearLayout[@content-desc=\"Prueba.jpg, 9.32 KB, 21 jun\"]\r\n")]
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[3]/android.widget.LinearLayout/android.widget.LinearLayout\r\n")]
         private IWebElement SeleccionarImagenVoucher;
-        
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout\r\n")]
+        private IWebElement SeleccionarImagenDescuento;
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout\r\n")]
+        private IWebElement SeleccionarImagenError;
 
 
         public AndroidDriver<AppiumWebElement> Driver;
@@ -45,7 +70,7 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
         public ParkingPage(AndroidDriver<AppiumWebElement> driver)
         {
             this.Driver = driver;
-            _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
+            _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             PageFactory.InitElements(driver, this);
         }
 
@@ -77,18 +102,118 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
         {
             selectGalery.Click();
         }
-        public void SeleccionarImagen()
+        public void ClickImagenVoucher()
         {
-            _wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionDesplegable));
-            SeleccionDesplegable.Click();
-            _wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarCarpetaPadre));
-            SeleccionarCarpetaPadre.Click();
-            _wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarCarpetaImagenes));
-            SeleccionarCarpetaImagenes.Click();
-            _wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarImagenVoucher));
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionDesplegable));
+            //SeleccionDesplegable.Click();
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarCarpetaPadre));
+            //SeleccionarCarpetaPadre.Click();
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarCarpetaImagenes));
+            //SeleccionarCarpetaImagenes.Click();
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarImagenVoucher));
             SeleccionarImagenVoucher.Click();
-            }
+        }
+        public void ClickImagenDescuento()
+        {
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionDesplegable));
+            //SeleccionDesplegable.Click();
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarCarpetaPadre));
+            //SeleccionarCarpetaPadre.Click();
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarCarpetaImagenes));
+            //SeleccionarCarpetaImagenes.Click();
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarImagenVoucher));
+            SeleccionarImagenDescuento.Click();
+        }
+        public void ClickImagenError()
+        {
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionDesplegable));
+            //SeleccionDesplegable.Click();
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarCarpetaPadre));
+            //SeleccionarCarpetaPadre.Click();
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarCarpetaImagenes));
+            //SeleccionarCarpetaImagenes.Click();
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarImagenVoucher));
+            SeleccionarImagenError.Click();
+        }
+        public void VerificarMontoPagar()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(MontoPagar));
+            Assert.AreEqual(MontoPagar.Text, "S/0.35");
+            
         }
 
+        public void VerificarBotonDescuento()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(selectContentButonDescuento));
+            Assert.AreEqual(selectContentButonDescuento.Text, "Aplicar un descuento");
+        }
+
+        public void ClicBotonDescuento()
+        {
+            selectButonDescuento.Click();
+        }
+
+        public void VerificarModalAplicarDescuento()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(TextModalDescuento));
+            Assert.AreEqual(TextModalDescuento.Text, "TEXTO QUE CONTENGA MODAL APLICAR DESCUENTO");
+        }
+
+        public void ClickBotonAplicarDescuento()
+        {
+            selectButonAplicarDescuento.Click();
+        }
+
+        public void VerificarDescuentoAplicado()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(ModalTextDescuento));
+            Assert.AreEqual(ModalTextDescuento.Text, "TEXTO QUE CONTENGA MONTO DE DESCUENTO APLICADO");   
+        }
+
+        public void ClicBotonPagar()
+        {
+            selectBotonPagar.Click();
+        }
+
+        public bool CheckTerminosCondiciones()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(selectBotonPagar));
+            return selectBotonPagar.Enabled;
+        }
+
+        public void VerificarBotonPagarDeshabilitado()
+        {
+            if (CheckTerminosCondiciones())
+            {
+                _wait.Until(ExpectedConditions.ElementToBeClickable(selectBotonPagar));
+                System.Console.WriteLine("BOTON HABILITADO");
+            }
+            System.Console.WriteLine("BOTON DESHABILITADO");
+        }
+
+        public void ClicTerminosCondiciones()
+        {
+            selectTyCPagar.Click();
+        }
+
+        public void VerificarBotonPagarHabilitado()
+        {
+            if (CheckTerminosCondiciones())
+            {
+                _wait.Until(ExpectedConditions.ElementToBeClickable(selectBotonPagar));
+                System.Console.WriteLine("BOTON HABILITADO");
+                ClicBotonPagar();
+            }
+            System.Console.WriteLine("BOTON DESHABILITADO");
+        }
+
+        public void VerificarPantallaErrorPagoDescuento()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(ModalTextPantallaErrorPagoDescuento));
+            Assert.AreEqual(ModalTextPantallaErrorPagoDescuento.Text, "TEXTO QUE CONTENGA EL ERROR");
+        }
+        
     }
+}
+    
 
