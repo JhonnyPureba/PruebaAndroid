@@ -1,33 +1,35 @@
 Feature: Parking_KO
 Background: 
-	Given El usuario ingresa al app
+	Given El usuario se logea al app
 	Given Selecciona opcion parking 
-	Given Selecciona opcion pago de estacionamiento 
-	When Escanea qr 
+	Given Selecciona opcion continuar 
+	When Escanea qr
 	
 @TC1
 Scenario: Validar que al escanear un qr muetre pantalla del monto a pagar con la opcion de aplicar descuento
 	Then Visualiza opcion Aplicar un descuento
 	And Visualiza monto a pagar
 
+#NO APLICA
 @TC4
 Scenario: Validar que al dar clic en aplicar descuento muestre un modal sin imagen
 	When Selecciona opcion Aplicar un descuento
-	Then Visualiza modal Aplicar un descuento sin imagen
+	Then Visualiza modal Aplicar un descuento
 
 @TC7
 Scenario: Validar que si no se haya marcado terminos y condiciones no se active el boton de pagar, no permitiendo continuar el flujo
 	When Selecciona opcion Aplicar un descuento
-	Then Visualiza modal Aplicar un descuento con imagen
+	Then Visualiza modal Aplicar un descuento
 	When Selecciona boton Aplicar descuento
 	Then Visualiza monto con descuento
 	And Visualiza checkbox de terminos y condiciones
 	And Visualiza boton Pagar deshabilitado
 
+#Verificar ultimos 2 steps
 @TC10
-Scenario: Validar que si se hizo el cobro del pago  muestre pantalla de enchufe y numero de transaccion
+Scenario: Validar que si se hizo el cobro del pago muestre pantalla de enchufe y numero de transaccion
 	When Selecciona opcion Aplicar un descuento
-	Then Visualiza modal Aplicar un descuento con imagen
+	Then Visualiza modal Aplicar un descuento
 	When Selecciona boton Aplicar descuento
 	Then Visualiza monto con descuento
 	And Visualiza checkbox de terminos y condiciones
@@ -38,11 +40,10 @@ Scenario: Validar que si se hizo el cobro del pago  muestre pantalla de enchufe 
 	When Selecciona monto a pagar
 	Then Visualiza pantalla de enchufe y numero de transaccion
 
-
 @TC13
 Scenario: Validar que al dar clic en pagar estacionamiento desde pantalla de no se aplico la promocion en aplicar descuento muestra pantalla de monto a pagar
 	When Selecciona opcion Aplicar un descuento
-	Then Visualiza modal Aplicar un descuento con imagen
+	Then Visualiza modal Aplicar un descuento
 	When Selecciona boton Aplicar descuento
 	Then Visualiza monto con descuento
 	And Visualiza checkbox de terminos y condiciones
@@ -93,21 +94,21 @@ Scenario: Validar pago exitoso aplicando descuento desde un dynamic link
 @TC34
 Scenario: Validar que al dar clic terminos y condiciones muestre modal
 	When Selecciona opcion Aplicar un descuento
-	Then Visualiza modal Aplicar un descuento con imagen
+	Then Visualiza modal Aplicar un descuento
 	When Selecciona link Conoce los terminos y condiciones
 	Then Visualiza modal Terminos y Condiciones
 
 @TC37
 Scenario: Validar que al dar clic en botón de aplicar descuento muestre mensaje de "felicitaciones, se aplicó el descuento exitosamente"
 	When Selecciona opcion Aplicar un descuento
-	Then Visualiza modal Aplicar un descuento con imagen
+	Then Visualiza modal Aplicar un descuento
 	When Seleciona boton Aplicar descuento
 	Then Visualiza mensaje Felicitaciones se aplico el descuento exitosamente
 
 @TC40
 Scenario: Validar que al dar clic en pagar descuento aplicado muestre pantalla de ingresar datos de la tarjeta y realiza pago exitoso 
 	When Selecciona opcion Aplicar un descuento
-	Then Visualiza modal Aplicar un descuento con imagen
+	Then Visualiza modal Aplicar un descuento
 	When Selecciona boton Aplicar descuento
 	Then Visualiza monto con descuento
 	And Visualiza checkbox de terminos y condiciones

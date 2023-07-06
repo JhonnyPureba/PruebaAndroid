@@ -21,7 +21,9 @@ namespace SpecFlowProject1.Drivers
             var driverOptions = new AppiumOptions();
 
             driverOptions.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
-            driverOptions.AddAdditionalCapability(MobileCapabilityType.DeviceName, "emulator-5554");
+            //driverOptions.AddAdditionalCapability(MobileCapabilityType.DeviceName, "emulator-5554");
+            driverOptions.AddAdditionalCapability(MobileCapabilityType.DeviceName, "HONOR X7a");
+            driverOptions.AddAdditionalCapability(MobileCapabilityType.Udid, "ANKG9X3308G01331");
             driverOptions.AddAdditionalCapability(MobileCapabilityType.App, @"C:\Users\Kratos\Downloads\app-release.apk");
             driverOptions.AddAdditionalCapability("appWaitPackage", "com.realplazago.app");
             driverOptions.AddAdditionalCapability("appWaitActivity", "com.realplazago.app.MainActivity");

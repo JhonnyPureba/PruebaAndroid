@@ -2,6 +2,8 @@ using SpecFlowProject1.Utils;
 using SpecFlowMarketplaceMobileProject.PageObjects.Parking;
 using System.Reflection;
 using Castle.Core;
+using SpecFlowProject1.PageObjects;
+using NUnit.Framework;
 
 namespace SpecFlowProject1.StepDefinitions
 {
@@ -9,30 +11,41 @@ namespace SpecFlowProject1.StepDefinitions
     public class AppiumTestParkingStepDefinitions
     {
         TestContextSetup testContextSetup;
-        PagoEstacionamiento pagoEstacionamiento;
+        PagoEstacionamientoPage pagoEstacionamiento;
+        StartPage startPage;
+        LoginPage loginPage;
+        HomePage homePage;
+        ScannerQRPage scannerQRPage;
+        PagoPage pagoPage;
 
         public AppiumTestParkingStepDefinitions(ScenarioContext scenarioContext)
         {
             testContextSetup = new TestContextSetup(scenarioContext);
             pagoEstacionamiento = testContextSetup.pageObjectManager.GetPagoEstacionamiento();
+            pagoPage = testContextSetup.pageObjectManager.GetPagoPage();
+            startPage = testContextSetup.pageObjectManager.GetStartPage();
+            loginPage = testContextSetup.pageObjectManager.GetLoginPage();
+            homePage = testContextSetup.pageObjectManager.GetHomePage();
+            scannerQRPage = testContextSetup.pageObjectManager.GetScannerQRPage();
         }
 
         [Given(@"Selecciona opcion parking")]
         public void GivenSeleccionaOpcionParking()
         {
-            pagoEstacionamiento.ClickContinuar();
+            homePage.ClickParking();
         }
 
-        [Given(@"Selecciona opcion pago de estacionamiento")]
-        public void GivenSeleccionaOpcionPagoEstacionamiento()
+        [Given(@"Selecciona opcion continuar")]
+        public void GivenSeleccionaOpcionContinuar()
         {
-           
+            pagoEstacionamiento.ClickContinuar();
         }
 
         [When(@"Escanea qr")]
         public void WhenEscaneaQR()
         {
-
+            pagoEstacionamiento.ClickBotonSubirQR();
+            scannerQRPage.ClickPrimeraImagen();
         }
 
         [When(@"Selecciona Modal aplicar descuento")]
@@ -99,78 +112,72 @@ namespace SpecFlowProject1.StepDefinitions
         [Then(@"Visualiza opcion Aplicar un descuento")]
         public void ThenVisualizaOpcionAplicarUnDescuento()
         {
-            throw new PendingStepException();
+            Assert.IsTrue(pagoEstacionamiento.MuestraBotonAplicarDescuento());
         }
         [Then(@"Visualiza monto a pagar")]
         public void ThenVisualizaMontoAPagar()
         {
-            throw new PendingStepException();
+            Assert.IsTrue(pagoEstacionamiento.MuestraMontoAPagar());
         }
 
         [When(@"Selecciona opcion Aplicar un descuento")]
         public void WhenSeleccionaOpcionAplicarUnDescuento()
         {
-            throw new PendingStepException();
+            pagoEstacionamiento.ClickAplicarUnDescuento();
         }
 
-        [Then(@"Visualiza modal Aplicar un descuento sin imagen")]
-        public void ThenVisualizaModalAplicarUnDescuentoSinImagen()
+        [Then(@"Visualiza modal Aplicar un descuento")]
+        public void ThenVisualizaModalAplicarUnDescuento()
         {
-            throw new PendingStepException();
-        }
-
-        [Then(@"Visualiza modal Aplicar un descuento con imagen")]
-        public void ThenVisualizaModalAplicarUnDescuentoConImagen()
-        {
-            throw new PendingStepException();
+            Assert.IsTrue(pagoEstacionamiento.MuestraModalAplicarUnDescuento());
         }
 
         [When(@"Selecciona boton Aplicar descuento")]
         public void WhenSeleccionaBotonAplicarDescuento()
         {
-            throw new PendingStepException();
+            pagoEstacionamiento.clickAplicarDescuento();
         }
 
         [Then(@"Visualiza monto con descuento")]
         public void ThenVisualizaMontoConDescuento()
         {
-            throw new PendingStepException();
+            Assert.IsTrue(pagoEstacionamiento.MuestraMontoAPagarConDescuento());
         }
 
         [Then(@"Visualiza checkbox de terminos y condiciones")]
         public void ThenVisualizaCheckboxDeTerminosYCondiciones()
         {
-            throw new PendingStepException();
+            Assert.IsTrue(pagoEstacionamiento.MuestraCheckBoxTyC());
         }
 
         [Then(@"Visualiza boton Pagar deshabilitado")]
         public void ThenVisualizaBotonPagarDeshabilitado()
         {
-            throw new PendingStepException();
+            Assert.IsFalse(pagoEstacionamiento.BotonPagarHabilitado());
         }
 
         [When(@"Marca checkbox de terminos y condiciones")]
         public void WhenMarcaCheckboxDeTerminosYCondiciones()
         {
-            throw new PendingStepException();
+            pagoEstacionamiento.ClickCheckBoxTyC();
         }
 
         [Then(@"Visualiza boton Pagar habilitado")]
         public void ThenVisualizaBotonPagarHabilitado()
         {
-            throw new PendingStepException();
+            Assert.IsTrue(pagoEstacionamiento.BotonPagarHabilitado());
         }
 
         [When(@"Selecciona boton Pagar")]
         public void WhenSeleccionaBotonPagar()
         {
-            throw new PendingStepException();
+            pagoEstacionamiento.ClickBotonPagar();
         }
 
         [Then(@"Visualiza modal de pago con tarjeta")]
         public void ThenVisualizaModalDePagoConTarjeta()
         {
-            throw new PendingStepException();
+            Assert.IsTrue(pagoPage.MuestraModalPagoConTarjeta());
         }
 
         [When(@"Selecciona monto a pagar")]
@@ -188,13 +195,13 @@ namespace SpecFlowProject1.StepDefinitions
         [Then(@"Visualizar mensaje Lo sentimos, no se ha podido aplicar el descuento")]
         public void ThenVisualizarMensajeLoSentimosNoSeHaPodidoAplicarElDescuento()
         {
-            throw new PendingStepException();
+            Assert.IsTrue(pagoEstacionamiento.MuestraMensajeLoSentimos());
         }
 
         [When(@"Selecciona boton Pagar estacionamiento")]
         public void WhenSeleccionaBotonPagarEstacionamiento()
         {
-            throw new PendingStepException();
+            pagoEstacionamiento.ClickBotonPagarEstacionamiento();
         }
 
         [When(@"Se pierde conexion")]
@@ -217,12 +224,6 @@ namespace SpecFlowProject1.StepDefinitions
 
         [Then(@"Visualiza modal Establecimientos validos")]
         public void ThenVisualizaModalEstablecimientosValidos()
-        {
-            throw new PendingStepException();
-        }
-
-        [Then(@"Visualiza modal Aplicar un descuento")]
-        public void ThenVisualizaModalAplicarUnDescuento()
         {
             throw new PendingStepException();
         }
@@ -299,5 +300,15 @@ namespace SpecFlowProject1.StepDefinitions
             throw new PendingStepException();
         }
 
+        [Given(@"El usuario se logea al app")]
+        public void GivenElUsuarioSeLogeaAlApp()
+        {
+            startPage.ClickIniciarSesion();
+            loginPage.ClickIngresarConTuCorreo();
+            loginPage.IngresarEmail("pradoccorajhonnyangelo@gmail.com");
+            loginPage.IngresarContrasena("Manzanita17");
+            loginPage.ClickCheckBoxTyC();
+            loginPage.ClickIngresar();
+        }
     }
 }

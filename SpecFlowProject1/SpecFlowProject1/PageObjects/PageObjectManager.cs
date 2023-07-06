@@ -11,8 +11,9 @@ namespace SpecFlowProject1.PageObjects
         private HomePage _homePage;
         private RegisterPage _registerPage;
         private LoginPage _loginPage;
-        private PagoEstacionamiento _pagoEstacionamiento;
-        private ScannerQR _scannerQR;
+        private PagoEstacionamientoPage _pagoEstacionamiento;
+        private ScannerQRPage _scannerQR;
+        private PagoPage _pagoPage;
 
         public PageObjectManager(AndroidDriver<AppiumWebElement> driver)
         {
@@ -42,17 +43,22 @@ namespace SpecFlowProject1.PageObjects
             return _registerPage;
         }
 
-        public PagoEstacionamiento GetPagoEstacionamiento()
+        public PagoEstacionamientoPage GetPagoEstacionamiento()
         {
-            _pagoEstacionamiento = new PagoEstacionamiento(Driver);
+            _pagoEstacionamiento = new PagoEstacionamientoPage(Driver);
             return _pagoEstacionamiento;
         }
 
-        public ScannerQR GetScannerQR()
+        public ScannerQRPage GetScannerQRPage()
         {
-            _scannerQR = new ScannerQR(Driver);
+            _scannerQR = new ScannerQRPage(Driver);
             return _scannerQR;
         }
 
+        public PagoPage GetPagoPage()
+        {
+            _pagoPage = new PagoPage(Driver);
+            return _pagoPage;
+        }
     }
 }
