@@ -4,6 +4,7 @@ using System.Reflection;
 using Castle.Core;
 using SpecFlowProject1.PageObjects;
 using NUnit.Framework;
+using SpecFlowMarketplaceMobileProject.PageObjects;
 
 namespace SpecFlowProject1.StepDefinitions
 {
@@ -109,6 +110,27 @@ namespace SpecFlowProject1.StepDefinitions
 
         }
 
+        [Then(@"Verificar que el descuento se aplique")]
+        public void ThenVerificarQueElDescuentoSeAplique()
+        {
+            pagoEstacionamiento.VerificarDescuentoAplicado();
+            pagoEstacionamiento.VerificarMontoAhorrado();
+        }
+
+        [Then(@"Verificar el monto y boton de descuento")]
+        public void ThenVerificarElMontoYBotonDeDescuento()
+        {
+            pagoEstacionamiento.VerificarMontoPagar();
+            pagoEstacionamiento.VerificarBotonDescuento();
+        }
+
+
+        [Then(@"Verificar error de pantalla")]
+        public void ThenVerificarErrorDePantalla()
+        {
+            pagoEstacionamiento.VerificarPantallaErrorPagoDescuento();
+        }
+
         [Then(@"Visualiza opcion Aplicar un descuento")]
         public void ThenVisualizaOpcionAplicarUnDescuento()
         {
@@ -154,6 +176,35 @@ namespace SpecFlowProject1.StepDefinitions
         public void ThenVisualizaBotonPagarDeshabilitado()
         {
             Assert.IsFalse(pagoEstacionamiento.BotonPagarHabilitado());
+        }
+
+        [Given(@"Aplicar Codigo de Error ""([^""]*)""")]
+        public void GivenAplicarCodigoDeError(string codigo)
+        {
+            homePage.ClickContactanos();
+            homePage.ClickModoDesarrollador();
+            homePage.CerrarVentanaContactanos();
+            homePage.EnviarCodigoError(codigo);
+        }
+
+        [When(@"el usuario selecciona imagen de voucher")]
+        public void WhenElUsuarioSeleccionaImagen()
+        {
+            pagoEstacionamiento.ClickBotonSubirQR();
+            scannerQRPage.ClickImagenVoucher();
+        }
+
+        [Then(@"Verificar modal con imagen")]
+        public void ThenVerificarModalSinImagen()
+        {
+            pagoEstacionamiento.VerificarModalAplicarDescuento();
+        }
+
+        [When(@"el usuario selecciona imagen Erronea de voucher")]
+        public void WhenElUsuarioSeleccionaImagenErroneaDeVoucher()
+        {
+            pagoEstacionamiento.ClickBotonSubirQR();
+            scannerQRPage.ClickImagenError();
         }
 
         [When(@"Marca checkbox de terminos y condiciones")]

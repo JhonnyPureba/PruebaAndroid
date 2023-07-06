@@ -164,5 +164,38 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         //    imagenQR_999_24.Click();
         //}
 
+        public void ClickImagenVoucher()
+        {
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionDesplegable));
+            //SeleccionDesplegable.Click();
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarCarpetaPadre));
+            //SeleccionarCarpetaPadre.Click();
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarCarpetaImagenes));
+            //SeleccionarCarpetaImagenes.Click();
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarImagenVoucher));
+            SeleccionarImagenVoucher.Click();
+        }
+        public void ClickImagenDescuento()
+        {
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionDesplegable));
+            //SeleccionDesplegable.Click();
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarCarpetaPadre));
+            //SeleccionarCarpetaPadre.Click();
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarCarpetaImagenes));
+            //SeleccionarCarpetaImagenes.Click();
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarImagenVoucher));
+            SeleccionarImagenDescuento.Click();
+        }
+        public void ClickImagenError()
+        {
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionDesplegable));
+            //SeleccionDesplegable.Click();
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarCarpetaPadre));
+            //SeleccionarCarpetaPadre.Click();
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarCarpetaImagenes));
+            //SeleccionarCarpetaImagenes.Click();
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarImagenVoucher));
+            SeleccionarImagenError.Click();
+        }
     }
 }
