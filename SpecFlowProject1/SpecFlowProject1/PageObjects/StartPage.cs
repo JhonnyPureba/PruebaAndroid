@@ -26,6 +26,7 @@ namespace SpecFlowProject1.PageObjects
         {
             this.Driver = driver;
             _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
+            _wait.PollingInterval = TimeSpan.FromMilliseconds(10);
             PageFactory.InitElements(driver, this);
         }
 
