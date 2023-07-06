@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using Dynamitey.Internal.Optimization;
 using OpenQA.Selenium.Appium.Interfaces;
 using NUnit.Framework;
+using OpenQA.Selenium.Appium.MultiTouch;
 
 namespace SpecFlowMarketplaceMobileProject.PageObjects
 {
@@ -33,20 +34,22 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
         private IWebElement selectContentButonDescuento;
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]\r\n")]
         private IWebElement selectButonDescuento;
-        [FindsBy(How = How.XPath, Using = "")]
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.TextView\r\n")]
         private IWebElement ModalTextDescuento;
-        [FindsBy(How = How.XPath, Using = "")]
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup\r\n")]
         private IWebElement selectButonAplicarDescuento;
-        [FindsBy(How = How.XPath, Using = "")]
-        private IWebElement TextModalDescuento;
-        [FindsBy(How = How.XPath, Using = "")]
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[5]/android.view.ViewGroup\r\n")]
         private IWebElement selectBotonPagar;
-        [FindsBy(How = How.XPath, Using = "")]
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup\r\n")]
+        private IWebElement selectBotonPagarSegundaVista;
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.CheckBox\r\n")]
         private IWebElement selectTyCPagar;
         [FindsBy(How = How.XPath, Using = "")]
         private IWebElement ModalTextPantallaErrorPagoDescuento;
-
-
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView\r\n")]
+        private IWebElement TextFelicidadesDescuentoAplicado;
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.TextView[2]\r\n")]
+        private IWebElement TextMontoAhorradoDescuento;
 
 
         //MOBILE JHONNY CARPETAS DE SELECCION IMAGENES
@@ -145,50 +148,65 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
         public void VerificarBotonDescuento()
         {
             _wait.Until(ExpectedConditions.ElementToBeClickable(selectContentButonDescuento));
-            Assert.AreEqual(selectContentButonDescuento.Text, "Aplicar un descuento");
+            Assert.AreEqual(selectContentButonDescuento.Text, "");
         }
-
+        
         public void ClicBotonDescuento()
         {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(selectButonDescuento));
             selectButonDescuento.Click();
         }
 
         public void VerificarModalAplicarDescuento()
         {
-            _wait.Until(ExpectedConditions.ElementToBeClickable(TextModalDescuento));
-            Assert.AreEqual(TextModalDescuento.Text, "TEXTO QUE CONTENGA MODAL APLICAR DESCUENTO");
+            _wait.Until(ExpectedConditions.ElementToBeClickable(ModalTextDescuento));
+            Assert.AreEqual(ModalTextDescuento.Text, "Obtendrás un descuento especial en tu monto a pagar.");
         }
 
         public void ClickBotonAplicarDescuento()
         {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(selectButonAplicarDescuento));
             selectButonAplicarDescuento.Click();
         }
 
         public void VerificarDescuentoAplicado()
         {
-            _wait.Until(ExpectedConditions.ElementToBeClickable(ModalTextDescuento));
-            Assert.AreEqual(ModalTextDescuento.Text, "TEXTO QUE CONTENGA MONTO DE DESCUENTO APLICADO");   
+            _wait.Until(ExpectedConditions.ElementToBeClickable(TextFelicidadesDescuentoAplicado));
+            Assert.AreEqual(TextFelicidadesDescuentoAplicado.Text, "¡Felicitaciones, se aplicó el descuento exitosamente!");   
+        }
+
+        public void VerificarMontoAhorrado()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(TextMontoAhorradoDescuento));
+            Assert.AreEqual(TextMontoAhorradoDescuento.Text, "Ahorraste S/1.00 en tu pago de estacionamiento");
+            
         }
 
         public void ClicBotonPagar()
         {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(selectBotonPagar));
             selectBotonPagar.Click();
+        }
+
+        public void ClicBotonPagarSegundaVista()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(selectBotonPagarSegundaVista));
+            selectBotonPagarSegundaVista.Click();
         }
 
         public bool CheckTerminosCondiciones()
         {
-            _wait.Until(ExpectedConditions.ElementToBeClickable(selectBotonPagar));
-            return selectBotonPagar.Enabled;
+            _wait.Until(ExpectedConditions.ElementToBeClickable(selectBotonPagarSegundaVista));
+            return selectBotonPagarSegundaVista.Displayed;
         }
 
         public void VerificarBotonPagarDeshabilitado()
         {
             if (CheckTerminosCondiciones())
             {
-                _wait.Until(ExpectedConditions.ElementToBeClickable(selectBotonPagar));
-                System.Console.WriteLine("BOTON HABILITADO");
-            }
-            System.Console.WriteLine("BOTON DESHABILITADO");
+                System.Console.WriteLine("BOTON DESHABILITADO");
+            }else
+            System.Console.WriteLine("BOTON HABILITADO");
         }
 
         public void ClicTerminosCondiciones()
@@ -200,10 +218,9 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
         {
             if (CheckTerminosCondiciones())
             {
-                _wait.Until(ExpectedConditions.ElementToBeClickable(selectBotonPagar));
                 System.Console.WriteLine("BOTON HABILITADO");
-                ClicBotonPagar();
-            }
+                ClicBotonPagarSegundaVista();
+            }else
             System.Console.WriteLine("BOTON DESHABILITADO");
         }
 

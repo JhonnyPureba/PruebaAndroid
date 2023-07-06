@@ -51,10 +51,20 @@ namespace SpecFlowProject1.StepDefinitions
         public void elusuarioseleccionaparking()
         {
             homePage.ClickParking();
-            parkingPage.ClickPermitirUbicacion();
-            parkingPage.ClickSalaverry();
+            //parkingPage.ClickPermitirUbicacion();
+            //parkingPage.ClickSalaverry();
             parkingPage.ClickContinuarParking();
         }
+
+        [Given(@"Aplicar Codigo de Error ""([^""]*)""")]
+        public void GivenAplicarCodigoDeError(string codigo)
+        {
+            homePage.ClickContactanos();
+            homePage.ClickModoDesarrollador();
+            homePage.CerrarVentanaContactanos();
+            homePage.EnviarCodigoError(codigo);
+        }
+
 
         [When(@"el usuario selecciona imagen de voucher")]
         public void WhenElUsuarioSeleccionaImagen()
@@ -86,7 +96,7 @@ namespace SpecFlowProject1.StepDefinitions
             parkingPage.VerificarMontoPagar();
         }
 
-        [Then(@"Verificar modal sin imagen")]
+        [Then(@"Verificar modal con imagen")]
         public void ThenVerificarModalSinImagen()
         {
             parkingPage.VerificarModalAplicarDescuento();
@@ -132,6 +142,7 @@ namespace SpecFlowProject1.StepDefinitions
         public void ThenVerificarQueElDescuentoSeAplique()
         {
             parkingPage.VerificarDescuentoAplicado();
+            parkingPage.VerificarMontoAhorrado();
         }
 
         [Then(@"Verificar error de pantalla")]
