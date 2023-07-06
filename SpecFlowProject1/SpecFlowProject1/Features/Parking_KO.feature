@@ -1,7 +1,7 @@
 Feature: Parking_KO
 Background: 
 	Given El usuario se logea al app
-	Given Selecciona opcion parking 
+	Given Selecciona opcion parking
 	Given Selecciona opcion continuar 
 	When Escanea qr
 	
