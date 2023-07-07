@@ -178,6 +178,12 @@ namespace SpecFlowProject1.StepDefinitions
             Assert.IsFalse(pagoEstacionamiento.BotonPagarHabilitado());
         }
 
+        [Then(@"Visualiza boton Pagar deshabilitado de estacionamiento")]
+        public void ThenVisualizaBotonPagarDeshabilitadoDeEstacionamiento()
+        {
+            pagoEstacionamiento.VerificarBotonPagarDeshabilitado();
+        }
+
         [Given(@"Aplicar Codigo de Error ""([^""]*)""")]
         public void GivenAplicarCodigoDeError(string codigo)
         {
@@ -218,6 +224,13 @@ namespace SpecFlowProject1.StepDefinitions
         {
             Assert.IsTrue(pagoEstacionamiento.BotonPagarHabilitado());
         }
+
+        [Then(@"Visualiza boton Pagar habilitado de estacionamiento")]
+        public void ThenVisualizaBotonPagarHabilitadoDeEstacionamiento()
+        {
+            pagoEstacionamiento.VerificarBotonPagarHabilitado();
+        }
+
 
         [When(@"Selecciona boton Pagar")]
         public void WhenSeleccionaBotonPagar()

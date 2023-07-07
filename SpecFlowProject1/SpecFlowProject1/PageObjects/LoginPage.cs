@@ -44,25 +44,25 @@ namespace SpecFlowProject1.PageObjects
 
         public void IngresarEmail(string email)
         {
-            //_wait.Until(ExpectedConditions.ElementToBeClickable(campoIngresarEmail));
+            _wait.Until(ExpectedConditions.ElementToBeClickable(campoIngresarEmail));
             campoIngresarEmail.SendKeys(email);
         }
 
         public void IngresarContrasena(string pass)
         {
-            //_wait.Until(ExpectedConditions.ElementToBeClickable(campoContrasena));
+            _wait.Until(ExpectedConditions.ElementToBeClickable(campoContrasena));
             campoContrasena.SendKeys(pass);
         }
 
         public void ClickCheckBoxTyC()
         {
-            //_wait.Until(ExpectedConditions.ElementToBeClickable(checkBoxTyC));
+            _wait.Until(ExpectedConditions.ElementToBeClickable(checkBoxTyC));
             checkBoxTyC.Click();
         }
 
         public void ClickIngresar()
         {
-            //_wait.Until(ExpectedConditions.ElementToBeClickable(botonIngresar));
+            _wait.Until(ExpectedConditions.ElementToBeClickable(botonIngresar));
             botonIngresar.Click();
         }
     }

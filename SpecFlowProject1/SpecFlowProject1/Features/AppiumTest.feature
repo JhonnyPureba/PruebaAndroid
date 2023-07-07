@@ -5,18 +5,22 @@ Background:
 @TC32
 Scenario: Boton aplicar descuento y monto
 	Given Selecciona opcion parking
+	And Selecciona opcion continuar
 	When el usuario selecciona imagen de voucher
-	Then Verificar el monto y boton de descuento
+	Then Visualiza opcion Aplicar un descuento
+	And Visualiza monto a pagar
 
 #faltaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 @TC26
 Scenario: Subir imagen incorrecta desde galeria
 	Given Selecciona opcion parking
+	And Selecciona opcion continuar
 	When el usuario selecciona imagen Erronea de voucher
 
 @TC2
 Scenario: Verificar Modal al hacer clic en aplicar descuento
 	Given Selecciona opcion parking
+	And Selecciona opcion continuar
 	When el usuario selecciona imagen de voucher
 	When Selecciona opcion Aplicar un descuento
 	Then Verificar modal con imagen 
@@ -24,21 +28,24 @@ Scenario: Verificar Modal al hacer clic en aplicar descuento
 @TC38
 Scenario: Verificar al no seleccionar terminos y condiciones no se activar el boton pagar
 	Given Selecciona opcion parking
+	And Selecciona opcion continuar
 	When el usuario selecciona imagen de voucher
-	When Selecciona boton Pagar
-	Then Visualiza boton Pagar deshabilitado
+	When Selecciona boton Pagar estacionamiento
+	Then Visualiza boton Pagar deshabilitado de estacionamiento
 
 @TC8
 Scenario: Verificar al  seleccionar terminos y condiciones se active el boton pagar
 	Given Selecciona opcion parking
+	And Selecciona opcion continuar
 	When el usuario selecciona imagen de voucher
-	When Selecciona boton Pagar
+	And Selecciona boton Pagar estacionamiento
 	When Marca checkbox de terminos y condiciones
-	Then Visualiza boton Pagar habilitado
+	Then Visualiza boton Pagar habilitado de estacionamiento
 
 @TC5
 Scenario: Aplicar descuento a voucher y verificar descuento aplicado
 	Given Selecciona opcion parking
+	And Selecciona opcion continuar
 	When el usuario selecciona imagen de voucher
 	When Selecciona opcion Aplicar un descuento
 	And Selecciona boton Aplicar descuento

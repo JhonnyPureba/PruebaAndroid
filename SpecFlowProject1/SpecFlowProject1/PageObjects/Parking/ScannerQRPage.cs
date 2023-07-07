@@ -172,7 +172,7 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
             //SeleccionarCarpetaPadre.Click();
             //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarCarpetaImagenes));
             //SeleccionarCarpetaImagenes.Click();
-            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarImagenVoucher));
+            _wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarImagenVoucher));
             SeleccionarImagenVoucher.Click();
         }
         public void ClickImagenDescuento()
