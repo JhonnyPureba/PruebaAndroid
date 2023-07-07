@@ -1,4 +1,6 @@
-﻿using OpenQA.Selenium.Appium;using OpenQA.Selenium.Appium.Android;
+﻿using MKPMobileProject.PageObjects;
+using MKPMobileProject.PageObjects.MiCuenta;
+using OpenQA.Selenium.Appium;using OpenQA.Selenium.Appium.Android;
 using SpecFlowMarketplaceMobileProject.PageObjects;
 using SpecFlowMarketplaceMobileProject.PageObjects.Parking;
 
@@ -15,6 +17,8 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
         private ScannerQRPage _scannerQR;
         private PagoPage _pagoPage;
         private HistorialPage _historialPage;
+        private GlobalPage _globalPage;
+        private MiCuentaPage _miCuentaPage;
 
         public PageObjectManager(AndroidDriver<AppiumWebElement> driver)
         {
@@ -66,6 +70,18 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
         {
             _historialPage= new HistorialPage(Driver);
             return _historialPage;
+        }
+
+        internal GlobalPage GetGlobalPage()
+        {
+            _globalPage = new GlobalPage(Driver);
+            return _globalPage;
+        }
+
+        internal MiCuentaPage GetMiCuentaPage()
+        {
+            _miCuentaPage = new MiCuentaPage(Driver);
+            return _miCuentaPage;
         }
     }
 }
