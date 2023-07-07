@@ -2,11 +2,10 @@ using SpecFlowProject1.Utils;
 using SpecFlowMarketplaceMobileProject.PageObjects.Parking;
 using System.Reflection;
 using Castle.Core;
-using SpecFlowProject1.PageObjects;
 using NUnit.Framework;
 using SpecFlowMarketplaceMobileProject.PageObjects;
 
-namespace SpecFlowProject1.StepDefinitions
+namespace SpecFlowMarketplaceMobileProject.StepDefinitions
 {
     [Binding]
     public class AppiumTestParkingStepDefinitions
@@ -40,6 +39,12 @@ namespace SpecFlowProject1.StepDefinitions
         public void GivenSeleccionaOpcionContinuar()
         {
             pagoEstacionamiento.ClickContinuar();
+        }
+
+        [Given(@"Selecciona opcion Ver mi historial de pagos")]
+        public void GivenSeleccionaOpcionVerMiHistorialDePagos()
+        {
+            pagoEstacionamiento.ClickVerMiHistorial();
         }
 
         [When(@"Escanea qr")]
@@ -270,7 +275,13 @@ namespace SpecFlowProject1.StepDefinitions
         [When(@"Selecciona opcion Validar ticket de compra")]
         public void WhenSeleccionaOpcionValidarTicketDeCompra()
         {
-            throw new PendingStepException();
+            pagoEstacionamiento.ClickBotonValidarTicketDeCompra();
+        }
+
+        [Then(@"Visualiza opcion Validar ticket de compra")]
+        public void ThenVisualizaOpcionValidarTicketDeCompra()
+        {
+            Assert.IsTrue(pagoEstacionamiento.MuestraBotonValidarTicketDeCompra());
         }
 
         [Then(@"Visualiza modal Establecimientos validos")]
@@ -287,12 +298,6 @@ namespace SpecFlowProject1.StepDefinitions
 
         [When(@"Selecciona boton Ver mi historial de pagos")]
         public void WhenSeleccionaBotonVerMiHistorialDePagos()
-        {
-            throw new PendingStepException();
-        }
-
-        [Then(@"Visualiza Historial de pagos")]
-        public void ThenVisualizaHistorialDePagos()
         {
             throw new PendingStepException();
         }

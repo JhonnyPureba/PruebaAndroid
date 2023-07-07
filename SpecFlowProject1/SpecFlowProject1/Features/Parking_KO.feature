@@ -1,4 +1,5 @@
 Feature: Parking_KO
+
 Background: 
 	Given El usuario se logea al app
 	Given Selecciona opcion parking
@@ -63,7 +64,7 @@ Scenario: Validar error de conexión al aplicar descuento
 @TC19
 Scenario: Validar que al dar clic en botón continuar muestre pantalla de escanear qr o subir qr desde galeria
 	When Selecciona opcion Validar ticket de compra
-	Then Visualiza modal Establecimientos validos
+	Then Visualiza opcion Validar ticket de compra
 
 @TC22
 Scenario: Validar el stock de descuentos según configurado desde el cms
@@ -71,13 +72,6 @@ Scenario: Validar el stock de descuentos según configurado desde el cms
 	Then Visualiza modal Aplicar un descuento
 	When Selecciona boton Aplicar descuento
 	Then Visualiza modal de descuento
-
-########################################### TC25 No va aqui por el background
-@TC25
-Scenario: Validar que que si el pago fue rechazado muestre monto a pagar tachado y mensaje de pago rechazado realizar un pago exitoso
-	#antes de escanear qr
-	When Selecciona boton Ver mi historial de pagos
-	Then Visualiza Historial de pagos
 
 ########################################### TC28 No va aqui por el background
 @TC28

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 
-namespace SpecFlowProject1.PageObjects
+namespace SpecFlowMarketplaceMobileProject.PageObjects
 {
     public class LoginPage
     {

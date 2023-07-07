@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace SpecFlowMarketplaceMobileProject.Features
+namespace MKPMobileProject.Features
 {
     using TechTalk.SpecFlow;
     using System;

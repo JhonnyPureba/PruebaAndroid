@@ -135,6 +135,7 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         public AndroidDriver<AppiumWebElement> Driver;
         private readonly WebDriverWait _wait;
         private readonly ITouchAction action;
+
         public PagoEstacionamientoPage(AndroidDriver<AppiumWebElement> driver)
         {
             Driver = driver;
@@ -308,6 +309,18 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         {
             _wait.Until(ExpectedConditions.ElementToBeClickable(mensajeLoSentimosNoSeHaPodidoAplicarElDescuento));
             return mensajeLoSentimosNoSeHaPodidoAplicarElDescuento.Displayed;
+        }
+
+        internal bool MuestraBotonValidarTicketDeCompra()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(botonValidarticketDecompra));
+            return botonValidarticketDecompra.Displayed;
+        }
+
+        internal void ClickBotonValidarTicketDeCompra()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(botonValidarticketDecompra));
+            botonValidarticketDecompra.Click();
         }
     }
 }
