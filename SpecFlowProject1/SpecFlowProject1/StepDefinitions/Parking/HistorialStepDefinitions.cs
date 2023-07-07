@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using SpecFlowMarketplaceMobileProject.PageObjects;
 using SpecFlowMarketplaceMobileProject.PageObjects.Parking;
 using SpecFlowProject1.Utils;
 
@@ -29,6 +30,17 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions.Parking
             Assert.IsTrue(historialPage.MuestraPagosRechazados());
         }
 
+        [When(@"Selecciona un pago")]
+        public void WhenSeleccionaUnPago()
+        {
+            historialPage.ClickEnUnPagoConPrecio();
+        }
+
+        [Then(@"Visualiza detalle del pago")]
+        public void ThenVisualizaDetalleDelPago()
+        {
+            Assert.IsTrue(historialPage.MuestraDetalleDelPago());
+        }
 
     }
 }

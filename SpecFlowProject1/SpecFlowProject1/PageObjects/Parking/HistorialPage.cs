@@ -5,6 +5,7 @@ using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 using OpenQA.Selenium.Appium.Interfaces;
 using OpenQA.Selenium.Appium.MultiTouch;
+using System;
 
 namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
 {
@@ -15,18 +16,22 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         //---------------------------
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView")]
         private IWebElement tituloHistorialDePagos;
-        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup")]
-        private List<IWebElement> listaDePagos;
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[*]/android.widget.TextView[2]")]
+        private IList<IWebElement> listaDePagos;
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.view.ViewGroup[*]")]
-        private List<IWebElement> listaDeNumerosDePagina;
+        private IList<IWebElement> listaDeNumerosDePagina;
         [FindsBy(How = How.XPath, Using = "")]
         private IWebElement botonIrAPagar;
+        [FindsBy(How = How.XPath, Using = "//android.widget.TextView[@text='¡Ups! Sin conexión a internet']")]
+        private IWebElement mensajeUpsSinConexion;
 
         //---------------------------
         //Elementos Historial de Pago: Detalle del pago
         //---------------------------
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[7]")]
         private IWebElement montoTotal;
+        [FindsBy(How = How.XPath, Using = "//android.widget.TextView[@text='Detalle del pago']")]
+        private IWebElement tituloDetalleDelPago;
         [FindsBy(How = How.XPath, Using = "")]
         private IWebElement mensajePagoExitoso;
         [FindsBy(How = How.XPath, Using = "")]
@@ -68,17 +73,53 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
             _wait.Until(ExpectedConditions.ElementToBeClickable(botonDescargarComprobante));
             botonDescargarComprobante.Click();
         }
+        public bool MuestraTituloHistorial()
+        {
+            _wait.Until(driver =>
+            {
+                return tituloHistorialDePagos.Displayed;
+            });
+            Console.WriteLine("LLEGO ACA");
+            return tituloHistorialDePagos.Displayed;
+        }
 
         public bool MuestraPagosRechazados()
         {
-            _wait.Until(ExpectedConditions.ElementToBeClickable(listaDePagos[0]));
-            return listaDePagos.Exists(item => item.Text.Contains("Rechazado"));
+            Console.WriteLine("LLEGO ACA 2");
+            _wait.Until(d =>
+            {
+                return listaDePagos[0].Displayed;
+            });
+            Console.WriteLine(listaDePagos[0].Text);
+            return listaDePagos.Any(item => item.Text.Contains("Rechazado"));
         }
 
-        public bool MuestraTituloHistorial()
+        public void ClickEnUnPagoConPrecio()
         {
-            _wait.Until(ExpectedConditions.ElementToBeClickable(botonDescargarComprobante));
-            return tituloHistorialDePagos.Displayed;
+            Console.WriteLine("LLEGO ACA 3");
+            _wait.Until(d =>
+            {
+                return listaDePagos[0].Displayed;
+            });
+            listaDePagos[0].Click();
+        }
+
+        internal bool MuestraDetalleDelPago()
+        {
+            _wait.Until(d =>
+            {
+                return tituloDetalleDelPago.Displayed;
+            });
+            return tituloDetalleDelPago.Displayed;
+        }
+
+        internal bool? MuestraMensajeUpsSinConexion()
+        {
+            _wait.Until(d =>
+            {
+                return mensajeUpsSinConexion.Displayed;
+            });
+            return mensajeUpsSinConexion.Displayed;
         }
     }
 }

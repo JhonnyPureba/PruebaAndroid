@@ -4,6 +4,7 @@ using System.Reflection;
 using Castle.Core;
 using NUnit.Framework;
 using SpecFlowMarketplaceMobileProject.PageObjects;
+using MKPMobileProject.PageObjects;
 
 namespace SpecFlowMarketplaceMobileProject.StepDefinitions
 {
@@ -17,6 +18,7 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         HomePage homePage;
         ScannerQRPage scannerQRPage;
         PagoPage pagoPage;
+        GlobalPage globalPage;
 
         public AppiumTestParkingStepDefinitions(ScenarioContext scenarioContext)
         {
@@ -27,6 +29,7 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
             loginPage = testContextSetup.pageObjectManager.GetLoginPage();
             homePage = testContextSetup.pageObjectManager.GetHomePage();
             scannerQRPage = testContextSetup.pageObjectManager.GetScannerQRPage();
+            globalPage = testContextSetup.pageObjectManager.GetGlobalPage();
         }
 
         [Given(@"Selecciona opcion parking")]
@@ -276,7 +279,7 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         [When(@"Se pierde conexion")]
         public void WhenSePierdeConexion()
         {
-            throw new PendingStepException();
+            globalPage.ApagarInternet();
         }
 
         [Then(@"Visualiza pantalla de error de conexion")]
@@ -378,6 +381,12 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
             loginPage.IngresarContrasena("Manzanita17");
             loginPage.ClickCheckBoxTyC();
             loginPage.ClickIngresar();
+        }
+
+        [Given(@"Selecciona opcion Mi cuenta")]
+        public void GivenSeleccionaOpcionMiCuenta()
+        {
+            homePage.ClickMiCuenta();
         }
     }
 }
