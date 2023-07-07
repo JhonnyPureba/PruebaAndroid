@@ -5,12 +5,12 @@ using SpecFlowProject1.Utils;
 namespace SpecFlowMarketplaceMobileProject.StepDefinitions.Parking
 {
     [Binding]
-    public class ParkingHistorialStepDefinitions
+    public class HistorialStepDefinitions
     {
         TestContextSetup testContextSetup;
         HistorialPage historialPage;
 
-        public ParkingHistorialStepDefinitions(ScenarioContext scenarioContext)
+        public HistorialStepDefinitions(ScenarioContext scenarioContext)
         {
             testContextSetup = new TestContextSetup(scenarioContext);
             historialPage = testContextSetup.pageObjectManager.GetHistorialPage();
