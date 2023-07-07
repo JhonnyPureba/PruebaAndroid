@@ -1,9 +1,8 @@
-﻿using OpenQA.Selenium.Appium;
-using OpenQA.Selenium.Appium.Android;
+﻿using OpenQA.Selenium.Appium;using OpenQA.Selenium.Appium.Android;
 using SpecFlowMarketplaceMobileProject.PageObjects;
 using SpecFlowMarketplaceMobileProject.PageObjects.Parking;
 
-namespace SpecFlowProject1.PageObjects
+namespace SpecFlowMarketplaceMobileProject.PageObjects
 {
     public class PageObjectManager
     {
@@ -15,7 +14,7 @@ namespace SpecFlowProject1.PageObjects
         private PagoEstacionamientoPage _pagoEstacionamiento;
         private ScannerQRPage _scannerQR;
         private PagoPage _pagoPage;
-        private ParkingPage _parkingPage;
+        private HistorialPage _historialPage;
 
         public PageObjectManager(AndroidDriver<AppiumWebElement> driver)
         {
@@ -63,10 +62,10 @@ namespace SpecFlowProject1.PageObjects
             return _pagoPage;
         }
 
-        public ParkingPage GetParkingPage()
+        public HistorialPage GetHistorialPage()
         {
-            _parkingPage = new ParkingPage(Driver);
-            return _parkingPage;
+            _historialPage= new HistorialPage(Driver);
+            return _historialPage;
         }
     }
 }

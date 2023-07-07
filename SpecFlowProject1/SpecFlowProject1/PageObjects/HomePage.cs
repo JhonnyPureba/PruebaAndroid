@@ -3,10 +3,9 @@ using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
-using OpenQA.Selenium.Appium.MultiTouch;
 using OpenQA.Selenium.Interactions;
 
-namespace SpecFlowProject1.PageObjects
+namespace SpecFlowMarketplaceMobileProject.PageObjects
 {
     public class HomePage
     {

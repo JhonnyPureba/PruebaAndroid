@@ -56,7 +56,7 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         private IWebElement mensajeAhorrasteEnTuPagoDeEstacionamiento;
         [FindsBy(How = How.XPath, Using = "")]
         private IWebElement mensajeLoSentimosNoSeHaPodidoAplicarElDescuento;
-        [FindsBy(How = How.XPath, Using = "")]
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[5]/android.view.ViewGroup\r\n")]
         private IWebElement botonPagarEstacionamiento;
         [FindsBy(How = How.XPath, Using = "")]
         private IWebElement establecimientosValidos;
@@ -68,8 +68,18 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         private IWebElement checkBoxTyC;
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[5]")]
         private IWebElement botonPagar;
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup\r\n")]
+        private IWebElement botonPagarLuegoDePagoEstacionamiento;
         [FindsBy(How = How.XPath, Using = "")]
         private IWebElement botonContinuarImportante;
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView\r\n")]
+        private IWebElement TextFelicidadesDescuentoAplicado;
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.TextView[2]\r\n")]
+        private IWebElement TextMontoAhorradoDescuento;
+        [FindsBy(How = How.XPath, Using = "")]
+        private IWebElement ModalTextPantallaErrorPagoDescuento;
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.TextView\r\n")]
+        private IWebElement selectContentButonDescuento;
 
         //---------------------------
         //Elementos de Pago de Estacionamiento: Monto a Pagar: Aplicar un descuento
@@ -85,6 +95,8 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         private IWebElement botonAplicarDescuento;
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.TextView")]
         private IWebElement tituloTyC;
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.TextView\r\n")]
+        private IWebElement ModalTextDescuento;
 
 
 
@@ -125,6 +137,7 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         public AndroidDriver<AppiumWebElement> Driver;
         private readonly WebDriverWait _wait;
         private readonly ITouchAction action;
+
         public PagoEstacionamientoPage(AndroidDriver<AppiumWebElement> driver)
         {
             Driver = driver;
@@ -192,10 +205,48 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
             botonSubirCodigoQRDesdeGaleria.Click();
         }
 
+        public void VerificarMontoPagar()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(montoAPagar));
+            Assert.AreEqual(montoAPagar.Text, "S/0.35");
+
+        }
+
+        public void VerificarBotonDescuento()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(selectContentButonDescuento));
+            Assert.AreEqual(selectContentButonDescuento.Text, "");
+        }
+
+        public void VerificarModalAplicarDescuento()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(ModalTextDescuento));
+            Assert.AreEqual(ModalTextDescuento.Text, "Obtendrás un descuento especial en tu monto a pagar.");
+        }
+
+        public void VerificarDescuentoAplicado()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(TextFelicidadesDescuentoAplicado));
+            Assert.AreEqual(TextFelicidadesDescuentoAplicado.Text, "¡Felicitaciones, se aplicó el descuento exitosamente!");
+        }
+
+        public void VerificarMontoAhorrado()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(TextMontoAhorradoDescuento));
+            Assert.AreEqual(TextMontoAhorradoDescuento.Text, "Ahorraste S/1.00 en tu pago de estacionamiento");
+
+        }
+
         public bool MuestraMontoAPagar()
         {
             _wait.Until(ExpectedConditions.ElementToBeClickable(montoAPagar));
             return montoAPagar.Displayed;
+        }
+
+        public void VerificarPantallaErrorPagoDescuento()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(ModalTextPantallaErrorPagoDescuento));
+            Assert.AreEqual(ModalTextPantallaErrorPagoDescuento.Text, "TEXTO QUE CONTENGA EL ERROR");
         }
 
         public bool MuestraBotonAplicarDescuento()
@@ -220,9 +271,50 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
             return montoAPagarConDescuento.Displayed;
         }
 
+        public bool CheckEstadohabilitadoBotonPagar()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(botonPagarLuegoDePagoEstacionamiento));
+            return botonPagarLuegoDePagoEstacionamiento.Displayed;
+        }
+
+        public void ClicBotonPagarLuegoDePagarEstacionamiento()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(botonPagarLuegoDePagoEstacionamiento));
+            botonPagarLuegoDePagoEstacionamiento.Click();
+        }
+
+        public void VerificarBotonPagarHabilitado()
+        {
+            if (CheckEstadohabilitadoBotonPagar())
+            {
+                System.Console.WriteLine("BOTON HABILITADO");
+                ClicBotonPagarLuegoDePagarEstacionamiento();
+            }
+            else
+                System.Console.WriteLine("BOTON DESHABILITADO");
+        }
+
+
+        public void VerificarBotonPagarDeshabilitado()
+        {
+            if (CheckEstadohabilitadoBotonPagar())
+            {
+                System.Console.WriteLine("BOTON DESHABILITADO");
+            }
+            else
+                System.Console.WriteLine("BOTON HABILITADO");
+        }
+
         public bool BotonPagarHabilitado()
         {
             botonPagar.Click();
+            Thread.Sleep(3000);
+            return !botonPagar.Displayed;
+        }
+
+        public bool BotonPagarHabilitadoLuegoDePagarEstacionaminto()
+        {
+            botonPagarLuegoDePagoEstacionamiento.Click();
             Thread.Sleep(3000);
             return !botonPagar.Displayed;
         }
@@ -260,6 +352,18 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         {
             _wait.Until(ExpectedConditions.ElementToBeClickable(mensajeLoSentimosNoSeHaPodidoAplicarElDescuento));
             return mensajeLoSentimosNoSeHaPodidoAplicarElDescuento.Displayed;
+        }
+
+        internal bool MuestraBotonValidarTicketDeCompra()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(botonValidarticketDecompra));
+            return botonValidarticketDecompra.Displayed;
+        }
+
+        internal void ClickBotonValidarTicketDeCompra()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(botonValidarticketDecompra));
+            botonValidarticketDecompra.Click();
         }
     }
 }

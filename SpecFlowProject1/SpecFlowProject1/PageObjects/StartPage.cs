@@ -1,14 +1,10 @@
-﻿using OpenQA.Selenium.Support.UI;
-using SeleniumExtras.PageObjects;
+﻿using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Appium;
-using OpenQA.Selenium.Appium.Android;
-using OpenQA.Selenium.Appium.Interfaces;
-using Dynamitey.DynamicObjects;
+using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium;
-using ExpectedConditions = SeleniumExtras.WaitHelpers.ExpectedConditions;
-using OpenQA.Selenium.Appium.PageObjects.Attributes;
+using SeleniumExtras.PageObjects;
 
-namespace SpecFlowProject1.PageObjects
+namespace SpecFlowMarketplaceMobileProject.PageObjects
 {
     public class StartPage
     {

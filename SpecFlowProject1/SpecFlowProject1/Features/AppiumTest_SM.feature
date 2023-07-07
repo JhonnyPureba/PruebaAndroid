@@ -76,6 +76,6 @@ Scenario: Validar  que al dar clic terminos y condiciones muestre modal
 	Then Visualiza titulo "el Modal de Terminos y condiciones"
 
 @TC18
-Scenario: Validar que al dar clic en validar ticket de compra  muestre un modal de establecimientos validos 
-	When Valida ticket de compra 
-	Then Visualiza titulo "modal de establecimientos validos"
+Scenario: Validar que al dar clic en validar ticket de compra  muestre un modal de establecimientos validos
+	When Selecciona opcion Validar ticket de compra
+	Then Visualiza modal Establecimientos validos

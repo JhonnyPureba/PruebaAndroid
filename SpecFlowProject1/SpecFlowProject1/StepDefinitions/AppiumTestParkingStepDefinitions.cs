@@ -2,10 +2,10 @@ using SpecFlowProject1.Utils;
 using SpecFlowMarketplaceMobileProject.PageObjects.Parking;
 using System.Reflection;
 using Castle.Core;
-using SpecFlowProject1.PageObjects;
 using NUnit.Framework;
+using SpecFlowMarketplaceMobileProject.PageObjects;
 
-namespace SpecFlowProject1.StepDefinitions
+namespace SpecFlowMarketplaceMobileProject.StepDefinitions
 {
     [Binding]
     public class AppiumTestParkingStepDefinitions
@@ -39,6 +39,12 @@ namespace SpecFlowProject1.StepDefinitions
         public void GivenSeleccionaOpcionContinuar()
         {
             pagoEstacionamiento.ClickContinuar();
+        }
+
+        [Given(@"Selecciona opcion Ver mi historial de pagos")]
+        public void GivenSeleccionaOpcionVerMiHistorialDePagos()
+        {
+            pagoEstacionamiento.ClickVerMiHistorial();
         }
 
         [When(@"Escanea qr")]
@@ -109,6 +115,27 @@ namespace SpecFlowProject1.StepDefinitions
 
         }
 
+        [Then(@"Verificar que el descuento se aplique")]
+        public void ThenVerificarQueElDescuentoSeAplique()
+        {
+            pagoEstacionamiento.VerificarDescuentoAplicado();
+            pagoEstacionamiento.VerificarMontoAhorrado();
+        }
+
+        [Then(@"Verificar el monto y boton de descuento")]
+        public void ThenVerificarElMontoYBotonDeDescuento()
+        {
+            pagoEstacionamiento.VerificarMontoPagar();
+            pagoEstacionamiento.VerificarBotonDescuento();
+        }
+
+
+        [Then(@"Verificar error de pantalla")]
+        public void ThenVerificarErrorDePantalla()
+        {
+            pagoEstacionamiento.VerificarPantallaErrorPagoDescuento();
+        }
+
         [Then(@"Visualiza opcion Aplicar un descuento")]
         public void ThenVisualizaOpcionAplicarUnDescuento()
         {
@@ -156,6 +183,41 @@ namespace SpecFlowProject1.StepDefinitions
             Assert.IsFalse(pagoEstacionamiento.BotonPagarHabilitado());
         }
 
+        [Then(@"Visualiza boton Pagar deshabilitado de estacionamiento")]
+        public void ThenVisualizaBotonPagarDeshabilitadoDeEstacionamiento()
+        {
+            pagoEstacionamiento.VerificarBotonPagarDeshabilitado();
+        }
+
+        [Given(@"Aplicar Codigo de Error ""([^""]*)""")]
+        public void GivenAplicarCodigoDeError(string codigo)
+        {
+            homePage.ClickContactanos();
+            homePage.ClickModoDesarrollador();
+            homePage.CerrarVentanaContactanos();
+            homePage.EnviarCodigoError(codigo);
+        }
+
+        [When(@"el usuario selecciona imagen de voucher")]
+        public void WhenElUsuarioSeleccionaImagen()
+        {
+            pagoEstacionamiento.ClickBotonSubirQR();
+            scannerQRPage.ClickImagenVoucher();
+        }
+
+        [Then(@"Verificar modal con imagen")]
+        public void ThenVerificarModalSinImagen()
+        {
+            pagoEstacionamiento.VerificarModalAplicarDescuento();
+        }
+
+        [When(@"el usuario selecciona imagen Erronea de voucher")]
+        public void WhenElUsuarioSeleccionaImagenErroneaDeVoucher()
+        {
+            pagoEstacionamiento.ClickBotonSubirQR();
+            scannerQRPage.ClickImagenError();
+        }
+
         [When(@"Marca checkbox de terminos y condiciones")]
         public void WhenMarcaCheckboxDeTerminosYCondiciones()
         {
@@ -167,6 +229,13 @@ namespace SpecFlowProject1.StepDefinitions
         {
             Assert.IsTrue(pagoEstacionamiento.BotonPagarHabilitado());
         }
+
+        [Then(@"Visualiza boton Pagar habilitado de estacionamiento")]
+        public void ThenVisualizaBotonPagarHabilitadoDeEstacionamiento()
+        {
+            pagoEstacionamiento.VerificarBotonPagarHabilitado();
+        }
+
 
         [When(@"Selecciona boton Pagar")]
         public void WhenSeleccionaBotonPagar()
@@ -219,7 +288,13 @@ namespace SpecFlowProject1.StepDefinitions
         [When(@"Selecciona opcion Validar ticket de compra")]
         public void WhenSeleccionaOpcionValidarTicketDeCompra()
         {
-            throw new PendingStepException();
+            pagoEstacionamiento.ClickBotonValidarTicketDeCompra();
+        }
+
+        [Then(@"Visualiza opcion Validar ticket de compra")]
+        public void ThenVisualizaOpcionValidarTicketDeCompra()
+        {
+            Assert.IsTrue(pagoEstacionamiento.MuestraBotonValidarTicketDeCompra());
         }
 
         [Then(@"Visualiza modal Establecimientos validos")]
@@ -236,12 +311,6 @@ namespace SpecFlowProject1.StepDefinitions
 
         [When(@"Selecciona boton Ver mi historial de pagos")]
         public void WhenSeleccionaBotonVerMiHistorialDePagos()
-        {
-            throw new PendingStepException();
-        }
-
-        [Then(@"Visualiza Historial de pagos")]
-        public void ThenVisualizaHistorialDePagos()
         {
             throw new PendingStepException();
         }
