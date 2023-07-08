@@ -196,6 +196,7 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
             homePage.ClickModoDesarrollador();
             homePage.CerrarVentanaContactanos();
             homePage.EnviarCodigoError(codigo);
+            homePage.SubirAParking();
         }
 
         [When(@"el usuario selecciona imagen de voucher")]
@@ -368,6 +369,13 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         {
             throw new PendingStepException();
         }
+
+        [Then(@"Verificar la visualizacion del boton Ver mi historial de pagos")]
+        public void ThenVerificarLaVisualizacionDelBotonVerMiHistorialDePagos()
+        {
+            Assert.IsTrue(pagoEstacionamiento.ValidarBotonVerMiHistorialdePagos());
+        }
+
 
         [Given(@"El usuario se logea al app")]
         public void GivenElUsuarioSeLogeaAlApp()

@@ -9,3 +9,4 @@ Background:
 	Scenario: Validar que que si el pago fue rechazado muestre monto a pagar tachado y mensaje de pago rechazado realizar un pago exitoso
 	Then Visualiza Historial de pagos
 	And Visualiza pagos rechazado en color rojito
+

@@ -29,6 +29,12 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions.Parking
             Assert.IsTrue(historialPage.MuestraPagosRechazados());
         }
 
+        [Then(@"Verificar la paginacion en historial de pagos")]
+        public void ThenVerificarLaPaginacionEnHistorialDePagos()
+        {
+            historialPage.VerificarFuncionamientoPaginacion();
+        }
+
 
     }
 }
