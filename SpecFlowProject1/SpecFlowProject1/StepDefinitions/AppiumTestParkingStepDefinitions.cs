@@ -195,11 +195,21 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         [Given(@"Aplicar Codigo de Error ""([^""]*)""")]
         public void GivenAplicarCodigoDeError(string codigo)
         {
+
             homePage.ClickContactanos();
             homePage.ClickModoDesarrollador();
             homePage.CerrarVentanaContactanos();
             homePage.EnviarCodigoError(codigo);
+            homePage.SubirAParking();
         }
+
+
+        [Given(@"Selecciona opcion parking directo")]
+        public void GivenSeleccionaOpcionParkingDirecto()
+        {
+            homePage.ClickParkingDirect();
+        }
+
 
         [When(@"el usuario selecciona imagen de voucher")]
         public void WhenElUsuarioSeleccionaImagen()
@@ -371,6 +381,13 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         {
             throw new PendingStepException();
         }
+
+        [Then(@"Verificar la visualizacion del boton Ver mi historial de pagos")]
+        public void ThenVerificarLaVisualizacionDelBotonVerMiHistorialDePagos()
+        {
+            Assert.IsTrue(pagoEstacionamiento.ValidarBotonVerMiHistorialdePagos());
+        }
+
 
         [Given(@"El usuario se logea al app")]
         public void GivenElUsuarioSeLogeaAlApp()

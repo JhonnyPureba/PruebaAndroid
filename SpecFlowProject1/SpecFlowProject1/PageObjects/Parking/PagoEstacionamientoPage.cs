@@ -312,6 +312,12 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
             return !botonPagar.Displayed;
         }
 
+        public bool ValidarBotonVerMiHistorialdePagos()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(botonVerMiHistorial));
+            return botonVerMiHistorial.Displayed;
+        }
+
         public bool BotonPagarHabilitadoLuegoDePagarEstacionaminto()
         {
             botonPagarLuegoDePagoEstacionamiento.Click();
