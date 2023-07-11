@@ -192,12 +192,21 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         [Given(@"Aplicar Codigo de Error ""([^""]*)""")]
         public void GivenAplicarCodigoDeError(string codigo)
         {
+
             homePage.ClickContactanos();
             homePage.ClickModoDesarrollador();
             homePage.CerrarVentanaContactanos();
             homePage.EnviarCodigoError(codigo);
             homePage.SubirAParking();
         }
+
+
+        [Given(@"Selecciona opcion parking directo")]
+        public void GivenSeleccionaOpcionParkingDirecto()
+        {
+            homePage.ClickParkingDirect();
+        }
+
 
         [When(@"el usuario selecciona imagen de voucher")]
         public void WhenElUsuarioSeleccionaImagen()

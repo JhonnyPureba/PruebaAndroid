@@ -32,7 +32,8 @@ Scenario: Boton aplicar descuento y monto
 	@PRIORITARIOTC12
 	Scenario: Historial Pago Error de servicio desde mi cuenta 
 	And Aplicar Codigo de Error "62"
-	Given Selecciona opcion parking
+	Given Selecciona opcion parking directo
+	And Selecciona opcion continuar
 	When el usuario selecciona imagen de voucher
 	When Selecciona opcion Aplicar un descuento
 	And Selecciona boton Aplicar descuento

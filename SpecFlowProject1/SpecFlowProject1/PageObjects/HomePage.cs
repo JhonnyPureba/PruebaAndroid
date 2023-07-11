@@ -11,6 +11,7 @@ using static System.Collections.Specialized.BitVector32;
 using OpenQA.Selenium.Appium.Interfaces;
 using Newtonsoft.Json.Linq;
 using Gherkin.CucumberMessages.Types;
+using System.Xml.Linq;
 
 namespace SpecFlowMarketplaceMobileProject.PageObjects
 {
@@ -22,7 +23,7 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
         private IWebElement botonIniciarSesion;
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.TextView")]
         private IWebElement botonInvitado;
-        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ImageView\r\n")]
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ImageView\r\n")]
         private IWebElement botonParking;
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup")]
         private IWebElement bannerPromo;
@@ -54,6 +55,7 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
             jse = (IJavaScriptExecutor)driver;
             //IJavaScriptExecutor jse = (IJavaScriptExecutor)driver;
             PageFactory.InitElements(driver, this);
+            
         }
 
         public bool IsBannerPromo()
@@ -66,10 +68,26 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
             if (IsBannerPromo())
             {
                 bannerPromo.Click();
-            }
-            Thread.Sleep(5000);
-            action.LongPress(0,1000).MoveTo(0,500).Release().Perform();
-            _wait.Until(ExpectedConditions.ElementToBeClickable(botonParking));
+                Thread.Sleep(1500);
+            }else 
+
+            Driver.FindElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0))" + ".scrollIntoView(new UiSelector()" + ".textMatches(\"" + "Descubre Real Plaza" + "\").instance(0))");
+
+            _wait.Until(d =>
+            {
+                return botonParking.Displayed;
+            });
+            botonParking.Click();
+        }
+
+        public void ClickParkingDirect()
+        {
+            Driver.FindElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0))" + ".scrollIntoView(new UiSelector()" + ".textMatches(\"" + "Descubre Real Plaza" + "\").instance(0))");
+
+            _wait.Until(d =>
+            {
+                return botonParking.Displayed;
+            });
             botonParking.Click();
         }
 
@@ -80,7 +98,9 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
                 bannerPromo.Click();
             }
             Thread.Sleep(5000);
-            action.LongPress(0, 2180).MoveTo(0, 0).Release().Perform();
+            
+            Driver.FindElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0))"+".scrollIntoView(new UiSelector()"+".textMatches(\"" + "Contáctanos"+ "\").instance(0))");
+
             _wait.Until(ExpectedConditions.ElementToBeClickable(Contactanos));
             Contactanos.Click();
         }
@@ -94,6 +114,7 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
             {
                 BotonModoError.Click();
             }
+            Thread.Sleep(1000);
         }
 
         public void CerrarVentanaContactanos()
@@ -106,21 +127,14 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
         public void SubirAParking()
         {
             Thread.Sleep(5000);
-            //action.LongPress(500, -1500).MoveTo(500, 2000).Release().Perform();
-            //action.MoveTo(botonParking);
-            //action.Perform();
-            //jse.ExecuteScript("ventana.scrollBy(0,250)", "");
-            jse.ExecuteScript("Window.scrollBy(0, 500)");
-            Driver.PressKeyCode(AndroidKeyCode.ActionUp);
-
+            Driver.FindElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0))" + ".scrollIntoView(new UiSelector()" + ".textMatches(\"" + "Descubre Real Plaza" + "\").instance(0))");
         }
 
         public void EnviarCodigoError(String codigo)
         {
+            Thread.Sleep(5000);
             IngresarCodigoError.SendKeys(codigo);
             GuardarCodigoError.Click();
-            
-
         }
     }
 }
