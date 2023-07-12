@@ -29,8 +29,8 @@ Scenario: Boton aplicar descuento y monto
 	Given Selecciona opcion Ver mi historial de pagos
 	Then Verificar la paginacion en historial de pagos
 
-	@PRIORITARIOTC12
-	Scenario: Historial Pago Error de servicio desde mi cuenta 
+	@TC17
+	Scenario: Error de servicios al aplicar descuento 
 	And Aplicar Codigo de Error "62"
 	Given Selecciona opcion parking directo
 	And Selecciona opcion continuar
@@ -38,6 +38,20 @@ Scenario: Boton aplicar descuento y monto
 	When Selecciona opcion Aplicar un descuento
 	And Selecciona boton Aplicar descuento
 	Then Verificar error de pantalla 
+
+	@PRIORITARIOTC12
+	Scenario: Historial Pago Error de servicio desde mi cuenta
+	And Aplicar Codigo de Error "12"
+	Given Selecciona opcion Mi cuenta directo
+	When Selecciona Mis pagos de estacionamiento
+	Then Visualiza Error en el Historial de pagos
+
+	@PRIORITARIOTC13
+	Scenario: Historial Pago Error de servicio desde parking 
+	And Aplicar Codigo de Error "12"
+	Given Selecciona opcion parking directo
+	Given Selecciona opcion Ver mi historial de pagos
+	Then Visualiza Error en el Historial de pagos
 
 
 #faltaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -94,14 +108,6 @@ Scenario: Error al Aplicar descuento a voucher
 
 @TC14
 Scenario: Desde pantalla de "no se aplico la promocion en aplicar descuento " muestra modal de establecimientos validos
-	Given Selecciona opcion parking
-	When el usuario selecciona imagen de voucher
-	When Selecciona opcion Aplicar un descuento
-	And Selecciona boton Aplicar descuento
-	Then Verificar error de pantalla 
-
-@TC17
-Scenario: Error de servicio al aplicar descuento
 	Given Selecciona opcion parking
 	When el usuario selecciona imagen de voucher
 	When Selecciona opcion Aplicar un descuento

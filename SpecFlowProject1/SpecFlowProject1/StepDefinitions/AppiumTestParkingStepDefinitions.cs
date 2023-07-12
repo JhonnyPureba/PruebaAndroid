@@ -210,6 +210,12 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
             homePage.ClickParkingDirect();
         }
 
+        [Given(@"Selecciona opcion Mi cuenta directo")]
+        public void GivenSeleccionaOpcionMiCuentaDirecto()
+        {
+            homePage.ClickMiCuentaDirect();
+        }
+
 
         [When(@"el usuario selecciona imagen de voucher")]
         public void WhenElUsuarioSeleccionaImagen()

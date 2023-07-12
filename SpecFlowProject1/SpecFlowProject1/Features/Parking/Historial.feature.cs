@@ -83,9 +83,6 @@ namespace MKPMobileProject.Features.Parking
 #line 5
  testRunner.And("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 6
- testRunner.And("Selecciona opcion Ver mi historial de pagos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
@@ -99,7 +96,7 @@ namespace MKPMobileProject.Features.Parking
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validar que que si el pago fue rechazado muestre monto a pagar tachado y mensaje " +
                     "de pago rechazado realizar un pago exitoso", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 9
+#line 8
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -111,6 +108,9 @@ namespace MKPMobileProject.Features.Parking
                 this.ScenarioStart();
 #line 3
 this.FeatureBackground();
+#line hidden
+#line 9
+ testRunner.And("Selecciona opcion Ver mi historial de pagos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 10
  testRunner.Then("Visualiza Historial de pagos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -147,13 +147,53 @@ this.FeatureBackground();
 this.FeatureBackground();
 #line hidden
 #line 16
- testRunner.Then("Visualiza Historial de pagos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("Selecciona opcion Ver mi historial de pagos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 17
- testRunner.When("Selecciona un pago", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("Visualiza Historial de pagos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 18
+ testRunner.When("Selecciona un pago", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 19
  testRunner.Then("Visualiza detalle del pago", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Validar sin conexi�n a internet al ver historial de pagos de estacionamiento  des" +
+            "de parking")]
+        [NUnit.Framework.CategoryAttribute("TC11")]
+        public void ValidarSinConexiNAInternetAlVerHistorialDePagosDeEstacionamientoDesdeParking()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "TC11"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validar sin conexi�n a internet al ver historial de pagos de estacionamiento  des" +
+                    "de parking", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 22
+ this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 3
+this.FeatureBackground();
+#line hidden
+#line 23
+ testRunner.When("Se pierde conexion", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 24
+ testRunner.And("Selecciona Mis pagos de estacionamiento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 25
+ testRunner.Then("Visualiza mensaje Ups Sin conexion a internet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
