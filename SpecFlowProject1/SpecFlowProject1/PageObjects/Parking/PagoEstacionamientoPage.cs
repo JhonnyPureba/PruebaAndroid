@@ -324,6 +324,8 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
             return !botonPagar.Displayed;
         }
 
+
+
         public bool MuestraCheckBoxTyC()
         {
             return checkBoxTyC.Displayed;

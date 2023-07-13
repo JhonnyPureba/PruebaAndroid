@@ -84,7 +84,9 @@ Scenario: Verificar al  seleccionar terminos y condiciones se active el boton pa
 	When el usuario selecciona imagen de voucher
 	And Selecciona boton Pagar estacionamiento
 	When Marca checkbox de terminos y condiciones
-	Then Visualiza boton Pagar habilitado de estacionamiento
+	Then Visualiza boton Pagar habilitado
+	When Selecciona boton Pagar
+
 
 @TC5
 Scenario: Aplicar descuento a voucher y verificar descuento aplicado
@@ -95,16 +97,23 @@ Scenario: Aplicar descuento a voucher y verificar descuento aplicado
 	And Selecciona boton Aplicar descuento
 	Then Verificar que el descuento se aplique
 
-	#DIVISION DE CASOS POR REALIZAR
+	# EN PROCESO DE DESARROLLO 
 
 @TC11
 Scenario: Error al Aplicar descuento a voucher
-	And Aplicar Codigo de Error "62"
 	Given Selecciona opcion parking
+	And Selecciona opcion continuar
 	When el usuario selecciona imagen de voucher
 	When Selecciona opcion Aplicar un descuento
 	And Selecciona boton Aplicar descuento
-	Then Verificar error de pantalla 
+	When Marca checkbox de terminos y condiciones
+	And Selecciona boton Pagar luego de aplicar descuento
+	## verificar ultimo paso esta fallando 
+
+
+
+	
+	#DIVISION DE CASOS POR REALIZAR
 
 @TC14
 Scenario: Desde pantalla de "no se aplico la promocion en aplicar descuento " muestra modal de establecimientos validos

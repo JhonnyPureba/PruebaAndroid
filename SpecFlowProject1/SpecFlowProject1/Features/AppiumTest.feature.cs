@@ -509,7 +509,10 @@ this.FeatureBackground();
  testRunner.When("Marca checkbox de terminos y condiciones", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 87
- testRunner.Then("Visualiza boton Pagar habilitado de estacionamiento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Visualiza boton Pagar habilitado", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 88
+ testRunner.When("Selecciona boton Pagar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -524,7 +527,7 @@ this.FeatureBackground();
                     "TC5"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Aplicar descuento a voucher y verificar descuento aplicado", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 90
+#line 92
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -537,22 +540,22 @@ this.ScenarioInitialize(scenarioInfo);
 #line 2
 this.FeatureBackground();
 #line hidden
-#line 91
+#line 93
  testRunner.Given("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 92
+#line 94
  testRunner.And("Selecciona opcion continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 93
+#line 95
  testRunner.When("el usuario selecciona imagen de voucher", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 94
+#line 96
  testRunner.When("Selecciona opcion Aplicar un descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 95
+#line 97
  testRunner.And("Selecciona boton Aplicar descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 96
+#line 98
  testRunner.Then("Verificar que el descuento se aplique", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -568,7 +571,7 @@ this.FeatureBackground();
                     "TC11"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Error al Aplicar descuento a voucher", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 101
+#line 103
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -581,23 +584,26 @@ this.ScenarioInitialize(scenarioInfo);
 #line 2
 this.FeatureBackground();
 #line hidden
-#line 102
- testRunner.And("Aplicar Codigo de Error \"62\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 103
+#line 104
  testRunner.Given("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 104
- testRunner.When("el usuario selecciona imagen de voucher", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
 #line 105
- testRunner.When("Selecciona opcion Aplicar un descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("Selecciona opcion continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 106
- testRunner.And("Selecciona boton Aplicar descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("el usuario selecciona imagen de voucher", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 107
- testRunner.Then("Verificar error de pantalla", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("Selecciona opcion Aplicar un descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 108
+ testRunner.And("Selecciona boton Aplicar descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 109
+ testRunner.When("Marca checkbox de terminos y condiciones", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 110
+ testRunner.And("Selecciona boton Pagar luego de aplicar descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -614,49 +620,6 @@ this.FeatureBackground();
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Desde pantalla de \"no se aplico la promocion en aplicar descuento \" muestra modal" +
                     " de establecimientos validos", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 110
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 2
-this.FeatureBackground();
-#line hidden
-#line 111
- testRunner.Given("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 112
- testRunner.When("el usuario selecciona imagen de voucher", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 113
- testRunner.When("Selecciona opcion Aplicar un descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 114
- testRunner.And("Selecciona boton Aplicar descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 115
- testRunner.Then("Verificar error de pantalla", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Pantalla de monto a pagar muestre mensaje de conoce los establecimientos validos " +
-            "aquí y al dar click muestre modal informativo")]
-        [NUnit.Framework.CategoryAttribute("TC20")]
-        public void PantallaDeMontoAPagarMuestreMensajeDeConoceLosEstablecimientosValidosAquiYAlDarClickMuestreModalInformativo()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "TC20"};
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Pantalla de monto a pagar muestre mensaje de conoce los establecimientos validos " +
-                    "aquí y al dar click muestre modal informativo", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 118
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -690,14 +653,16 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verificar un pago realizado con descuento se muestre en el historial de pagos")]
-        [NUnit.Framework.CategoryAttribute("TC23")]
-        public void VerificarUnPagoRealizadoConDescuentoSeMuestreEnElHistorialDePagos()
+        [NUnit.Framework.DescriptionAttribute("Pantalla de monto a pagar muestre mensaje de conoce los establecimientos validos " +
+            "aquí y al dar click muestre modal informativo")]
+        [NUnit.Framework.CategoryAttribute("TC20")]
+        public void PantallaDeMontoAPagarMuestreMensajeDeConoceLosEstablecimientosValidosAquiYAlDarClickMuestreModalInformativo()
         {
             string[] tagsOfScenario = new string[] {
-                    "TC23"};
+                    "TC20"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verificar un pago realizado con descuento se muestre en el historial de pagos", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Pantalla de monto a pagar muestre mensaje de conoce los establecimientos validos " +
+                    "aquí y al dar click muestre modal informativo", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 126
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -724,6 +689,47 @@ this.FeatureBackground();
  testRunner.And("Selecciona boton Aplicar descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 131
+ testRunner.Then("Verificar error de pantalla", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Verificar un pago realizado con descuento se muestre en el historial de pagos")]
+        [NUnit.Framework.CategoryAttribute("TC23")]
+        public void VerificarUnPagoRealizadoConDescuentoSeMuestreEnElHistorialDePagos()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "TC23"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verificar un pago realizado con descuento se muestre en el historial de pagos", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 134
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 2
+this.FeatureBackground();
+#line hidden
+#line 135
+ testRunner.Given("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 136
+ testRunner.When("el usuario selecciona imagen de voucher", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 137
+ testRunner.When("Selecciona opcion Aplicar un descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 138
+ testRunner.And("Selecciona boton Aplicar descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 139
  testRunner.Then("Verificar error de pantalla", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
