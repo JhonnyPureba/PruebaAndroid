@@ -29,8 +29,8 @@ Scenario: Boton aplicar descuento y monto
 	Given Selecciona opcion Ver mi historial de pagos
 	Then Verificar la paginacion en historial de pagos
 
-	@PRIORITARIOTC12
-	Scenario: Historial Pago Error de servicio desde mi cuenta 
+	@TC17
+	Scenario: Error de servicios al aplicar descuento 
 	And Aplicar Codigo de Error "62"
 	Given Selecciona opcion parking directo
 	And Selecciona opcion continuar
@@ -38,6 +38,20 @@ Scenario: Boton aplicar descuento y monto
 	When Selecciona opcion Aplicar un descuento
 	And Selecciona boton Aplicar descuento
 	Then Verificar error de pantalla 
+
+	@PRIORITARIOTC12
+	Scenario: Historial Pago Error de servicio desde mi cuenta
+	And Aplicar Codigo de Error "12"
+	Given Selecciona opcion Mi cuenta directo
+	When Selecciona Mis pagos de estacionamiento
+	Then Visualiza Error en el Historial de pagos
+
+	@PRIORITARIOTC13
+	Scenario: Historial Pago Error de servicio desde parking 
+	And Aplicar Codigo de Error "12"
+	Given Selecciona opcion parking directo
+	Given Selecciona opcion Ver mi historial de pagos
+	Then Visualiza Error en el Historial de pagos
 
 
 #faltaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -70,7 +84,9 @@ Scenario: Verificar al  seleccionar terminos y condiciones se active el boton pa
 	When el usuario selecciona imagen de voucher
 	And Selecciona boton Pagar estacionamiento
 	When Marca checkbox de terminos y condiciones
-	Then Visualiza boton Pagar habilitado de estacionamiento
+	Then Visualiza boton Pagar habilitado
+	When Selecciona boton Pagar
+
 
 @TC5
 Scenario: Aplicar descuento a voucher y verificar descuento aplicado
@@ -81,27 +97,26 @@ Scenario: Aplicar descuento a voucher y verificar descuento aplicado
 	And Selecciona boton Aplicar descuento
 	Then Verificar que el descuento se aplique
 
-	#DIVISION DE CASOS POR REALIZAR
+	# EN PROCESO DE DESARROLLO 
 
 @TC11
 Scenario: Error al Aplicar descuento a voucher
-	And Aplicar Codigo de Error "62"
 	Given Selecciona opcion parking
+	And Selecciona opcion continuar
 	When el usuario selecciona imagen de voucher
 	When Selecciona opcion Aplicar un descuento
 	And Selecciona boton Aplicar descuento
-	Then Verificar error de pantalla 
+	When Marca checkbox de terminos y condiciones
+	And Selecciona boton Pagar luego de aplicar descuento
+	## verificar ultimo paso esta fallando 
+
+
+
+	
+	#DIVISION DE CASOS POR REALIZAR
 
 @TC14
 Scenario: Desde pantalla de "no se aplico la promocion en aplicar descuento " muestra modal de establecimientos validos
-	Given Selecciona opcion parking
-	When el usuario selecciona imagen de voucher
-	When Selecciona opcion Aplicar un descuento
-	And Selecciona boton Aplicar descuento
-	Then Verificar error de pantalla 
-
-@TC17
-Scenario: Error de servicio al aplicar descuento
 	Given Selecciona opcion parking
 	When el usuario selecciona imagen de voucher
 	When Selecciona opcion Aplicar un descuento

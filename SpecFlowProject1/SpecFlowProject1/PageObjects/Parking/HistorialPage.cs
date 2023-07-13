@@ -29,7 +29,8 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         private IWebElement mensajeUpsSinConexion;
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.view.ViewGroup[4]/android.widget.TextView\r\n")]
         private IWebElement botonSiguientePaginacion;
-
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[1]\r\n")]
+        private IWebElement MessageErrorServicesHistorialPago;
 
         //---------------------------
         //Elementos Historial de Pago: Detalle del pago
@@ -131,6 +132,11 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         {
             _wait.Until(ExpectedConditions.ElementToBeClickable(botonSiguientePaginacion));
             botonSiguientePaginacion.Click();
+        }
+        public void VisualizarErrorHistorialPago()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(MessageErrorServicesHistorialPago));
+            Assert.AreEqual(MessageErrorServicesHistorialPago.Text, "¡Ups! No eres tú, somos nosotros ");
         }
     }
 }

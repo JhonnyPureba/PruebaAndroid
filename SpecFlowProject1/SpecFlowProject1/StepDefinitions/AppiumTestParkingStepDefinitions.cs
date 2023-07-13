@@ -405,5 +405,18 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         {
             homePage.ClickMiCuenta();
         }
+
+        [Given(@"Selecciona opcion Mi cuenta directo")]
+        public void GivenSeleccionaOpcionMiCuentaDirecto()
+        {
+            homePage.ClickMiCuentaDirect();
+        }
+
+        [When(@"Selecciona boton Pagar luego de aplicar descuento")]
+        public void WhenSeleccionaBotonPagarLuegoDeAplicarDescuento()
+        {
+            pagoEstacionamiento.ClicBotonPagarLuegoDePagarEstacionamiento();
+        }
+
     }
 }

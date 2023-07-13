@@ -48,5 +48,12 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions.Parking
             Assert.IsTrue(historialPage.MuestraDetalleDelPago());
         }
 
+        [Then(@"Visualiza Error en el Historial de pagos")]
+        public void ThenVisualizaErrorEnElHistorialDePagos()
+        {
+            historialPage.VisualizarErrorHistorialPago();
+        }
+
+
     }
 }

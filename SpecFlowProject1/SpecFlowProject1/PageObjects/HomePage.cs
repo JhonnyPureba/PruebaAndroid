@@ -141,6 +141,14 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
             _wait.Until(ExpectedConditions.ElementToBeClickable(miCuenta));
             miCuenta.Click();
         }
+        public void ClickMiCuentaDirect()
+        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(miCuenta));
+            miCuenta.Click();
         }
+
     }
-}
+    }
+
+
+
