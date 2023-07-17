@@ -418,5 +418,18 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
             pagoEstacionamiento.ClicBotonPagarLuegoDePagarEstacionamiento();
         }
 
+        [When(@"Seleccionar continuar")]
+        public void WhenSeleccionarContinuar()
+        {
+            throw new PendingStepException();
+        }
+
+        [Then(@"Visualizar mensaje de error de servicios")]
+        public void ThenVisualizarMensajeDeErrorDeServicios()
+        {
+            throw new PendingStepException();
+        }
+
+
     }
 }

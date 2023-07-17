@@ -100,7 +100,7 @@ Scenario: Aplicar descuento a voucher y verificar descuento aplicado
 	# EN PROCESO DE DESARROLLO 
 
 @TC11
-Scenario: Error al Aplicar descuento a voucher
+Scenario: Error en la confirmacion de pago"  realizar un pago con descuento 
 	Given Selecciona opcion parking
 	And Selecciona opcion continuar
 	When el usuario selecciona imagen de voucher
@@ -108,33 +108,45 @@ Scenario: Error al Aplicar descuento a voucher
 	And Selecciona boton Aplicar descuento
 	When Marca checkbox de terminos y condiciones
 	And Selecciona boton Pagar luego de aplicar descuento
+	And Seleccionar continuar 
+	Then Visualizar mensaje de error de servicios 
+
 	## verificar ultimo paso esta fallando 
 
-
-
-	
 	#DIVISION DE CASOS POR REALIZAR
 
 @TC14
 Scenario: Desde pantalla de "no se aplico la promocion en aplicar descuento " muestra modal de establecimientos validos
 	Given Selecciona opcion parking
+	And Selecciona opcion continuar
 	When el usuario selecciona imagen de voucher
 	When Selecciona opcion Aplicar un descuento
 	And Selecciona boton Aplicar descuento
-	Then Verificar error de pantalla 
+	When Marca checkbox de terminos y condiciones
+	And Selecciona boton Pagar luego de aplicar descuento
+	And Seleccionar continuar 
+	Then Visualizar mensaje de error de servicios 
 
 @TC20
 Scenario: Pantalla de monto a pagar muestre mensaje de conoce los establecimientos validos aquí y al dar click muestre modal informativo
 	Given Selecciona opcion parking
+	And Selecciona opcion continuar
 	When el usuario selecciona imagen de voucher
 	When Selecciona opcion Aplicar un descuento
 	And Selecciona boton Aplicar descuento
-	Then Verificar error de pantalla 
+	When Marca checkbox de terminos y condiciones
+	And Selecciona boton Pagar luego de aplicar descuento
+	And Seleccionar continuar 
+	Then Visualizar mensaje de error de servicios 
 
 @TC23
 Scenario: Verificar un pago realizado con descuento se muestre en el historial de pagos
 	Given Selecciona opcion parking
+	And Selecciona opcion continuar
 	When el usuario selecciona imagen de voucher
 	When Selecciona opcion Aplicar un descuento
 	And Selecciona boton Aplicar descuento
-	Then Verificar error de pantalla 
+	When Marca checkbox de terminos y condiciones
+	And Selecciona boton Pagar luego de aplicar descuento
+	And Seleccionar continuar 
+	Then Visualizar mensaje de error de servicios 
