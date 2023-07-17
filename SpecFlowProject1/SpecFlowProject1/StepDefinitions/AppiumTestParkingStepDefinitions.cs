@@ -38,7 +38,7 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
             homePage.ClickParking();
         }
 
-        [Given(@"Selecciona opcion continuar")]
+        [When(@"Selecciona opcion continuar")]
         public void GivenSeleccionaOpcionContinuar()
         {
             pagoEstacionamiento.ClickContinuar();
@@ -50,11 +50,28 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
             pagoEstacionamiento.ClickVerMiHistorial();
         }
 
-        [When(@"Escanea qr")]
-        public void WhenEscaneaQR()
+        [When(@"Selecciona Subir codigo QR")]
+        public void WhennEscaneaQR()
         {
             pagoEstacionamiento.ClickBotonSubirQR();
-            scannerQRPage.ClickPrimeraImagen();
+        }
+
+        [Then(@"Visualiza Subir codigo QR")]
+        public void VisualizaSubirCodigoQR()
+        {
+            Assert.IsTrue(pagoEstacionamiento.MuestraSubirQR());
+        }
+
+        [When(@"Escanea QR incorrecto")]
+        public void WhenEscaneaQRIncorrecto()
+        {
+            scannerQRPage.SeleccionarQRIncorrecto();
+        }
+
+        [When(@"Escanea QR correcto")]
+        public void WhenEscaneaQRCorrecto()
+        {
+            scannerQRPage.SeleccionarQRCorrecto();
         }
 
         [When(@"Selecciona Modal aplicar descuento")]
@@ -256,22 +273,47 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
             pagoEstacionamiento.ClickBotonPagar();
         }
 
-        [Then(@"Visualiza modal de pago con tarjeta")]
+        [Then(@"Visualiza modal Elige un medio de pago")]
         public void ThenVisualizaModalDePagoConTarjeta()
         {
-            Assert.IsTrue(pagoPage.MuestraModalPagoConTarjeta());
+            Assert.IsTrue(pagoPage.MuestraModalEligeUnMedioDePago());
+        }
+
+        [When(@"Selecciona tarjeta como medio de pago")]
+        public void WhenSeleccionaTarjetaMedioDePago()
+        {
+            pagoPage.ClickEnTarjetaDeCredito();
+            pagoPage.ClickEnContinuar();
+        }
+
+        [Then(@"Visualiza formulario Pago con tarjeta")]
+        public void ThenVisualizaFormularioPagoConTarjeta()
+        {
+            Assert.IsTrue(pagoPage.MuestraFormularioPagoTarjeta());
+        }
+
+        [When(@"Llena formulario con los datos de la tarjeta correcta")]
+        public void WhenLlenaFormularioConLosDatosDeLaTarjetaCorrecta()
+        {
+            pagoPage.LlenarFormularioTarjetaCorrecta();
         }
 
         [When(@"Selecciona monto a pagar")]
         public void WhenSeleccionaMontoAPagar()
         {
-            throw new PendingStepException();
+            pagoPage.ClickPagarMonto();
+        }
+
+        [Then(@"Visualiza pantalla Pago exitoso")]
+        public void ThenVisualizaPantallaPagoExitoso()
+        {
+            Assert.IsTrue(pagoPage.MuestraPantallaPagoExitoso());
         }
 
         [Then(@"Visualiza pantalla de enchufe y numero de transaccion")]
         public void ThenVisualizaPantallaDeEnchufeYNumeroDeTransaccion()
         {
-            throw new PendingStepException();
+            Assert.IsTrue(pagoPage.MuestraPantallaEnchufeTransaccion());
         }
 
         [Then(@"Visualizar mensaje Lo sentimos, no se ha podido aplicar el descuento")]
@@ -295,7 +337,7 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         [Then(@"Visualiza pantalla de error de conexion")]
         public void ThenVisualizaPantallaDeErrorDeConexion()
         {
-            throw new PendingStepException();
+            Assert.IsTrue(pagoEstacionamiento.MuestraMensajeErrorDeConexion());
         }
 
         [When(@"Selecciona opcion Validar ticket de compra")]
@@ -334,10 +376,10 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
             throw new PendingStepException();
         }
 
-        [Then(@"Visualiza mensaje de error")]
-        public void ThenVisualizaMensajeDeError()
+        [Then(@"Visualiza mensaje UPS Error de imagen")]
+        public void ThenVisualizaMensajeUpsErrorDeImagen()
         {
-            throw new PendingStepException();
+            Assert.IsTrue(pagoEstacionamiento.MuestraMensajeErrorDeImagen());
         }
 
         [When(@"Acceder al dynamic link")]
@@ -355,25 +397,19 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         [When(@"Selecciona link Conoce los terminos y condiciones")]
         public void WhenSeleccionaLinkConoceLosTerminosYCondiciones()
         {
-            throw new PendingStepException();
+            pagoEstacionamiento.ClickconoceLosTyC();
         }
 
         [Then(@"Visualiza modal Terminos y Condiciones")]
         public void ThenVisualizaModalTerminosYCondiciones()
         {
-            throw new PendingStepException();
-        }
-
-        [When(@"Seleciona boton Aplicar descuento")]
-        public void WhenSelecionaBotonAplicarDescuento()
-        {
-            throw new PendingStepException();
+            Assert.IsTrue(pagoEstacionamiento.MuestraModalTerminosYCondiciones());
         }
 
         [Then(@"Visualiza mensaje Felicitaciones se aplico el descuento exitosamente")]
         public void ThenVisualizaMensajeFelicitacionesSeAplicoElDescuentoExitosamente()
         {
-            throw new PendingStepException();
+            Assert.IsTrue(pagoEstacionamiento.MuestraMensajeFelicitacionesSeAplicoDescuento());
         }
 
         [Then(@"Visualiza pantalla de pago exitoso")]
