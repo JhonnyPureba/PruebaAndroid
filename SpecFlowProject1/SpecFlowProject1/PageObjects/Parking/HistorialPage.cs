@@ -86,24 +86,20 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
             {
                 return tituloHistorialDePagos.Displayed;
             });
-            Console.WriteLine("LLEGO ACA");
             return tituloHistorialDePagos.Displayed;
         }
 
         public bool MuestraPagosRechazados()
         {
-            Console.WriteLine("LLEGO ACA 2");
             _wait.Until(d =>
             {
                 return listaDePagos[0].Displayed;
             });
-            Console.WriteLine(listaDePagos[0].Text);
             return listaDePagos.Any(item => item.Text.Contains("Rechazado"));
         }
 
         public void ClickEnUnPagoConPrecio()
         {
-            Console.WriteLine("LLEGO ACA 3");
             _wait.Until(d =>
             {
                 return listaDePagos[0].Displayed;
