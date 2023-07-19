@@ -66,7 +66,7 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         [When(@"Selecciona link terminos y condiciones")]
         public void WhenSeleccionaLinkTerminosYCondiciones()
         {
-
+            pagoEstacionamiento.ClickTyCAplicarDescuento();
         }
 
         [When(@"Selecciona opcion aplicar descuento")]
@@ -136,8 +136,27 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         [Then(@"Verificar error de pantalla")]
         public void ThenVerificarErrorDePantalla()
         {
-            pagoEstacionamiento.VerificarPantallaErrorPagoDescuento();
+            pagoEstacionamiento.VerificarPantallaErrorPagoDescuentoSERVICIO();
         }
+
+        [Then(@"Verificar error de pantalla no aplico descuento")]
+        public void ThenVerificarErrorDePantallaNoAplicoDescuento()
+        {
+            pagoEstacionamiento.VerificarPantallaErrorPagoDescuentoNoAplicaDescuento();
+        }
+
+        [When(@"Seleccionar Validar Ticket de compra luego de Error al aplicar descuento")]
+        public void WhenSeleccionarValidarTicketDeCompraLuegoDeErrorAlAplicarDescuento()
+        {
+            pagoEstacionamiento.ClickTicketCompraLuegodeNoAplicarDescuento();   
+        }
+
+        [Then(@"Visualizar Establecimientos validos")]
+        public void ThenVisualizarEstablecimientosValidos()
+        {
+            pagoEstacionamiento.VerificarTituloEstablecimientosValidos();
+        }
+
 
         [Then(@"Visualiza opcion Aplicar un descuento")]
         public void ThenVisualizaOpcionAplicarUnDescuento()
@@ -201,6 +220,12 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
             homePage.CerrarVentanaContactanos();
             homePage.EnviarCodigoError(codigo);
             homePage.SubirAParking();
+        }
+
+        [Then(@"Visualiza titulo de terminos y condiciones")]
+        public void ThenVisualizaTituloDeTerminosYCondiciones()
+        {
+            pagoEstacionamiento.VerificarTituloLinkTerminosCondiciones();
         }
 
 
@@ -418,11 +443,48 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
             pagoEstacionamiento.ClicBotonPagarLuegoDePagarEstacionamiento();
         }
 
+        [Then(@"Visualizar el mensaje exitoso cuando el descuento se aplique")]
+        public void ThenVisualizarElMensajeExitosoCuandoElDescuentoSeAplique()
+        {
+            pagoEstacionamiento.VerificarDescuentoAplicado();
+        }
+
         [When(@"Seleccionar continuar")]
         public void WhenSeleccionarContinuar()
         {
-            throw new PendingStepException();
+            pagoEstacionamiento.ClickContinuarPagar();
         }
+
+        [When(@"Seleccionar metodo de pago tarjeta credito debito")]
+        public void WhenSeleccionarMetodoDePagotarjetacreditodebito()
+        {
+            pagoPage.SeleccionarMetodoPagoTarjetaCreditoDebito();
+        }
+
+        [When(@"Seleccionar boton continuar dentro de pago")]
+        public void WhenSeleccionarBotonContinuarDentroDePago()
+        {
+            pagoPage.ClickContinuar();
+        }
+
+        [When(@"Ingresar datos de tarjeta correctos")]
+        public void WhenIngresarDatosDeTarjetaCorrectos()
+        {
+            pagoPage.IngresarNumeroTarjeta("5160030000000317");
+            pagoPage.IngresarFechaVencimiento("032028");
+            pagoPage.IngresarCVV("111");
+            pagoPage.IngresarNombres("Shouny");
+            pagoPage.IngresarApellido("Prado");
+            pagoPage.IngresarEmail("pradoccorajhonnyangelo@gmail.com");
+            pagoPage.ClickPagar();
+        }
+
+        [Then(@"Visualizar pago exitoso en voucher")]
+        public void ThenVisualizarPagoExitosoEnVoucher()
+        {
+            pagoPage.VisualizarPagoExitoso();
+        }
+
 
         [Then(@"Visualizar mensaje de error de servicios")]
         public void ThenVisualizarMensajeDeErrorDeServicios()
