@@ -61,110 +61,17 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
             PageFactory.InitElements(driver, this);
         }
 
-        //public void ClickPrimeraImagen()
-        //{
-        //    _wait.Until(ExpectedConditions.ElementToBeClickable(primeraImagen));
-        //    action.Tap(primeraImagen).Perform();
-        //}
-
-        //public void ClickWhileUseAppntinuar()
-        //{
-        //    _wait.Until(ExpectedConditions.ElementToBeClickable(botonWhileUseApp));
-        //    botonWhileUseApp.Click();
-        //}
-        //public void ClickOnlyThisTime()
-        //{
-        //    _wait.Until(ExpectedConditions.ElementToBeClickable(botonOnlyThisTime));
-        //    botonOnlyThisTime.Click();
-        //}
-        //public void ClickDontAllow()
-        //{
-        //    _wait.Until(ExpectedConditions.ElementToBeClickable(botonDontAllow));
-        //    botonOnlyThisTime.Click();
-        //}
-
-        //public void ClickQR()
-        //{
-        //    _wait.Until(ExpectedConditions.ElementToBeClickable(botonQR)); 
-        //    botonQR.Click();
-        //}
-        //public void ClickbotonQRGaleria()
-        //{
-        //    _wait.Until(ExpectedConditions.ElementToBeClickable(botonQRGaleria));
-        //    botonQRGaleria.Click();
-        //}
-        //public void ClickBuscarRuta()
-        //{
-        //    _wait.Until(ExpectedConditions.ElementToBeClickable(botonBuscarRuta));
-        //    botonBuscarRuta.Click();
-        //}
-        //public void ClickRutaDownloand()
-        //{
-        //    _wait.Until(ExpectedConditions.ElementToBeClickable(botonSeleccionarRuta));
-        //    botonSeleccionarRuta.Click();
-        //}
-        //public void ClickImagenQR_999_19()
-        //{
-        //    _wait.Until(ExpectedConditions.ElementToBeClickable(imagenQR_999_19));
-        //    imagenQR_999_19.Click();
-        //}
-        //public void ClickImagenQR_999_20()
-        //{
-        //    _wait.Until(ExpectedConditions.ElementToBeClickable(imagenQR_999_20));
-        //    imagenQR_999_20.Click();
-        //}
-        //public void ClickImagenQR_999_21()
-        //{
-        //    _wait.Until(ExpectedConditions.ElementToBeClickable(imagenQR_999_21));
-        //    imagenQR_999_21.Click();
-        //}
-        //public void ClickImagenQR_999_22()
-        //{
-        //    _wait.Until(ExpectedConditions.ElementToBeClickable(imagenQR_999_22));
-        //    imagenQR_999_22.Click();
-        //}
-        //public void ClickImagenQR_999_23()
-        //{
-        //    _wait.Until(ExpectedConditions.ElementToBeClickable(imagenQR_999_23));
-        //    imagenQR_999_23.Click();
-        //}
-        //public void ClickImagenQR_999_24()
-        //{
-        //    _wait.Until(ExpectedConditions.ElementToBeClickable(imagenQR_999_24));
-        //    imagenQR_999_24.Click();
-        //}
-
         public void ClickImagenVoucher()
         {
-            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionDesplegable));
-            //SeleccionDesplegable.Click();
-            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarCarpetaPadre));
-            //SeleccionarCarpetaPadre.Click();
-            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarCarpetaImagenes));
-            //SeleccionarCarpetaImagenes.Click();
             _wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarImagenVoucher));
             SeleccionarImagenVoucher.Click();
         }
         public void ClickImagenDescuento()
         {
-            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionDesplegable));
-            //SeleccionDesplegable.Click();
-            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarCarpetaPadre));
-            //SeleccionarCarpetaPadre.Click();
-            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarCarpetaImagenes));
-            //SeleccionarCarpetaImagenes.Click();
-            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarImagenVoucher));
             SeleccionarImagenDescuento.Click();
         }
         public void ClickImagenError()
         {
-            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionDesplegable));
-            //SeleccionDesplegable.Click();
-            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarCarpetaPadre));
-            //SeleccionarCarpetaPadre.Click();
-            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarCarpetaImagenes));
-            //SeleccionarCarpetaImagenes.Click();
-            //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarImagenVoucher));
             SeleccionarImagenError.Click();
         } 
 
