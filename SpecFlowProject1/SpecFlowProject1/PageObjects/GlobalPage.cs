@@ -14,6 +14,8 @@ namespace MKPMobileProject.PageObjects
         //Elementos Modal ¡Conexion perdida!
         [FindsBy(How = How.XPath, Using = "//android.widget.TextView[@text='Cancelar']")]
         private IWebElement botonCancelar;
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView\r\n")]
+        private IWebElement botonCancelarScanner;
 
         public AndroidDriver<AppiumWebElement> Driver;
         private readonly WebDriverWait _wait;
@@ -34,6 +36,13 @@ namespace MKPMobileProject.PageObjects
             _wait.Until(ExpectedConditions.ElementToBeClickable(botonCancelar));
             botonCancelar.Click();
 
+        }
+        internal void ApagarWifiScanner()
+        {
+            Driver.ToggleWifi();
+            Thread.Sleep(5000);
+            _wait.Until(ExpectedConditions.ElementToBeClickable(botonCancelarScanner));
+            botonCancelarScanner.Click();
         }
     }
 }

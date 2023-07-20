@@ -89,22 +89,76 @@ Scenario: TC08: Validar mensaje de error de poca iluminacion en scanner de estab
 	Then Visualiza mensaje UPS Error de imagen
 	
 Scenario: TC09: Validar mensaje de error de falla de red en scanner de establecimiento
+	Given El usuario se logea al app
+	Given Selecciona opcion parking	
+	When Se pierde conexion scanner
+	When Selecciona boton Continuar  
+	When el usuario selecciona imagen de voucher
+	Then Visualiza pantalla de error de conexion scanner
 
 Scenario: TC10: Validar mensaje de error de falla de servicios en scanner de establecimiento
-
-Scenario: TC11: Validar mensaje de error de poca iluminacion en ticket de compra
+	Given El usuario se logea al app
+	And Aplicar Codigo de Error "1"
+	Given Selecciona opcion parking directo
+	When Selecciona boton Continuar 
+	When el usuario selecciona imagen de voucher
+	Then Visualiza pantalla de error de servicio scanner
 
 Scenario: TC12: Validar mensaje de error de falla de red en ticket de compra
+	Given El usuario se logea al app
+	Given Selecciona opcion parking
+	When Selecciona boton Continuar 
+	When el usuario selecciona imagen de voucher
+	When Selecciona opcion Validar ticket de compra
+	And Seleccionar continuar en Ticket de compra
+	And Se pierde conexion Ticket Compra
+	When el usuario selecciona imagen de ticket de compra
+	Then Visualiza pantalla de error de conexion scanner
 
 Scenario: TC13: Validar mensaje de error de falla de servicios en ticket de compra
+	Given El usuario se logea al app
+	And Aplicar Codigo de Error "4"
+	Given Selecciona opcion parking directo
+	When Selecciona boton Continuar 
+	When el usuario selecciona imagen de voucher
+	When Selecciona opcion Validar ticket de compra
+	And Seleccionar continuar en Ticket de compra
+	When el usuario selecciona imagen de ticket de compra
+	Then Visualiza pantalla de error de servicio scanner
 
 Scenario: TC14: Validar mensaje de ticket de compra no valido en ticket de compra
+	Given El usuario se logea al app
+	And Aplicar Codigo de Error "10"
+	Given Selecciona opcion parking directo
+	When Selecciona boton Continuar 
+	When el usuario selecciona imagen de voucher
+	When Selecciona opcion Validar ticket de compra
+	And Seleccionar continuar en Ticket de compra
+	When el usuario selecciona imagen error de ticket de compra
+	Then Visualizar mensaje de error no valido para ticket de compra
 
 Scenario: TC15: Validar mensaje de lo sentimos no se ha podido aplicar el descuento en aplicar descuento
-
-Scenario: TC16: Validar mensaje de se agoto la promocion en aplicar descuentos
+	Given El usuario se logea al app
+	And Aplicar Codigo de Error "62"
+	Given Selecciona opcion parking directo
+	When Selecciona boton Continuar 
+	When el usuario selecciona imagen de voucher
+	When Selecciona opcion Aplicar un descuento
+	And Selecciona boton Aplicar descuento
+	Then Verificar error de pantalla no aplico descuento
 
 Scenario: TC17: Validar que al hacer clic en el boton pagar  muestre la pantalla de error de servicios
+	Given El usuario se logea al app
+	And Aplicar Codigo de Error "7"
+	Given Selecciona opcion parking directo
+	When Selecciona boton Continuar 
+	When el usuario selecciona imagen de voucher
+	When Selecciona opcion Aplicar un descuento
+	And Selecciona boton Aplicar descuento
+	When Marca checkbox de terminos y condiciones
+	When Selecciona boton Pagar
+	And Seleccionar continuar 
+	Then Visualizar mensaje error de servicios en pago
 
 Scenario: TC18: Validar que al realizar el pago exitoso muestra falla de red con cuenta regresiva y se recupere correctamente
 	Given El usuario se logea al app

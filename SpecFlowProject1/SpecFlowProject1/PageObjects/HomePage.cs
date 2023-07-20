@@ -79,6 +79,7 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
             {
                 return botonParking.Displayed;
             });
+            _wait.Until(ExpectedConditions.ElementToBeClickable(botonParking));
             botonParking.Click();
         }
         public void ClickParkingDirect()
