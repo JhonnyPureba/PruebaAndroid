@@ -25,7 +25,8 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
         private IWebElement checkBoxTyC;
         [FindsBy(How = How.XPath, Using = "//android.widget.TextView[@text='INGRESAR']")]
         private IWebElement botonIngresar;
-
+        [FindsBy(How = How.XPath, Using = "//android.widget.TextView[@text='Regístrate']")]
+        private IWebElement linkRegistrate;
 
         public AndroidDriver<AppiumWebElement> Driver;
         private readonly WebDriverWait _wait;
@@ -34,7 +35,7 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
         public LoginPage(AndroidDriver<AppiumWebElement> driver)
         {
             this.Driver = driver;
-            _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
             _wait.PollingInterval = TimeSpan.FromMilliseconds(10);
             action = new TouchAction(driver);
             PageFactory.InitElements(driver, this);
@@ -68,6 +69,24 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
         {
             _wait.Until(d => { return botonIngresar.Displayed; });
             botonIngresar.Click();
+        }
+
+        internal bool? MuestraPantallaLogin()
+        {
+            try
+            {
+                _wait.Until(d => { return botonIngresarConTuCorreo.Displayed; });
+                return botonIngresarConTuCorreo.Displayed;
+            }catch(Exception ex)
+            {
+                return false;
+            }
+        }
+
+        internal void ClickLinkRegistrate()
+        {
+            _wait.Until(d => { return linkRegistrate.Displayed; });
+            linkRegistrate.Click();
         }
     }
 }

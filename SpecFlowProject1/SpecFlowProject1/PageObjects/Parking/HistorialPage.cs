@@ -15,12 +15,14 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         //---------------------------
         //Elementos Historial de Pago
         //---------------------------
-        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.widget.ImageView\r\n")]
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.widget.ImageView")]
         private IWebElement ImagenHistorialPagos;
-        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView\r\n")]
+        [FindsBy(How = How.XPath, Using = "//android.widget.TextView[@text='Historial de pagos']")]
         private IWebElement tituloHistorialDePagos;
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[*]/android.widget.TextView[2]")]
         private IList<IWebElement> listaDePagos;
+        [FindsBy(How = How.XPath, Using = "//android.widget.TextView[contains(@text,'S/')]")]
+        private IList<IWebElement> listaDeMontos;
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.view.ViewGroup[*]")]
         private IList<IWebElement> listaDeNumerosDePagina;
         [FindsBy(How = How.XPath, Using = "")]
@@ -118,10 +120,7 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
 
         internal bool? MuestraMensajeUpsSinConexion()
         {
-            _wait.Until(d =>
-            {
-                return mensajeUpsSinConexion.Displayed;
-            });
+            _wait.Until(d => {return mensajeUpsSinConexion.Displayed;});
             return mensajeUpsSinConexion.Displayed;
         }
         public void VerificarFuncionamientoPaginacion()
@@ -129,10 +128,15 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
             _wait.Until(ExpectedConditions.ElementToBeClickable(botonSiguientePaginacion));
             botonSiguientePaginacion.Click();
         }
-        public void VisualizarErrorHistorialPago()
+        public string VisualizarErrorHistorialPago()
         {
             _wait.Until(ExpectedConditions.ElementToBeClickable(MessageErrorServicesHistorialPago));
-            Assert.AreEqual(MessageErrorServicesHistorialPago.Text, "¡Ups! No eres tú, somos nosotros ");
+            return MessageErrorServicesHistorialPago.Text;
+        }
+        public double GetUltimoMontoPagado()
+        {
+            _wait.Until(d => { return listaDeMontos[0].Displayed; });
+            return double.Parse(listaDeMontos[0].Text.Remove(0, 2));
         }
     }
 }

@@ -13,8 +13,12 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
     {
         [FindsBy(How = How.Id, Using = "com.android.permissioncontroller:id/permission_allow_one_time_button")]
         private IWebElement botonOnlyThisTime;
-        [FindsBy(How = How.XPath, Using = "//android.widget.LinearLayout[contains(@content-desc,'QR_PREPROD_Correcto_1')]")]
+        [FindsBy(How = How.XPath, Using = "//android.widget.LinearLayout[contains(@content-desc,'QR_UAT_Correcto1')]")]
         private IWebElement qrCorrecto;
+        [FindsBy(How = How.XPath, Using = "//android.widget.LinearLayout[contains(@content-desc,'QR_UAT_Correcto2')]")]
+        private IWebElement qrCorrecto2;
+        [FindsBy(How = How.XPath, Using = "//android.widget.LinearLayout[contains(@content-desc,'QR_UAT_Correcto3')]")]
+        private IWebElement qrCorrecto3;
         [FindsBy(How = How.XPath, Using = "//android.widget.LinearLayout[contains(@content-desc,'QR_Incorrecto')]")]
         private IWebElement qrIncorrecto;
         [FindsBy(How = How.XPath, Using = "//android.widget.ImageButton[@content-desc='Mostrar raíces']")]
@@ -184,7 +188,34 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
             botonCarpetaParkingQR.Click();
             _wait.Until(d => { return qrCorrecto.Displayed; });
             qrCorrecto.Click();
+            Thread.Sleep(5000);
+        }
+
+        internal void SeleccionarQRCorrecto2()
+        {
+            _wait.Until(d => { return botonMostrarRaiz.Displayed; });
+            botonMostrarRaiz.Click();
             Thread.Sleep(500);
+            _wait.Until(d => { return botonImagenes.Displayed; });
+            botonImagenes.Click();
+            _wait.Until(d => { return botonCarpetaParkingQR.Displayed; });
+            botonCarpetaParkingQR.Click();
+            _wait.Until(d => { return qrCorrecto2.Displayed; });
+            qrCorrecto2.Click();
+            Thread.Sleep(5000);
+        }
+        internal void SeleccionarQRCorrecto3()
+        {
+            _wait.Until(d => { return botonMostrarRaiz.Displayed; });
+            botonMostrarRaiz.Click();
+            Thread.Sleep(500);
+            _wait.Until(d => { return botonImagenes.Displayed; });
+            botonImagenes.Click();
+            _wait.Until(d => { return botonCarpetaParkingQR.Displayed; });
+            botonCarpetaParkingQR.Click();
+            _wait.Until(d => { return qrCorrecto3.Displayed; });
+            qrCorrecto3.Click();
+            Thread.Sleep(5000);
         }
     }
 }

@@ -1,12 +1,5 @@
 ﻿using Allure.Commons;
-using OpenQA.Selenium.Appium;
-using OpenQA.Selenium.Appium.Android;
 using SpecFlowProject1.Drivers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SpecFlowProject1.Hooks
 {
