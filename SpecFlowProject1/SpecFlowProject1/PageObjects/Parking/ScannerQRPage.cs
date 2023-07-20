@@ -13,52 +13,24 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
     {
         [FindsBy(How = How.Id, Using = "com.android.permissioncontroller:id/permission_allow_one_time_button")]
         private IWebElement botonOnlyThisTime;
-
-        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView//android.widget.LinearLayout")]
-        private IWebElement primeraImagen;
-
-        //[FindsBy(How = How.Id, Using = "com.android.permissioncontroller:id/permission_allow_foreground_only_button")]
-        //private IWebElement botonWhileUseApp;
-
-        //[FindsBy(How = How.Id, Using = "com.android.permissioncontroller:id/permission_allow_one_time_button")]
-        //private IWebElement botonOnlyThisTime;
-
-        //[FindsBy(How = How.Id, Using = "com.android.permissioncontroller:id/permission_deny_button")]
-        //private IWebElement botonDontAllow;
-
-        //[FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup")]
-        //private IWebElement botonQR;
-
-        //[FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[1]")]
-        //private IWebElement botonQRGaleria;
-
-        //[FindsBy(How = How.XPath, Using = "//android.widget.ImageButton[@content-desc=\"Show roots\"]")]
-        //private IWebElement botonBuscarRuta;
-
-        //[FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.TextView")]
-        //private IWebElement botonSeleccionarRuta;
-
-        //[FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout")]
-        //private IWebElement imagenQR_999_19;
-
-        //[FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout")]
-        //private IWebElement imagenQR_999_20;
-
-        //[FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[3]/android.widget.LinearLayout/android.widget.LinearLayout")]
-        //private IWebElement imagenQR_999_21;
-
-        //[FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[4]/android.widget.LinearLayout/android.widget.LinearLayout")]
-        //private IWebElement imagenQR_999_22;
-
-        //[FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[5]/android.widget.LinearLayout/android.widget.LinearLayout")]
-        //private IWebElement imagenQR_999_23;
-
-        //[FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[6]/android.widget.LinearLayout/android.widget.LinearLayout")]
-        //private IWebElement imagenQR_999_24;
+        [FindsBy(How = How.XPath, Using = "//android.widget.LinearLayout[contains(@content-desc,'QR_UAT_Correcto1')]")]
+        private IWebElement qrCorrecto;
+        [FindsBy(How = How.XPath, Using = "//android.widget.LinearLayout[contains(@content-desc,'QR_UAT_Correcto2')]")]
+        private IWebElement qrCorrecto2;
+        [FindsBy(How = How.XPath, Using = "//android.widget.LinearLayout[contains(@content-desc,'QR_UAT_Correcto3')]")]
+        private IWebElement qrCorrecto3;
+        [FindsBy(How = How.XPath, Using = "//android.widget.LinearLayout[contains(@content-desc,'QR_Incorrecto')]")]
+        private IWebElement qrIncorrecto;
+        [FindsBy(How = How.XPath, Using = "//android.widget.ImageButton[@content-desc='Mostrar raíces']")]
+        private IWebElement botonMostrarRaiz;
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[2]")]
+        private IWebElement botonImagenes;
+        [FindsBy(How = How.XPath, Using = "//*[@resource-id='com.google.android.documentsui:id/dir_list']//android.widget.TextView[@text='ParkingQR']")]
+        private IWebElement botonCarpetaParkingQR;
 
 
         //MOBILE JHONNY CARPETAS DE SELECCION IMAGENES
-        [FindsBy(How = How.XPath, Using = "//android.widget.ImageButton[@content-desc=\"Mostrar raíces\"]\r\n")]
+        [FindsBy(How = How.XPath, Using = "//android.widget.ImageButton[@content-desc='Mostrar raíces']")]
         private IWebElement SeleccionDesplegable;
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[4]/android.widget.LinearLayout/android.widget.TextView\r\n")]
         private IWebElement SeleccionarCarpetaPadre;
@@ -89,17 +61,11 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
             PageFactory.InitElements(driver, this);
         }
 
-        public void ClickWhileUseAppntinuar()
-        {
-            _wait.Until(ExpectedConditions.ElementToBeClickable(primeraImagen));
-            primeraImagen.Click();
-        }
-
-        public void ClickPrimeraImagen()
-        {
-            _wait.Until(ExpectedConditions.ElementToBeClickable(primeraImagen));
-            action.Tap(primeraImagen).Perform();
-        }
+        //public void ClickPrimeraImagen()
+        //{
+        //    _wait.Until(ExpectedConditions.ElementToBeClickable(primeraImagen));
+        //    action.Tap(primeraImagen).Perform();
+        //}
 
         //public void ClickWhileUseAppntinuar()
         //{
@@ -210,6 +176,61 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         public void ClickImagenTicketCompra()
         {
             SeleccionarImagenTicketCompra.Click();
+        }
+        }
+
+        internal void SeleccionarQRIncorrecto()
+        {
+            _wait.Until(d => { return botonMostrarRaiz.Displayed; });
+            botonMostrarRaiz.Click();
+            Thread.Sleep(500);
+            _wait.Until(d => { return botonImagenes.Displayed; });
+            botonImagenes.Click();
+            _wait.Until(d => { return botonCarpetaParkingQR.Displayed; });
+            botonCarpetaParkingQR.Click();
+            _wait.Until(d => { return qrIncorrecto.Displayed; });
+            qrIncorrecto.Click();
+        }
+
+        internal void SeleccionarQRCorrecto()
+        {
+            _wait.Until(d => { return botonMostrarRaiz.Displayed; });
+            botonMostrarRaiz.Click();
+            Thread.Sleep(500);
+            _wait.Until(d => { return botonImagenes.Displayed; });
+            botonImagenes.Click();
+            _wait.Until(d => { return botonCarpetaParkingQR.Displayed; });
+            botonCarpetaParkingQR.Click();
+            _wait.Until(d => { return qrCorrecto.Displayed; });
+            qrCorrecto.Click();
+            Thread.Sleep(5000);
+        }
+
+        internal void SeleccionarQRCorrecto2()
+        {
+            _wait.Until(d => { return botonMostrarRaiz.Displayed; });
+            botonMostrarRaiz.Click();
+            Thread.Sleep(500);
+            _wait.Until(d => { return botonImagenes.Displayed; });
+            botonImagenes.Click();
+            _wait.Until(d => { return botonCarpetaParkingQR.Displayed; });
+            botonCarpetaParkingQR.Click();
+            _wait.Until(d => { return qrCorrecto2.Displayed; });
+            qrCorrecto2.Click();
+            Thread.Sleep(5000);
+        }
+        internal void SeleccionarQRCorrecto3()
+        {
+            _wait.Until(d => { return botonMostrarRaiz.Displayed; });
+            botonMostrarRaiz.Click();
+            Thread.Sleep(500);
+            _wait.Until(d => { return botonImagenes.Displayed; });
+            botonImagenes.Click();
+            _wait.Until(d => { return botonCarpetaParkingQR.Displayed; });
+            botonCarpetaParkingQR.Click();
+            _wait.Until(d => { return qrCorrecto3.Displayed; });
+            qrCorrecto3.Click();
+            Thread.Sleep(5000);
         }
     }
 }

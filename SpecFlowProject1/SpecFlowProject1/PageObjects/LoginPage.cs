@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Appium.Interfaces;
+using OpenQA.Selenium.Appium.MultiTouch;
 
 namespace SpecFlowMarketplaceMobileProject.PageObjects
 {
@@ -21,18 +23,21 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
         private IWebElement campoContrasena;
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.CheckBox")]
         private IWebElement checkBoxTyC;
-        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]")]
+        [FindsBy(How = How.XPath, Using = "//android.widget.TextView[@text='INGRESAR']")]
         private IWebElement botonIngresar;
-
+        [FindsBy(How = How.XPath, Using = "//android.widget.TextView[@text='Regístrate']")]
+        private IWebElement linkRegistrate;
 
         public AndroidDriver<AppiumWebElement> Driver;
         private readonly WebDriverWait _wait;
+        private readonly ITouchAction action;
 
         public LoginPage(AndroidDriver<AppiumWebElement> driver)
         {
             this.Driver = driver;
-            _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
             _wait.PollingInterval = TimeSpan.FromMilliseconds(10);
+            action = new TouchAction(driver);
             PageFactory.InitElements(driver, this);
         }
 
@@ -62,8 +67,26 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
 
         public void ClickIngresar()
         {
-            _wait.Until(ExpectedConditions.ElementToBeClickable(botonIngresar));
+            _wait.Until(d => { return botonIngresar.Displayed; });
             botonIngresar.Click();
+        }
+
+        internal bool? MuestraPantallaLogin()
+        {
+            try
+            {
+                _wait.Until(d => { return botonIngresarConTuCorreo.Displayed; });
+                return botonIngresarConTuCorreo.Displayed;
+            }catch(Exception ex)
+            {
+                return false;
+            }
+        }
+
+        internal void ClickLinkRegistrate()
+        {
+            _wait.Until(d => { return linkRegistrate.Displayed; });
+            linkRegistrate.Click();
         }
     }
 }

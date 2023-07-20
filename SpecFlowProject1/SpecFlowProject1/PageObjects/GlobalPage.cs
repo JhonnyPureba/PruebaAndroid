@@ -12,7 +12,7 @@ namespace MKPMobileProject.PageObjects
     public class GlobalPage
     {
         //Elementos Modal ¡Conexion perdida!
-        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]")]
+        [FindsBy(How = How.XPath, Using = "//android.widget.TextView[@text='Cancelar']")]
         private IWebElement botonCancelar;
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView\r\n")]
         private IWebElement botonCancelarScanner;
