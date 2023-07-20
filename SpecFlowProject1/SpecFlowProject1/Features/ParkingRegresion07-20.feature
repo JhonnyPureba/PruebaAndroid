@@ -93,7 +93,8 @@ Scenario: TC09: Validar mensaje de error de falla de red en scanner de estableci
 	Given Selecciona opcion parking	
 	When Se pierde conexion scanner
 	When Selecciona boton Continuar  
-	When el usuario selecciona imagen de voucher
+	When Selecciona Subir codigo QR
+	When Escanea QR correcto
 	Then Visualiza pantalla de error de conexion scanner
 
 Scenario: TC10: Validar mensaje de error de falla de servicios en scanner de establecimiento
@@ -101,18 +102,21 @@ Scenario: TC10: Validar mensaje de error de falla de servicios en scanner de est
 	And Aplicar Codigo de Error "1"
 	Given Selecciona opcion parking directo
 	When Selecciona boton Continuar 
-	When el usuario selecciona imagen de voucher
+	When Selecciona Subir codigo QR
+	When Escanea QR correcto
 	Then Visualiza pantalla de error de servicio scanner
 
 Scenario: TC12: Validar mensaje de error de falla de red en ticket de compra
 	Given El usuario se logea al app
 	Given Selecciona opcion parking
 	When Selecciona boton Continuar 
-	When el usuario selecciona imagen de voucher
+	When Selecciona Subir codigo QR
+	When Escanea QR correcto
 	When Selecciona opcion Validar ticket de compra
 	And Seleccionar continuar en Ticket de compra
 	And Se pierde conexion Ticket Compra
-	When el usuario selecciona imagen de ticket de compra
+	When el usuario selecciona imagen de ticket de compra 
+	# asdasd
 	Then Visualiza pantalla de error de conexion scanner
 
 Scenario: TC13: Validar mensaje de error de falla de servicios en ticket de compra
@@ -120,7 +124,8 @@ Scenario: TC13: Validar mensaje de error de falla de servicios en ticket de comp
 	And Aplicar Codigo de Error "4"
 	Given Selecciona opcion parking directo
 	When Selecciona boton Continuar 
-	When el usuario selecciona imagen de voucher
+	When Selecciona Subir codigo QR
+	When Escanea QR correcto
 	When Selecciona opcion Validar ticket de compra
 	And Seleccionar continuar en Ticket de compra
 	When el usuario selecciona imagen de ticket de compra
@@ -131,7 +136,8 @@ Scenario: TC14: Validar mensaje de ticket de compra no valido en ticket de compr
 	And Aplicar Codigo de Error "10"
 	Given Selecciona opcion parking directo
 	When Selecciona boton Continuar 
-	When el usuario selecciona imagen de voucher
+	When Selecciona Subir codigo QR
+	When Escanea QR correcto
 	When Selecciona opcion Validar ticket de compra
 	And Seleccionar continuar en Ticket de compra
 	When el usuario selecciona imagen error de ticket de compra
@@ -142,7 +148,8 @@ Scenario: TC15: Validar mensaje de lo sentimos no se ha podido aplicar el descue
 	And Aplicar Codigo de Error "62"
 	Given Selecciona opcion parking directo
 	When Selecciona boton Continuar 
-	When el usuario selecciona imagen de voucher
+	When Selecciona Subir codigo QR
+	When Escanea QR correcto
 	When Selecciona opcion Aplicar un descuento
 	And Selecciona boton Aplicar descuento
 	Then Verificar error de pantalla no aplico descuento
@@ -152,7 +159,8 @@ Scenario: TC17: Validar que al hacer clic en el boton pagar  muestre la pantalla
 	And Aplicar Codigo de Error "7"
 	Given Selecciona opcion parking directo
 	When Selecciona boton Continuar 
-	When el usuario selecciona imagen de voucher
+	When Selecciona Subir codigo QR
+	When Escanea QR correcto
 	When Selecciona opcion Aplicar un descuento
 	And Selecciona boton Aplicar descuento
 	When Marca checkbox de terminos y condiciones

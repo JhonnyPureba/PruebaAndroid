@@ -42,9 +42,9 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         private IWebElement SeleccionarImagenDescuento;
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout\r\n")]
         private IWebElement SeleccionarImagenError;
-        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout\r\n")]
+        [FindsBy(How = How.XPath, Using = "//android.widget.LinearLayout[contains(@content-desc,'Descuento')]")]
         private IWebElement SeleccionarImagenErrorTicketCompra;
-        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[8]/android.widget.LinearLayout/android.widget.LinearLayout\r\n")]
+        [FindsBy(How = How.XPath, Using = "//android.widget.LinearLayout[contains(@content-desc,'Ticketcompra')]")]
         private IWebElement SeleccionarImagenTicketCompra;
 
 
@@ -77,11 +77,27 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
 
         public void ClickImagenTicketCompraError()
         {
+            _wait.Until(d => { return botonMostrarRaiz.Displayed; });
+            botonMostrarRaiz.Click();
+            Thread.Sleep(500);
+            _wait.Until(d => { return botonImagenes.Displayed; });
+            botonImagenes.Click();
+            _wait.Until(d => { return botonCarpetaParkingQR.Displayed; });
+            botonCarpetaParkingQR.Click();
+            _wait.Until(d => { return SeleccionarImagenErrorTicketCompra.Displayed; });
             SeleccionarImagenErrorTicketCompra.Click();
         }
 
         public void ClickImagenTicketCompra()
         {
+            _wait.Until(d => { return botonMostrarRaiz.Displayed; });
+            botonMostrarRaiz.Click();
+            Thread.Sleep(500);
+            _wait.Until(d => { return botonImagenes.Displayed; });
+            botonImagenes.Click();
+            _wait.Until(d => { return botonCarpetaParkingQR.Displayed; });
+            botonCarpetaParkingQR.Click();
+            _wait.Until(d => { return SeleccionarImagenTicketCompra.Displayed; });
             SeleccionarImagenTicketCompra.Click();
         }
         
