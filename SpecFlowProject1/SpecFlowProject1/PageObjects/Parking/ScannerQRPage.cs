@@ -177,7 +177,7 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         {
             SeleccionarImagenTicketCompra.Click();
         }
-        }
+        
 
         internal void SeleccionarQRIncorrecto()
         {
