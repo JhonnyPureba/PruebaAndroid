@@ -35,7 +35,7 @@ namespace MKPMobileProject.PageObjects
             Driver.ToggleWifi();
             _wait.Until(ExpectedConditions.ElementToBeClickable(botonCancelar));
             botonCancelar.Click();
-
+            Thread.Sleep(5000);
         }
         internal void ApagarWifiScanner()
         {

@@ -212,13 +212,19 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         public void ClickBotonSubirQR()
         {
             Thread.Sleep(2000);
-            action.Tap(563, 2064).Perform();
+            //kalin
+            action.Tap(360, 1452).Perform();
+            //jhonny
+            //action.Tap(563, 2064).Perform();
         }
 
         public void ClickBotonSubirQRTicketCompra()
         {
             Thread.Sleep(2000);
-            action.Tap(563, 2064).Perform();
+            //kalin
+            action.Tap(360, 1452).Perform();
+            //jhonny
+            //action.Tap(563, 2064).Perform();
         }
 
         public void VerificarMontoPagar()
@@ -428,7 +434,7 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         public void ClickBotonPagarEstacionamiento()
         {
             _wait.Until(d => { return botonPagarEstacionamiento.Displayed; });
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
             botonPagarEstacionamiento.Click();
         }
 

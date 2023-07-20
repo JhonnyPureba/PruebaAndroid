@@ -81,17 +81,13 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
             {
                 return botonParking.Displayed;
             });
-            _wait.Until(ExpectedConditions.ElementToBeClickable(botonParking));
             botonParking.Click();
         }
         public void ClickParkingDirect()
         {
             Driver.FindElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0))" + ".scrollIntoView(new UiSelector()" + ".textMatches(\"" + "Descubre Real Plaza" + "\").instance(0))");
 
-            _wait.Until(d =>
-            {
-                return botonParking.Displayed;
-            });
+            _wait.Until(d =>    {    return botonParking.Displayed;     });
             botonParking.Click();
         }
 

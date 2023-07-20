@@ -43,7 +43,7 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         {
             homePage.ClickParking();
         }
-        //jhonny actualizar de given a WHEN
+        
         [When(@"Selecciona boton Continuar")]
         public void GivenSeleccionaOpcionContinuar()
         {
@@ -406,7 +406,7 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         [When(@"Se pierde conexion")]
         public void WhenSePierdeConexion()
         {
-            globalPage.ApagarWifiScanner();
+            globalPage.ApagarInternet();
         }
 
         [When(@"Se pierde conexion scanner")]
