@@ -103,8 +103,9 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
             }
             Thread.Sleep(5000);  
             Driver.FindElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0))"+".scrollIntoView(new UiSelector()"+".textMatches(\"" + "Contáctanos"+ "\").instance(0))");
-            _wait.Until(ExpectedConditions.ElementToBeClickable(Contactanos));
-            Contactanos.Click();
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(Contactanos));
+            _wait.Until(d => { return Contactanos.Displayed; });
+             Contactanos.Click();
         }
 
         public void ClickModoDesarrollador()
@@ -112,12 +113,12 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
             Thread.Sleep(5000);
             action.LongPress(0, 1500).MoveTo(0, 700).Release().Perform();
             _wait.Until(d =>        {       return BotonModoError.Displayed;       });
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 20; i++)
             {
                 BotonModoError.Click();
                 try {
                     if (iconoBichito.Displayed) { break; }
-                }catch (Exception e) {}
+                }catch (Exception e) { i = 0; }
                 
             }
             Thread.Sleep(1000);
