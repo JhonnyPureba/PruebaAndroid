@@ -110,7 +110,7 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
             Thread.Sleep(5000);
             action.LongPress(0, 1500).MoveTo(0, 700).Release().Perform();
             _wait.Until(ExpectedConditions.ElementToBeClickable(BotonModoError));
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 15; i++)
             {
                 BotonModoError.Click();
             }

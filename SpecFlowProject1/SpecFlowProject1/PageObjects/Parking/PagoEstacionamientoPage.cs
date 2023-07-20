@@ -175,7 +175,7 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         public PagoEstacionamientoPage(AndroidDriver<AppiumWebElement> driver)
         {
             Driver = driver;
-            _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
+            _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
             _wait.PollingInterval = TimeSpan.FromMilliseconds(10);
             action = new TouchAction(driver);
             PageFactory.InitElements(driver, this);
@@ -211,27 +211,15 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
 
         public void ClickBotonSubirQR()
         {
-            //_wait.Until(d => { return botonSubirCodigoQRDesdeGaleria.Displayed; });
             Thread.Sleep(2000);
-            //int l = botonSubirCodigoQRDesdeGaleria.Size.Width;
-            //int h = botonSubirCodigoQRDesdeGaleria.Size.Height;
-            //Point point = botonSubirCodigoQRDesdeGaleria.Location;
-            //int getX = point.X;
-            //int getY = point.Y;
-            //int middleX = (int)(getX + l * 0.5);
-            //int middleY = (int)(getY + h * 0.5);
-            action.Tap(360, 1452).Perform();
-            //action.Tap(middleX, middleY).Perform();
-            //botonSubirCodigoQRDesdeGaleria.Click();
+            action.Tap(563, 2064).Perform();
         }
 
         public void ClickBotonSubirQRTicketCompra()
         {
-
-            _wait.Until(ExpectedConditions.ElementToBeClickable(botonSubirCodigoQRDesdeGaleriaTicketCompra));
-            botonSubirCodigoQRDesdeGaleriaTicketCompra.Click();
+            Thread.Sleep(2000);
+            action.Tap(563, 2064).Perform();
         }
-
 
         public void VerificarMontoPagar()
         {
