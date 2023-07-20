@@ -29,7 +29,7 @@ namespace SpecFlowProject1.Drivers
 
             //datos de Jhonny
             driverOptions.AddAdditionalCapability(MobileCapabilityType.DeviceName, "b0dbb66b");
-            driverOptions.AddAdditionalCapability(MobileCapabilityType.App, @"C:\Users\Administrador\Downloads\app-release.apk");
+            driverOptions.AddAdditionalCapability(MobileCapabilityType.App, @"C:\Users\Administrador\Downloads\app-release1.apk");
             //
             driverOptions.AddAdditionalCapability("appWaitPackage", "com.realplazago.app");
             driverOptions.AddAdditionalCapability("appWaitActivity", "com.realplazago.app.MainActivity");

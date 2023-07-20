@@ -314,8 +314,49 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         [When(@"Se pierde conexion")]
         public void WhenSePierdeConexion()
         {
-            globalPage.ApagarInternet();
+            globalPage.ApagarWifiScanner();
         }
+
+        [When(@"Se pierde conexion scanner")]
+        public void WhenSePierdeConexionScanner()
+        {
+            globalPage.ApagarWifiScanner();
+        }
+
+        [When(@"Se pierde conexion Ticket Compra")]
+        public void WhenSePierdeConexionTicketCompra()
+        {
+            globalPage.ApagarWifiScanner();
+        }
+
+        [Then(@"Visualizar mensaje error de servicios en pago")]
+        public void ThenVisualizarMensajeErrorDeServiciosEnPago()
+        {
+            pagoEstacionamiento.VerificarmensajeErrorPagoEstacionamiento();
+        }
+
+
+        [When(@"el usuario selecciona imagen de ticket de compra")]
+        public void WhenElUsuarioSeleccionaImagenDeTicketDeCompra()
+        {
+            pagoEstacionamiento.ClickBotonSubirQRTicketCompra();
+            scannerQRPage.ClickImagenTicketCompra();
+        }
+
+
+        [When(@"el usuario selecciona imagen error de ticket de compra")]
+        public void WhenElUsuarioSeleccionaImageErrornDeTicketDeCompra()
+        {
+            pagoEstacionamiento.ClickBotonSubirQRTicketCompra();
+            scannerQRPage.ClickImagenTicketCompraError();
+        }
+
+        [Then(@"Visualizar mensaje de error no valido para ticket de compra")]
+        public void ThenVisualizarMensajeDeErrorNoValidoParaTicketDeCompra()
+        {
+            pagoEstacionamiento.VerificarMensajeErrorTicketNoValidoTicketCompra();
+        }
+
 
         [Then(@"Visualiza pantalla de error de conexion")]
         public void ThenVisualizaPantallaDeErrorDeConexion()
@@ -328,6 +369,33 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         {
             pagoEstacionamiento.ClickBotonValidarTicketDeCompra();
         }
+
+        [When(@"el usuario selecciona imagen de voucher sin conexion")]
+        public void WhenElUsuarioSeleccionaImagenDeVoucherSinConexion()
+        {
+            pagoEstacionamiento.ClickBotonSubirQR();
+            globalPage.ApagarWifiScanner();
+            scannerQRPage.ClickImagenVoucher();
+        }
+
+        [Then(@"Visualiza pantalla de error de conexion scanner")]
+        public void ThenVisualizaPantallaDeErrorDeConexionScanner()
+        {
+            pagoEstacionamiento.VerificarSinConexionScanner();
+        }
+
+        [Then(@"Visualiza pantalla de error de servicio scanner")]
+        public void ThenVisualizaPantallaDeErrorDeServicioScanner()
+        {
+            pagoEstacionamiento.VerificarSinServicioScanner();
+        }
+
+        [When(@"Seleccionar continuar en Ticket de compra")]
+        public void WhenSeleccionarContinuarEnTicketDeCompra()
+        {
+            pagoEstacionamiento.ClickContinuarValidarTicketComprar();
+        }
+
 
         [Then(@"Visualiza opcion Validar ticket de compra")]
         public void ThenVisualizaOpcionValidarTicketDeCompra()
@@ -419,8 +487,8 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         {
             startPage.ClickIniciarSesion();
             loginPage.ClickIngresarConTuCorreo();
-            loginPage.IngresarEmail("pradoccorajhonnyangelo@gmail.com");
-            loginPage.IngresarContrasena("Manzanita17");
+            loginPage.IngresarEmail("diego.herrera@rpgo.pe");
+            loginPage.IngresarContrasena("ParaPruebas123.");
             loginPage.ClickCheckBoxTyC();
             loginPage.ClickIngresar();
         }

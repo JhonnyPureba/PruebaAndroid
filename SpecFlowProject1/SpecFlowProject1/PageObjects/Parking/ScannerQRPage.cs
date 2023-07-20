@@ -13,7 +13,7 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
     {
         [FindsBy(How = How.Id, Using = "com.android.permissioncontroller:id/permission_allow_one_time_button")]
         private IWebElement botonOnlyThisTime;
-        
+
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView//android.widget.LinearLayout")]
         private IWebElement primeraImagen;
 
@@ -70,6 +70,10 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         private IWebElement SeleccionarImagenDescuento;
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout\r\n")]
         private IWebElement SeleccionarImagenError;
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout\r\n")]
+        private IWebElement SeleccionarImagenErrorTicketCompra;
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[8]/android.widget.LinearLayout/android.widget.LinearLayout\r\n")]
+        private IWebElement SeleccionarImagenTicketCompra;
 
 
         public AndroidDriver<AppiumWebElement> Driver;
@@ -196,6 +200,16 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
             //SeleccionarCarpetaImagenes.Click();
             //_wait.Until(ExpectedConditions.ElementToBeClickable(SeleccionarImagenVoucher));
             SeleccionarImagenError.Click();
+        } 
+
+        public void ClickImagenTicketCompraError()
+        {
+            SeleccionarImagenErrorTicketCompra.Click();
+        }
+
+        public void ClickImagenTicketCompra()
+        {
+            SeleccionarImagenTicketCompra.Click();
         }
     }
 }
