@@ -8,11 +8,11 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
 {
     public class StartPage
     {
-        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]")]
+        [FindsBy(How = How.XPath, Using = "//android.widget.TextView[@text='REGISTRARME']")]
         private IWebElement botonRegistrarme;
-        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]")]
+        [FindsBy(How = How.XPath, Using = "//android.widget.TextView[@text='INICIAR SESIÓN']")]
         private IWebElement botonIniciarSesion;
-        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.TextView")]
+        [FindsBy(How = How.XPath, Using = "//android.widget.TextView[@text='Seguir como invitado']")]
         private IWebElement botonInvitado;
 
         public AndroidDriver<AppiumWebElement> Driver;
@@ -28,19 +28,19 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
 
         public void ClickRegistrarme()
         {
-            _wait.Until(ExpectedConditions.ElementToBeClickable(botonRegistrarme));
+            _wait.Until(d => { return botonRegistrarme.Displayed; });
             botonRegistrarme.Click();
         }
 
         public void ClickIniciarSesion()
         {
-            _wait.Until(ExpectedConditions.ElementToBeClickable(botonIniciarSesion));
+            _wait.Until(d => { return botonIniciarSesion.Displayed; });
             botonIniciarSesion.Click();
         }
 
         public void ClickSeguirComoInvitado()
         {
-            _wait.Until(ExpectedConditions.ElementToBeClickable(botonInvitado));
+            _wait.Until(d => { return botonInvitado.Displayed; });
             botonInvitado.Click();
         }
     }

@@ -5,6 +5,8 @@ using Castle.Core;
 using NUnit.Framework;
 using SpecFlowMarketplaceMobileProject.PageObjects;
 using MKPMobileProject.PageObjects;
+using OpenQA.Selenium.Remote;
+using OpenQA.Selenium;
 
 namespace SpecFlowMarketplaceMobileProject.StepDefinitions
 {
@@ -19,10 +21,13 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         ScannerQRPage scannerQRPage;
         PagoPage pagoPage;
         GlobalPage globalPage;
+        HistorialPage historialPage;
+        ScenarioContext _scenarioContext;
 
         public AppiumTestParkingStepDefinitions(ScenarioContext scenarioContext)
         {
             testContextSetup = new TestContextSetup(scenarioContext);
+            _scenarioContext = scenarioContext;
             pagoEstacionamiento = testContextSetup.pageObjectManager.GetPagoEstacionamiento();
             pagoPage = testContextSetup.pageObjectManager.GetPagoPage();
             startPage = testContextSetup.pageObjectManager.GetStartPage();
@@ -30,6 +35,7 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
             homePage = testContextSetup.pageObjectManager.GetHomePage();
             scannerQRPage = testContextSetup.pageObjectManager.GetScannerQRPage();
             globalPage = testContextSetup.pageObjectManager.GetGlobalPage();
+            historialPage = testContextSetup.pageObjectManager.GetHistorialPage();
         }
 
         [Given(@"Selecciona opcion parking")]
@@ -38,10 +44,22 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
             homePage.ClickParking();
         }
 
-        [When(@"Selecciona opcion continuar")]
+        [When(@"Selecciona boton Continuar")]
         public void GivenSeleccionaOpcionContinuar()
         {
             pagoEstacionamiento.ClickContinuar();
+        }
+
+        [Then(@"Visualiza modal Importante")]
+        public void ThenVisualizaModalImportante()
+        {
+            Assert.IsTrue(pagoEstacionamiento.MuestraModalImportante());
+        }
+
+        [When(@"Realiza scroll hasta Ver mi historial de pagos")]
+        public void WhenRealizaScrollHasta()
+        {
+            pagoPage.BajarHastaVerMiHistorialDePagos();
         }
 
         [Given(@"Selecciona opcion Ver mi historial de pagos")]
@@ -53,6 +71,7 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         [When(@"Selecciona Subir codigo QR")]
         public void WhennEscaneaQR()
         {
+            pagoEstacionamiento.DarPermiso();
             pagoEstacionamiento.ClickBotonSubirQR();
         }
 
@@ -74,6 +93,18 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
             scannerQRPage.SeleccionarQRCorrecto();
         }
 
+        [When(@"Escanea QR correcto 2")]
+        public void WhenEscaneaQRCorrecto2()
+        {
+            scannerQRPage.SeleccionarQRCorrecto2();
+        }
+
+        [When(@"Escanea QR correcto 3")]
+        public void WhenEscaneaQRCorrecto3()
+        {
+            scannerQRPage.SeleccionarQRCorrecto3();
+        }
+
         [When(@"Selecciona Modal aplicar descuento")]
         public void WhenSeleccionaModalAplicarDescuento()
         {
@@ -86,7 +117,7 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
 
         }
 
-        [When(@"Selecciona opcion aplicar descuento")]
+        [When(@"Selecciona opcion Aplicar descuento")]
         public void WhenSeleccionaOpcionAplicarDescuentoo()
         {
 
@@ -155,6 +186,13 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         {
             pagoEstacionamiento.VerificarPantallaErrorPagoDescuento();
         }
+
+        [Then(@"Visualiza mensaje Ups Ha ocurrido un error en la confirmacion del pago")]
+        public void ThenVisualizaErrorDeServicios()
+        {
+            Assert.IsTrue(pagoPage.MuestraMensajeUpsErrorCconfirmacionDelPago());
+        }
+
 
         [Then(@"Visualiza opcion Aplicar un descuento")]
         public void ThenVisualizaOpcionAplicarUnDescuento()
@@ -292,10 +330,16 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
             Assert.IsTrue(pagoPage.MuestraFormularioPagoTarjeta());
         }
 
-        [When(@"Llena formulario con los datos de la tarjeta correcta")]
+        [When(@"Llena formulario con los datos de la tarjeta con fondos")]
         public void WhenLlenaFormularioConLosDatosDeLaTarjetaCorrecta()
         {
             pagoPage.LlenarFormularioTarjetaCorrecta();
+        }
+
+        [When(@"Llena formulario con los datos de la tarjeta sin fondos")]
+        public void WhenLlenaFormularioConLosDatosDeLaTarjetaSinFondos()
+        {
+            pagoPage.LlenarFormularioTarjetaSinFondos();
         }
 
         [When(@"Selecciona monto a pagar")]
@@ -307,7 +351,14 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         [Then(@"Visualiza pantalla Pago exitoso")]
         public void ThenVisualizaPantallaPagoExitoso()
         {
+            _scenarioContext.Set(pagoPage.GetMontoPagado(), "ultimoMontoPagadoEnParking");
             Assert.IsTrue(pagoPage.MuestraPantallaPagoExitoso());
+        }
+
+        [Then(@"Visualiza pantalla Pago rechazado")]
+        public void ThenVisualizaPantallaPagoRechazado()
+        {
+            Assert.IsTrue(pagoPage.MuestraPantallaPagoRechazado());
         }
 
         [Then(@"Visualiza pantalla de enchufe y numero de transaccion")]
@@ -355,7 +406,7 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         [Then(@"Visualiza modal Establecimientos validos")]
         public void ThenVisualizaModalEstablecimientosValidos()
         {
-            throw new PendingStepException();
+            Assert.IsTrue(pagoEstacionamiento.MuestraEstacionamientosValidos());
         }
 
         [Then(@"Visualiza modal de descuento")]
@@ -387,6 +438,13 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         {
             throw new PendingStepException();
         }
+
+        [When(@"Selecciona link Ir a inicio")]
+        public void WhenSeleccionaLinkIrAInicio()
+        {
+            pagoPage.ClickIrAInicio();
+        }
+
 
         [Then(@"Visualiza Parking")]
         public void ThenVisualizaParking()

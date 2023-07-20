@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OpenQA.Selenium;
+using System.Data;
 
 namespace SpecFlowProject1.Drivers
 {
@@ -32,12 +34,15 @@ namespace SpecFlowProject1.Drivers
             //driverOptions.AddAdditionalCapability(MobileCapabilityType.App, @"C:\Users\Administrador\Downloads\app-release.apk");
             ////
 
-
+            //driverOptions.AddAdditionalCapability("noReset", true);
+            driverOptions.AddAdditionalCapability("fullReset", false);
             driverOptions.AddAdditionalCapability("appWaitPackage", "com.realplazago.app");
             driverOptions.AddAdditionalCapability("appWaitActivity", "com.realplazago.app.MainActivity");
             //var AppiumService = new AppiumServiceBuilder().WithIPAddress("127.0.0.1").UsingPort(4723).Build();
             //AppiumService.Start();
-            return new AndroidDriver<AppiumWebElement>(new Uri("http://127.0.0.1:4723/wd/hub"), driverOptions);
+            var driver = new AndroidDriver<AppiumWebElement>(new Uri("http://127.0.0.1:4723/wd/hub"), driverOptions);
+            driver.ConnectionType = ConnectionType.AllNetworkOn;
+            return driver;
         }
     }
 }

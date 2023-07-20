@@ -10,10 +10,12 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions.Parking
     {
         TestContextSetup testContextSetup;
         HistorialPage historialPage;
+        ScenarioContext _scenarioContext;
 
         public HistorialStepDefinitions(ScenarioContext scenarioContext)
         {
             testContextSetup = new TestContextSetup(scenarioContext);
+            _scenarioContext = scenarioContext;
             historialPage = testContextSetup.pageObjectManager.GetHistorialPage();
 
         }
@@ -22,6 +24,12 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions.Parking
         public void ThenVisualizaHistorialDePagos()
         {
             Assert.IsTrue(historialPage.MuestraTituloHistorial());
+        }
+
+        [Then(@"Visualiza que el ultimo monto pagado sea correcto")]
+        public void ThenVerificaQueElUltimoMontoPagadoSeaCorrecto()
+        {
+            Assert.AreEqual(historialPage.GetUltimoMontoPagado(), _scenarioContext.Get<double>("ultimoMontoPagadoEnParking"));
         }
 
         [Then(@"Visualiza pagos rechazado en color rojito")]
@@ -51,9 +59,13 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions.Parking
         [Then(@"Visualiza Error en el Historial de pagos")]
         public void ThenVisualizaErrorEnElHistorialDePagos()
         {
-            historialPage.VisualizarErrorHistorialPago();
+            Assert.AreEqual(historialPage.VisualizarErrorHistorialPago(), "¡Ups! No eres tú, somos nosotros ");
         }
 
-
+        [Then(@"Visualiza ultimo pago de S/0.00")]
+        public void ThenVisualizaUltimoPagoDe0soles()
+        {
+            Assert.AreEqual(historialPage.GetUltimoMontoPagado(), 0.00);
+        }
     }
 }
