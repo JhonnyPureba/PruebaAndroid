@@ -34,6 +34,8 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
         private IWebElement Contactanos;
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.TextView")]
         private IWebElement BotonModoError;
+        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.widget.TextView")]
+        private IWebElement iconoBichito;
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.TextView")]
         private IWebElement CerrarContactanos;
         [FindsBy(How = How.XPath, Using = "//android.widget.EditText")]
@@ -109,10 +111,14 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
         {
             Thread.Sleep(5000);
             action.LongPress(0, 1500).MoveTo(0, 700).Release().Perform();
-            _wait.Until(ExpectedConditions.ElementToBeClickable(BotonModoError));
+            _wait.Until(d =>        {       return BotonModoError.Displayed;       });
             for (int i = 0; i < 10; i++)
             {
                 BotonModoError.Click();
+                try {
+                    if (iconoBichito.Displayed) { break; }
+                }catch (Exception e) {}
+                
             }
             Thread.Sleep(1000);
         }
