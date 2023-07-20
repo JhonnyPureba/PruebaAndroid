@@ -28,6 +28,11 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
             Assert.IsTrue(registerPage.MuestraPantallaDeRegistro());
         }
 
+        [When(@"Selecciona opcion Login")]
+        public void WhenSeleccionaOpcionLogin()
+        {
+            registerPage.ClickLinkLogin();
+        }
 
     }
 }

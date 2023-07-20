@@ -15,8 +15,10 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
 {
     public class RegisterPage
     {
-        [FindsBy(How = How.XPath, Using = "//android.widget.TextView[@text='Regístrate en realplaza.com']")]
+        [FindsBy(How = How.XPath, Using = "//android.widget.TextView[@text='Regístrate']")]
         private IWebElement mensajeRegisrtateEnRealPlaza;
+        [FindsBy(How = How.XPath, Using = "//android.widget.TextView[@text='Iniciar sesión']")]
+        private IWebElement linkLogin;
 
         public AndroidDriver<AppiumWebElement> Driver;
         private readonly WebDriverWait _wait;
@@ -33,6 +35,12 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
         {
             _wait.Until(d => { return mensajeRegisrtateEnRealPlaza.Displayed; });
             return mensajeRegisrtateEnRealPlaza.Displayed;
+        }
+
+        internal void ClickLinkLogin()
+        {
+            _wait.Until(d => { return linkLogin.Displayed; });
+            linkLogin.Click();
         }
     }
 }

@@ -3,9 +3,9 @@ Feature: Ejecucion de casos de pruebas de regresión 20/07
 Scenario: TC03: Validar registro de usuario con parking
 	Given El usuario ingresa como invitado
 	And Selecciona opcion parking
-	Then Visualiza pantalla de Login
-	When Selecciona opcion Registrate
 	Then Visualiza pantalla Registro
+	When Selecciona opcion Login
+	Then Visualiza pantalla de Login
 
 Scenario: TC04: Validar modal informativo de establecimientos validos en ticket de compra
 	Given El usuario se logea al app
@@ -91,7 +91,7 @@ Scenario: TC08: Validar mensaje de error de poca iluminacion en scanner de estab
 Scenario: TC09: Validar mensaje de error de falla de red en scanner de establecimiento
 	Given El usuario se logea al app
 	Given Selecciona opcion parking	
-	When Se pierde conexion scanner
+	When Se pierde conexion
 	When Selecciona boton Continuar  
 	When Selecciona Subir codigo QR
 	When Escanea QR correcto
@@ -115,8 +115,7 @@ Scenario: TC12: Validar mensaje de error de falla de red en ticket de compra
 	When Selecciona opcion Validar ticket de compra
 	And Seleccionar continuar en Ticket de compra
 	And Se pierde conexion Ticket Compra
-	When el usuario selecciona imagen de ticket de compra 
-	# asdasd
+	When el usuario selecciona imagen de ticket de compra
 	Then Visualiza pantalla de error de conexion scanner
 
 Scenario: TC13: Validar mensaje de error de falla de servicios en ticket de compra
