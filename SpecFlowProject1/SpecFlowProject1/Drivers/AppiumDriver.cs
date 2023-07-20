@@ -24,7 +24,6 @@ namespace SpecFlowProject1.Drivers
 
             driverOptions.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
             //datos de Kalin
-            driverOptions.AddAdditionalCapability(MobileCapabilityType.DeviceName, "emulator-5554");
             driverOptions.AddAdditionalCapability(MobileCapabilityType.DeviceName, "HONOR X7a");
             driverOptions.AddAdditionalCapability(MobileCapabilityType.Udid, "ANKG9X3308G01331");
             driverOptions.AddAdditionalCapability(MobileCapabilityType.App, @"C:\Users\Kratos\Downloads\app-release.apk");

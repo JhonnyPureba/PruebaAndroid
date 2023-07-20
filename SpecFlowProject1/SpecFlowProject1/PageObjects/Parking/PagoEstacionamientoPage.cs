@@ -161,18 +161,8 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
 
         public void ClickBotonSubirQR()
         {
-            //_wait.Until(d => { return botonSubirCodigoQRDesdeGaleria.Displayed; });
             Thread.Sleep(2000);
-            //int l = botonSubirCodigoQRDesdeGaleria.Size.Width;
-            //int h = botonSubirCodigoQRDesdeGaleria.Size.Height;
-            //Point point = botonSubirCodigoQRDesdeGaleria.Location;
-            //int getX = point.X;
-            //int getY = point.Y;
-            //int middleX = (int)(getX + l * 0.5);
-            //int middleY = (int)(getY + h * 0.5);
             action.Tap(360, 1452).Perform();
-            //action.Tap(middleX, middleY).Perform();
-            //botonSubirCodigoQRDesdeGaleria.Click();
         }
 
         public void VerificarMontoPagar()
