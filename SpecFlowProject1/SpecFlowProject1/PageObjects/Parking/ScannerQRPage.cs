@@ -19,6 +19,8 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         private IWebElement qrCorrecto2;
         [FindsBy(How = How.XPath, Using = "//android.widget.LinearLayout[contains(@content-desc,'QR_UAT_Correcto3')]")]
         private IWebElement qrCorrecto3;
+        [FindsBy(How = How.XPath, Using = "//android.widget.LinearLayout[contains(@content-desc,'QR_PREPROD_Correcto_1.png')]")]
+        private IWebElement qrCorrectoPreprod;
         [FindsBy(How = How.XPath, Using = "//android.widget.LinearLayout[contains(@content-desc,'QR_Incorrecto')]")]
         private IWebElement qrIncorrecto;
         [FindsBy(How = How.XPath, Using = "//android.widget.ImageButton[@content-desc='Mostrar raíces']")]
@@ -142,6 +144,20 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
             qrCorrecto2.Click();
             Thread.Sleep(5000);
         }
+        internal void SeleccionarQRCorrectoPreprod()
+        {
+            _wait.Until(d => { return botonMostrarRaiz.Displayed; });
+            botonMostrarRaiz.Click();
+            Thread.Sleep(500);
+            _wait.Until(d => { return botonImagenes.Displayed; });
+            botonImagenes.Click();
+            _wait.Until(d => { return botonCarpetaParkingQR.Displayed; });
+            botonCarpetaParkingQR.Click();
+            _wait.Until(d => { return qrCorrectoPreprod.Displayed; });
+            qrCorrectoPreprod.Click();
+            Thread.Sleep(5000);
+        }
+
         internal void SeleccionarQRCorrecto3()
         {
             _wait.Until(d => { return botonMostrarRaiz.Displayed; });

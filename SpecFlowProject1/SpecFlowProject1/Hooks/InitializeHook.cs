@@ -17,7 +17,7 @@ namespace SpecFlowProject1.Hooks
         [BeforeTestRun]
         public static void BeforeTestRun()
         {
-            //allure.CleanupResultDirectory();
+            allure.CleanupResultDirectory();
         }
 
         [BeforeScenario]
