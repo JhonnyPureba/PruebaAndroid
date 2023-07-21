@@ -59,7 +59,7 @@ Scenario: TC07: Validar historial de pagos despues de haber realizado un pago re
 	Then Visualiza modal Elige un medio de pago
 	When Selecciona tarjeta como medio de pago
 	Then Visualiza formulario Pago con tarjeta
-	When Llena formulario con los datos de la tarjeta sin fondos
+	When Llena formulario con los datos de la tarjeta sin fondos PREPROD
 	And Selecciona monto a pagar
 	Then Visualiza pantalla Pago rechazado
 	When Selecciona link Ir a inicio

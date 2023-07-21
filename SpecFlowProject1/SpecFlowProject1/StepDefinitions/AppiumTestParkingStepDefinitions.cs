@@ -372,6 +372,12 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
             pagoPage.LlenarFormularioTarjetaSinFondos();
         }
 
+        [When(@"Llena formulario con los datos de la tarjeta sin fondos PREPROD")]
+        public void WhenLlenaFormularioConLosDatosDeLaTarjetaSinFondosPreProd()
+        {
+            pagoPage.LlenarFormularioTarjetaSinFondosPreProd();
+        }
+
         [When(@"Selecciona monto a pagar")]
         public void WhenSeleccionaMontoAPagar()
         {
