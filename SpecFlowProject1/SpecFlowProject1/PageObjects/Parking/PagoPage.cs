@@ -152,6 +152,7 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         internal bool? MuestraFormularioPagoTarjeta()
         {
             _wait.Until(d => { return formularioTarjeta.Displayed; });
+            Thread.Sleep(2000);
             return formularioTarjeta.Displayed;
         }
 

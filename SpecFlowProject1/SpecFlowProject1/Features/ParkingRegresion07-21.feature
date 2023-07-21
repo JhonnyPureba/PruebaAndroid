@@ -33,15 +33,8 @@ Scenario: TC05: Validar historial de pagos despues de haber realizado un pago ex
 	Then Visualiza modal Elige un medio de pago
 	When Selecciona tarjeta como medio de pago
 	Then Visualiza formulario Pago con tarjeta
-	When Llena formulario con los datos de la tarjeta con fondos
-	And Selecciona monto a pagar
-	Then Visualiza pantalla Pago exitoso
-	When Realiza scroll hasta Ver mi historial de pagos
-	Given Selecciona opcion Ver mi historial de pagos
-	Then Visualiza Historial de pagos
-	And Visualiza que el ultimo monto pagado sea correcto
 
-	#no se puede
+	#Orden de Lesly: Que se quede en ver el monto
 Scenario: TC06: Validar historial de pagos despues de haber realizado un pago exitoso monto 0 soles
 	Given El usuario se logea al app
 	And Selecciona opcion parking
@@ -50,14 +43,6 @@ Scenario: TC06: Validar historial de pagos despues de haber realizado un pago ex
 	When Escanea QR correcto PREPROD
 	When Selecciona boton Pagar estacionamiento
 	Then Visualiza checkbox de terminos y condiciones
-	When Marca checkbox de terminos y condiciones
-	When Selecciona boton Pagar
-	Then Visualiza modal Importante
-	When Selecciona boton Continuar
-	Then Visualiza pantalla Pago exitoso
-	Given Selecciona opcion Ver mi historial de pagos
-	Then Visualiza Historial de pagos
-	And Visualiza ultimo pago de S/0.00
 
 Scenario: TC07: Validar historial de pagos despues de haber realizado un pago rechazado
 	Given El usuario se logea al app
