@@ -53,7 +53,7 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         [Then(@"Visualiza modal Importante")]
         public void ThenVisualizaModalImportante()
         {
-            Assert.IsTrue(pagoEstacionamiento.MuestraModalImportante());
+            Assert.IsTrue(pagoEstacionamiento.MuestraModalImportante(),"No se muestra el modal <Importante>");
         }
 
         [When(@"Realiza scroll hasta Ver mi historial de pagos")]
@@ -78,7 +78,7 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         [Then(@"Visualiza Subir codigo QR")]
         public void VisualizaSubirCodigoQR()
         {
-            Assert.IsTrue(pagoEstacionamiento.MuestraSubirQR());
+            Assert.IsTrue(pagoEstacionamiento.MuestraSubirQR(),"No se muestra el boton subir QR");
         }
 
         [When(@"Escanea QR incorrecto")]
@@ -97,6 +97,12 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         public void WhenEscaneaQRCorrecto2()
         {
             scannerQRPage.SeleccionarQRCorrecto2();
+        }
+
+        [When(@"Escanea QR correcto PREPROD")]
+        public void WhenEscaneaQRCorrectoPREDRO()
+        {
+            scannerQRPage.SeleccionarQRCorrectoPreprod();
         }
 
         [When(@"Escanea QR correcto 3")]
