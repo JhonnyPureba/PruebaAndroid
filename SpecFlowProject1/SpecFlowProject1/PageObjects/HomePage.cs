@@ -108,14 +108,18 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
         {
             Thread.Sleep(5000);
             action.LongPress(0, 1500).MoveTo(0, 700).Release().Perform();
-            _wait.Until(d =>        {       return BotonModoError.Displayed;       });
-            for (int i = 0; i < 20; i++)
+            _wait.Until(d => { return BotonModoError.Displayed; });
+            Thread.Sleep(1000);
+            while (true)
             {
-                BotonModoError.Click();
-                try {
-                    if (iconoBichito.Displayed) { break; }
-                }catch (Exception e) { i = 0; }
-                
+
+                for (int i = 0; i < 6; i++)
+                {
+                    BotonModoError.Click();
+                }
+                Thread.Sleep(1000);
+                try { if (iconoBichito.Displayed) { break; } } 
+                catch (Exception e) { }
             }
             Thread.Sleep(1000);
         }
