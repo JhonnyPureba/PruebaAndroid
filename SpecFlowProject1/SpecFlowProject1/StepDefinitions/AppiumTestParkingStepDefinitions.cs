@@ -214,7 +214,7 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         [Then(@"Visualiza mensaje Ups Ha ocurrido un error en la confirmacion del pago")]
         public void ThenVisualizaErrorDeServicios()
         {
-            Assert.IsTrue(pagoPage.MuestraMensajeUpsErrorCconfirmacionDelPago());
+            Assert.IsTrue(pagoPage.MuestraMensajeUpsErrorCconfirmacionDelPago(), "No se muestra el mensaje: Ups Ha ocurrido un error en la confirmacion del pago");
         }
 
 
@@ -370,6 +370,12 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         public void WhenLlenaFormularioConLosDatosDeLaTarjetaSinFondos()
         {
             pagoPage.LlenarFormularioTarjetaSinFondos();
+        }
+
+        [When(@"Llena formulario con los datos de la tarjeta sin fondos PREPROD")]
+        public void WhenLlenaFormularioConLosDatosDeLaTarjetaSinFondosPreProd()
+        {
+            pagoPage.LlenarFormularioTarjetaSinFondosPreProd();
         }
 
         [When(@"Selecciona monto a pagar")]

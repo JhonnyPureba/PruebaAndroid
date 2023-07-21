@@ -34,6 +34,7 @@ namespace MKPMobileProject.PageObjects
         {
             Driver.ToggleWifi();
             _wait.Until(ExpectedConditions.ElementToBeClickable(botonCancelar));
+            Thread.Sleep(1000);
             botonCancelar.Click();
             Thread.Sleep(5000);
         }
