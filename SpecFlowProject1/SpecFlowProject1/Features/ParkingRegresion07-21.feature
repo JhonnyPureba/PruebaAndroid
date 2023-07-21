@@ -1,4 +1,4 @@
-Feature: Ejecucion de casos de pruebas de regresión 21/07 PRE PROD
+Feature: Ejecucion de casos de pruebas de regresion 21/07 PRE PROD
 
 Scenario: TC03: Validar registro de usuario con parking
 	Given El usuario ingresa como invitado

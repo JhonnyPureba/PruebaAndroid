@@ -214,7 +214,7 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         [Then(@"Visualiza mensaje Ups Ha ocurrido un error en la confirmacion del pago")]
         public void ThenVisualizaErrorDeServicios()
         {
-            Assert.IsTrue(pagoPage.MuestraMensajeUpsErrorCconfirmacionDelPago());
+            Assert.IsTrue(pagoPage.MuestraMensajeUpsErrorCconfirmacionDelPago(), "No se muestra el mensaje: Ups Ha ocurrido un error en la confirmacion del pago");
         }
 
 
