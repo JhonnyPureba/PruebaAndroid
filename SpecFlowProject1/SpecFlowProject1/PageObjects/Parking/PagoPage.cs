@@ -36,6 +36,10 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         private IWebElement campoTextoApellido;
         [FindsBy(How = How.XPath, Using = "//android.widget.EditText[@resource-id='email']")]
         private IWebElement campoTextoEmail;
+        [FindsBy(How = How.XPath, Using = "//android.widget.EditText[@resource-id='city']")]
+        private IWebElement campoTextoCiudad;
+        [FindsBy(How = How.XPath, Using = "//android.widget.EditText[@resource-id='country']")]
+        private IWebElement campoTextoPais;
         [FindsBy(How = How.XPath, Using = "//android.widget.Button[contains(@text,'Pagar S/')]")]
         private IWebElement botonPagar;
         [FindsBy(How = How.XPath, Using = "//*[contains(@text,'Pago exitoso')]")]
@@ -174,6 +178,17 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
             campoTextoNombre.SendKeys("Kalin");
             campoTextoApellido.SendKeys("Osorio");
             campoTextoEmail.SendKeys("kalinosorio18@gmail.com");
+        }
+        internal void LlenarFormularioTarjetaSinFondosPreProd()
+        {
+            campoTextoTarjeta.SendKeys("5115422225052734");
+            campoTextoVencimiento.SendKeys("09/23");
+            campoTextoCVC.SendKeys("111");
+            campoTextoNombre.SendKeys("Kalin");
+            campoTextoApellido.SendKeys("Osorio");
+            campoTextoEmail.SendKeys("kalinosorio18@gmail.com");
+            campoTextoCiudad.SendKeys("Lima");
+            campoTextoPais.SendKeys("Peru");
         }
 
         internal void ClickPagarMonto()
