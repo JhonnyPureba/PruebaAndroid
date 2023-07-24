@@ -20,8 +20,8 @@ namespace MKPMobileProject.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Ejecucion de casos de pruebas de regresi�n 21/07 PRE PROD")]
-    public partial class EjecucionDeCasosDePruebasDeRegresiN2107PREPRODFeature
+    [NUnit.Framework.DescriptionAttribute("Ejecucion de casos de pruebas de regresion 21/07 PRE PROD")]
+    public partial class EjecucionDeCasosDePruebasDeRegresion2107PREPRODFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -35,7 +35,7 @@ namespace MKPMobileProject.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Ejecucion de casos de pruebas de regresi�n 21/07 PRE PROD", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Ejecucion de casos de pruebas de regresion 21/07 PRE PROD", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -803,7 +803,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("Visualiza formulario Pago con tarjeta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 175
- testRunner.When("Llena formulario con los datos de la tarjeta sin fondos PREPROD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("Llena formulario con los datos de la tarjeta con fondos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 176
  testRunner.And("Selecciona monto a pagar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
