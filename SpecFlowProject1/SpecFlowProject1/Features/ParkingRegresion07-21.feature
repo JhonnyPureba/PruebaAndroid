@@ -1,4 +1,4 @@
-Feature: Ejecucion de casos de pruebas de regresion 21/07 PRE PROD
+Feature: Ejecucion CPs 21/07 en PRE PROD
 
 Scenario: TC03: Validar registro de usuario con parking
 	Given El usuario ingresa como invitado
@@ -17,7 +17,7 @@ Scenario: TC04: Validar modal informativo de establecimientos validos en ticket 
 	When Selecciona opcion Validar ticket de compra
 	Then Visualiza modal Establecimientos validos
 
-#no se puede
+#Recortado hasta el ingreso de tarjeta
 Scenario: TC05: Validar historial de pagos despues de haber realizado un pago exitoso
 	Given El usuario se logea al app
 	And Selecciona opcion parking
@@ -34,7 +34,7 @@ Scenario: TC05: Validar historial de pagos despues de haber realizado un pago ex
 	When Selecciona tarjeta como medio de pago
 	Then Visualiza formulario Pago con tarjeta
 
-	#Orden de Lesly: Que se quede en ver el monto
+#Orden de Lesly: Que se quede en ver el monto
 Scenario: TC06: Validar historial de pagos despues de haber realizado un pago exitoso monto 0 soles
 	Given El usuario se logea al app
 	And Selecciona opcion parking
@@ -154,6 +154,7 @@ Scenario: TC17: Validar que al hacer clic en el boton pagar  muestre la pantalla
 	And Seleccionar continuar 
 	Then Visualizar mensaje error de servicios en pago
 
+#Siempre habra error porque se necesita un pago real
 Scenario: TC18: Validar que al realizar el pago exitoso muestra falla de red con cuenta regresiva y se recupere correctamente
 	Given El usuario se logea al app
 	And Aplicar Codigo de Error "8"
