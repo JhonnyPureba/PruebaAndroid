@@ -381,10 +381,10 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
             Thread.Sleep(3000);
             try
             {
-                return botonPagar.Displayed;
+                return !botonPagar.Displayed;
             } catch (Exception ex)
             {
-                return false;
+                return true;
             }
         }
 
