@@ -12,7 +12,7 @@ Scenario: TC01-Validar que al escanear un qr muetre pantalla del monto a pagar c
 	And Visualiza monto a pagar
 
 @TC2
-Scenario: Verificar Modal al hacer clic en aplicar descuento
+Scenario: TC02-Verificar Modal al hacer clic en aplicar descuento
 	Given Selecciona opcion parking
 	When Selecciona boton Continuar
 	When Selecciona Subir codigo QR
@@ -21,7 +21,7 @@ Scenario: Verificar Modal al hacer clic en aplicar descuento
 	Then Verificar modal con imagen 
 
 @TC3
-Scenario: Verificar al dar clic en terminos y condiciones muestre modal
+Scenario: TC03-Verificar al dar clic en terminos y condiciones muestre modal
 	Given Selecciona opcion parking
 	When Selecciona boton Continuar 
 	When Selecciona Subir codigo QR
@@ -31,7 +31,7 @@ Scenario: Verificar al dar clic en terminos y condiciones muestre modal
 	Then Visualiza titulo de terminos y condiciones 
 
 @TC5
-Scenario: Aplicar descuento a voucher y verificar descuento aplicado
+Scenario: TC05-Aplicar descuento a voucher y verificar descuento aplicado
 	Given Selecciona opcion parking
 	When Selecciona boton Continuar
 	When Selecciona Subir codigo QR
@@ -41,7 +41,7 @@ Scenario: Aplicar descuento a voucher y verificar descuento aplicado
 	Then Verificar que el descuento se aplique
 
 @TC6
-Scenario: Visualizar al aplicar descuento muestre mensaje "felicitaciones, se aplico el descuento exitosamente"
+Scenario: TC06-Visualizar al aplicar descuento muestre mensaje "felicitaciones, se aplico el descuento exitosamente"
 	Given Selecciona opcion parking
 	When Selecciona boton Continuar 
 	When Selecciona Subir codigo QR
@@ -64,7 +64,7 @@ Scenario: TC07-Validar que si no se haya marcado terminos y condiciones no se ac
 	And Visualiza boton Pagar deshabilitado
 
 @TC8
-Scenario: Verificar al  seleccionar terminos y condiciones se active el boton pagar
+Scenario: TC08-Verificar al  seleccionar terminos y condiciones se active el boton pagar
 	Given Selecciona opcion parking
 	When Selecciona boton Continuar
 	When Selecciona Subir codigo QR
@@ -75,7 +75,7 @@ Scenario: Verificar al  seleccionar terminos y condiciones se active el boton pa
 	When Selecciona boton Pagar
 
 @TC9
-Scenario: Pago exitoso y muestre datos correctos 
+Scenario: TC09-Pago exitoso y muestre datos correctos 
 	Given Selecciona opcion parking
 	When Selecciona boton Continuar
 	When Selecciona Subir codigo QR
@@ -111,7 +111,7 @@ Scenario: TC10-Validar que si se hizo el cobro del pago muestre pantalla de ench
 	Then Visualiza pantalla de enchufe y numero de transaccion
 
 @TC11
-Scenario: Validar que al hacer clic en el boton pagar  muestre la pantalla de error de servicios
+Scenario: TC11-Validar que al hacer clic en el boton pagar  muestre la pantalla de error de servicios
 	Given El usuario se logea al app
 	And Aplicar Codigo de Error "7"
 	Given Selecciona opcion parking directo
@@ -126,7 +126,7 @@ Scenario: Validar que al hacer clic en el boton pagar  muestre la pantalla de er
 	Then Visualizar mensaje error de servicios en pago
 
 @TC12
-	Scenario: Visualizar mensaje error no se aplico la promocion al aplicar descuento
+	Scenario: TC12-Visualizar mensaje error no se aplico la promocion al aplicar descuento
 	And Aplicar Codigo de Error "62"
 	Given Selecciona opcion parking directo
 	When Selecciona boton Continuar 
@@ -148,7 +148,7 @@ Scenario: TC13-Validar que al dar clic en pagar estacionamiento desde pantalla d
 	Then Verificar error de pantalla no aplico descuento
 
 @TC14
-Scenario: Validar modal informativo de establecimientos validos en ticket de compra
+Scenario: TC14-Validar modal informativo de establecimientos validos en ticket de compra
 	Given El usuario se logea al app
 	And Selecciona opcion parking
 	When Selecciona boton Continuar 
@@ -159,7 +159,7 @@ Scenario: Validar modal informativo de establecimientos validos en ticket de com
 	Then Visualiza modal Establecimientos validos
 
 @TC16
-Scenario: TC16- error de conexión al aplicar descuento
+Scenario: TC16-Error de conexión al aplicar descuento
 	Given Selecciona opcion parking
 	When Selecciona boton Continuar
 	When Selecciona Subir codigo QR
@@ -170,7 +170,7 @@ Scenario: TC16- error de conexión al aplicar descuento
 	Then Visualiza pantalla de error de conexion
 
 @TC17
-	Scenario: Error de servicios al aplicar descuento 
+	Scenario: TC17-Error de servicios al aplicar descuento 
 	And Aplicar Codigo de Error "4"
 	Given Selecciona opcion parking directo
 	When Selecciona boton Continuar
@@ -181,7 +181,7 @@ Scenario: TC16- error de conexión al aplicar descuento
 	Then Verificar error de pantalla 
 
 @TC18
-	Scenario: Visualizar establecimientos validos luego de error de no se aplico descuento
+	Scenario: TC18-Visualizar establecimientos validos luego de error de no se aplico descuento
 	And Aplicar Codigo de Error "62"
 	Given Selecciona opcion parking directo
 	When Selecciona boton Continuar 
@@ -199,7 +199,7 @@ Scenario: TC19-Validar que al dar clic en botón continuar muestre pantalla de es
 	Then Visualiza Subir codigo QR
 
 @TC20
-Scenario: Validar mensaje de conoce los establecimientos validos
+Scenario: TC20-Validar mensaje de conoce los establecimientos validos
 	Given El usuario se logea al app
 	And Selecciona opcion parking
 	When Selecciona boton Continuar 
@@ -210,7 +210,7 @@ Scenario: Validar mensaje de conoce los establecimientos validos
 	Then Visualiza modal Establecimientos validos
 
 @TC23
-Scenario: Validar historial de pagos despues de haber realizado un pago exitoso
+Scenario: TC23-Validar historial de pagos despues de haber realizado un pago exitoso
 	Given El usuario se logea al app
 	And Selecciona opcion parking
 	When Selecciona boton Continuar 
@@ -234,7 +234,7 @@ Scenario: Validar historial de pagos despues de haber realizado un pago exitoso
 	And Visualiza que el ultimo monto pagado sea correcto
 
 @TC24
-Scenario: Validar pago despues de haber realizado un pago exitoso monto 0 soles
+Scenario: TC24-Validar pago despues de haber realizado un pago exitoso monto 0 soles
 	Given El usuario se logea al app
 	And Selecciona opcion parking
 	When Selecciona boton Continuar 
@@ -249,7 +249,7 @@ Scenario: Validar pago despues de haber realizado un pago exitoso monto 0 soles
 	Then Visualiza pantalla Pago exitoso
 
 @TC26
-Scenario: Subir imagen incorrecta desde galeria
+Scenario: TC26-Subir imagen incorrecta desde galeria
 	Given Selecciona opcion parking
 	When Selecciona boton Continuar
 	When Selecciona Subir codigo QR
@@ -264,7 +264,7 @@ Scenario: TC27-Validar escanear qr  desde ticket de compra
 	Then Visualiza mensaje UPS Error de imagen
 
 @TC32
-Scenario: Boton aplicar descuento y monto
+Scenario: TC32-Boton aplicar descuento y monto
 	Given Selecciona opcion parking
 	When Selecciona boton Continuar
 	When Selecciona Subir codigo QR
@@ -315,7 +315,7 @@ Scenario: TC37-Validar que al dar clic en botón de aplicar descuento muestre men
 	Then Visualiza mensaje Felicitaciones se aplico el descuento exitosamente
 
 @TC38
-Scenario: Verificar al no seleccionar terminos y condiciones no se activar el boton pagar
+Scenario: TC38-Verificar al no seleccionar terminos y condiciones no se activar el boton pagar
 	Given Selecciona opcion parking
 	When Selecciona boton Continuar
 	When Selecciona Subir codigo QR
