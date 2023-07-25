@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <UpToDateCheckInput Remove="features\Parking_KO.feature" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Appium.WebDriver" Version="4.4.5" />
     <PackageReference Include="DotNetSeleniumExtras.PageObjects" Version="3.11.0" />
     <PackageReference Include="DotNetSeleniumExtras.PageObjects.Core" Version="3.12.0" />
