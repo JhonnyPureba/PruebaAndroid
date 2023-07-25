@@ -213,18 +213,18 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects.Parking
         {
             Thread.Sleep(2000);
             //kalin
-            action.Tap(360, 1452).Perform();
+            //action.Tap(360, 1452).Perform();
             //jhonny
-            //action.Tap(563, 2064).Perform();
+            action.Tap(563, 2064).Perform();
         }
 
         public void ClickBotonSubirQRTicketCompra()
         {
             Thread.Sleep(2000);
             //kalin
-            action.Tap(360, 1452).Perform();
+            //action.Tap(360, 1452).Perform();
             //jhonny
-            //action.Tap(563, 2064).Perform();
+            action.Tap(563, 2064).Perform();
         }
 
         public void VerificarMontoPagar()

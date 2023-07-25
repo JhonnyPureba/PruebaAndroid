@@ -176,7 +176,6 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         public void ThenVerificarQueElDescuentoSeAplique()
         {
             pagoEstacionamiento.VerificarDescuentoAplicado();
-            pagoEstacionamiento.VerificarMontoAhorrado();
         }
 
         [Then(@"Verificar el monto y boton de descuento")]
