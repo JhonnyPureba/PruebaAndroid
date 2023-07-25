@@ -20,8 +20,8 @@ namespace MKPMobileProject.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Ejecucion de casos de pruebas de regresion 21/07 PRE PROD")]
-    public partial class EjecucionDeCasosDePruebasDeRegresion2107PREPRODFeature
+    [NUnit.Framework.DescriptionAttribute("Ejecucion CPs 21/07 en PRE PROD")]
+    public partial class EjecucionCPs2107EnPREPRODFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -35,7 +35,7 @@ namespace MKPMobileProject.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Ejecucion de casos de pruebas de regresion 21/07 PRE PROD", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Ejecucion CPs 21/07 en PRE PROD", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         

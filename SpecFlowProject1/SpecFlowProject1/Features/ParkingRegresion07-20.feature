@@ -1,4 +1,4 @@
-Feature: Ejecucion de casos de pruebas de regresión 20/07
+Feature: Ejecucion CPs 20/07
 
 Scenario: TC03: Validar registro de usuario con parking
 	Given El usuario ingresa como invitado
