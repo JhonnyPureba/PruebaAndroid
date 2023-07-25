@@ -24,7 +24,7 @@ namespace MKPMobileProject.PageObjects
         public GlobalPage(AndroidDriver<AppiumWebElement> driver)
         {
             Driver = driver;
-            _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
+            _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
             _wait.PollingInterval = TimeSpan.FromMilliseconds(10);
             action = new TouchAction(driver);
             PageFactory.InitElements(driver, this);

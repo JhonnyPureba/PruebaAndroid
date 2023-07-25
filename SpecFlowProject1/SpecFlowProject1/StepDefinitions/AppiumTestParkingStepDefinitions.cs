@@ -570,7 +570,13 @@ namespace SpecFlowMarketplaceMobileProject.StepDefinitions
         [Then(@"Visualiza mensaje Felicitaciones se aplico el descuento exitosamente")]
         public void ThenVisualizaMensajeFelicitacionesSeAplicoElDescuentoExitosamente()
         {
-            Assert.IsTrue(pagoEstacionamiento.MuestraMensajeFelicitacionesSeAplicoDescuento());
+            Assert.IsTrue(pagoEstacionamiento.MuestraMensajeFelicitacionesSeAplicoDescuento(),"No se visualiza elm ensaje Felicitaciones se aplico el descuento exitosamente");
+        }
+
+        [Then(@"Visualiza mensaje Ahorraste en tu pago de estacionamiento")]
+        public void ThenVisualizaMensajesAhorrastEnTuPagoDeEstacionamiento()
+        {
+            Assert.IsTrue(pagoEstacionamiento.MuestraMensajeAhorrasteEntuPagoEstacionamiento(),"No se visualiza el mensaje Ahorraste en tu pago de estacionamiento");
         }
 
         [Then(@"Visualiza pantalla de pago exitoso")]
