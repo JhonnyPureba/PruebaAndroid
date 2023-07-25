@@ -129,14 +129,14 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verificar Modal al hacer clic en aplicar descuento")]
+        [NUnit.Framework.DescriptionAttribute("TC02-Verificar Modal al hacer clic en aplicar descuento")]
         [NUnit.Framework.CategoryAttribute("TC2")]
-        public void VerificarModalAlHacerClicEnAplicarDescuento()
+        public void TC02_VerificarModalAlHacerClicEnAplicarDescuento()
         {
             string[] tagsOfScenario = new string[] {
                     "TC2"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verificar Modal al hacer clic en aplicar descuento", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC02-Verificar Modal al hacer clic en aplicar descuento", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 15
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -173,14 +173,14 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verificar al dar clic en terminos y condiciones muestre modal")]
+        [NUnit.Framework.DescriptionAttribute("TC03-Verificar al dar clic en terminos y condiciones muestre modal")]
         [NUnit.Framework.CategoryAttribute("TC3")]
-        public void VerificarAlDarClicEnTerminosYCondicionesMuestreModal()
+        public void TC03_VerificarAlDarClicEnTerminosYCondicionesMuestreModal()
         {
             string[] tagsOfScenario = new string[] {
                     "TC3"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verificar al dar clic en terminos y condiciones muestre modal", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC03-Verificar al dar clic en terminos y condiciones muestre modal", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 24
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -220,14 +220,14 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Aplicar descuento a voucher y verificar descuento aplicado")]
+        [NUnit.Framework.DescriptionAttribute("TC05-Aplicar descuento a voucher y verificar descuento aplicado")]
         [NUnit.Framework.CategoryAttribute("TC5")]
-        public void AplicarDescuentoAVoucherYVerificarDescuentoAplicado()
+        public void TC05_AplicarDescuentoAVoucherYVerificarDescuentoAplicado()
         {
             string[] tagsOfScenario = new string[] {
                     "TC5"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Aplicar descuento a voucher y verificar descuento aplicado", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC05-Aplicar descuento a voucher y verificar descuento aplicado", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 34
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -267,16 +267,16 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Visualizar al aplicar descuento muestre mensaje \"felicitaciones, se aplico el des" +
-            "cuento exitosamente\"")]
+        [NUnit.Framework.DescriptionAttribute("TC06-Visualizar al aplicar descuento muestre mensaje \"felicitaciones, se aplico e" +
+            "l descuento exitosamente\"")]
         [NUnit.Framework.CategoryAttribute("TC6")]
-        public void VisualizarAlAplicarDescuentoMuestreMensajeFelicitacionesSeAplicoElDescuentoExitosamente()
+        public void TC06_VisualizarAlAplicarDescuentoMuestreMensajeFelicitacionesSeAplicoElDescuentoExitosamente()
         {
             string[] tagsOfScenario = new string[] {
                     "TC6"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Visualizar al aplicar descuento muestre mensaje \"felicitaciones, se aplico el des" +
-                    "cuento exitosamente\"", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC06-Visualizar al aplicar descuento muestre mensaje \"felicitaciones, se aplico e" +
+                    "l descuento exitosamente\"", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 44
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -374,14 +374,14 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verificar al  seleccionar terminos y condiciones se active el boton pagar")]
+        [NUnit.Framework.DescriptionAttribute("TC08-Verificar al  seleccionar terminos y condiciones se active el boton pagar")]
         [NUnit.Framework.CategoryAttribute("TC8")]
-        public void VerificarAlSeleccionarTerminosYCondicionesSeActiveElBotonPagar()
+        public void TC08_VerificarAlSeleccionarTerminosYCondicionesSeActiveElBotonPagar()
         {
             string[] tagsOfScenario = new string[] {
                     "TC8"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verificar al  seleccionar terminos y condiciones se active el boton pagar", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC08-Verificar al  seleccionar terminos y condiciones se active el boton pagar", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 67
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -424,14 +424,14 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Pago exitoso y muestre datos correctos")]
+        [NUnit.Framework.DescriptionAttribute("TC09-Pago exitoso y muestre datos correctos")]
         [NUnit.Framework.CategoryAttribute("TC9")]
-        public void PagoExitosoYMuestreDatosCorrectos()
+        public void TC09_PagoExitosoYMuestreDatosCorrectos()
         {
             string[] tagsOfScenario = new string[] {
                     "TC9"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Pago exitoso y muestre datos correctos", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC09-Pago exitoso y muestre datos correctos", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 78
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -568,16 +568,16 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Validar que al hacer clic en el boton pagar  muestre la pantalla de error de serv" +
-            "icios")]
+        [NUnit.Framework.DescriptionAttribute("TC11-Validar que al hacer clic en el boton pagar  muestre la pantalla de error de" +
+            " servicios")]
         [NUnit.Framework.CategoryAttribute("TC11")]
-        public void ValidarQueAlHacerClicEnElBotonPagarMuestreLaPantallaDeErrorDeServicios()
+        public void TC11_ValidarQueAlHacerClicEnElBotonPagarMuestreLaPantallaDeErrorDeServicios()
         {
             string[] tagsOfScenario = new string[] {
                     "TC11"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validar que al hacer clic en el boton pagar  muestre la pantalla de error de serv" +
-                    "icios", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC11-Validar que al hacer clic en el boton pagar  muestre la pantalla de error de" +
+                    " servicios", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 114
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -632,14 +632,14 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Visualizar mensaje error no se aplico la promocion al aplicar descuento")]
+        [NUnit.Framework.DescriptionAttribute("TC12-Visualizar mensaje error no se aplico la promocion al aplicar descuento")]
         [NUnit.Framework.CategoryAttribute("TC12")]
-        public void VisualizarMensajeErrorNoSeAplicoLaPromocionAlAplicarDescuento()
+        public void TC12_VisualizarMensajeErrorNoSeAplicoLaPromocionAlAplicarDescuento()
         {
             string[] tagsOfScenario = new string[] {
                     "TC12"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Visualizar mensaje error no se aplico la promocion al aplicar descuento", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC12-Visualizar mensaje error no se aplico la promocion al aplicar descuento", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 129
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -734,14 +734,14 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Validar modal informativo de establecimientos validos en ticket de compra")]
+        [NUnit.Framework.DescriptionAttribute("TC14-Validar modal informativo de establecimientos validos en ticket de compra")]
         [NUnit.Framework.CategoryAttribute("TC14")]
-        public void ValidarModalInformativoDeEstablecimientosValidosEnTicketDeCompra()
+        public void TC14_ValidarModalInformativoDeEstablecimientosValidosEnTicketDeCompra()
         {
             string[] tagsOfScenario = new string[] {
                     "TC14"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validar modal informativo de establecimientos validos en ticket de compra", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC14-Validar modal informativo de establecimientos validos en ticket de compra", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 151
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -784,14 +784,14 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("TC16- error de conexi�n al aplicar descuento")]
+        [NUnit.Framework.DescriptionAttribute("TC16-Error de conexi�n al aplicar descuento")]
         [NUnit.Framework.CategoryAttribute("TC16")]
         public void TC16_ErrorDeConexiNAlAplicarDescuento()
         {
             string[] tagsOfScenario = new string[] {
                     "TC16"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC16- error de conexi�n al aplicar descuento", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC16-Error de conexi�n al aplicar descuento", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 162
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -834,14 +834,14 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Error de servicios al aplicar descuento")]
+        [NUnit.Framework.DescriptionAttribute("TC17-Error de servicios al aplicar descuento")]
         [NUnit.Framework.CategoryAttribute("TC17")]
-        public void ErrorDeServiciosAlAplicarDescuento()
+        public void TC17_ErrorDeServiciosAlAplicarDescuento()
         {
             string[] tagsOfScenario = new string[] {
                     "TC17"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Error de servicios al aplicar descuento", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC17-Error de servicios al aplicar descuento", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 173
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -884,14 +884,16 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Visualizar establecimientos validos luego de error de no se aplico descuento")]
+        [NUnit.Framework.DescriptionAttribute("TC18-Visualizar establecimientos validos luego de error de no se aplico descuento" +
+            "")]
         [NUnit.Framework.CategoryAttribute("TC18")]
-        public void VisualizarEstablecimientosValidosLuegoDeErrorDeNoSeAplicoDescuento()
+        public void TC18_VisualizarEstablecimientosValidosLuegoDeErrorDeNoSeAplicoDescuento()
         {
             string[] tagsOfScenario = new string[] {
                     "TC18"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Visualizar establecimientos validos luego de error de no se aplico descuento", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC18-Visualizar establecimientos validos luego de error de no se aplico descuento" +
+                    "", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 184
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -974,14 +976,14 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Validar mensaje de conoce los establecimientos validos")]
+        [NUnit.Framework.DescriptionAttribute("TC20-Validar mensaje de conoce los establecimientos validos")]
         [NUnit.Framework.CategoryAttribute("TC20")]
-        public void ValidarMensajeDeConoceLosEstablecimientosValidos()
+        public void TC20_ValidarMensajeDeConoceLosEstablecimientosValidos()
         {
             string[] tagsOfScenario = new string[] {
                     "TC20"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validar mensaje de conoce los establecimientos validos", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC20-Validar mensaje de conoce los establecimientos validos", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 202
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -1024,14 +1026,14 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Validar historial de pagos despues de haber realizado un pago exitoso")]
+        [NUnit.Framework.DescriptionAttribute("TC23-Validar historial de pagos despues de haber realizado un pago exitoso")]
         [NUnit.Framework.CategoryAttribute("TC23")]
-        public void ValidarHistorialDePagosDespuesDeHaberRealizadoUnPagoExitoso()
+        public void TC23_ValidarHistorialDePagosDespuesDeHaberRealizadoUnPagoExitoso()
         {
             string[] tagsOfScenario = new string[] {
                     "TC23"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validar historial de pagos despues de haber realizado un pago exitoso", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC23-Validar historial de pagos despues de haber realizado un pago exitoso", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 213
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -1113,14 +1115,14 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Validar pago despues de haber realizado un pago exitoso monto 0 soles")]
+        [NUnit.Framework.DescriptionAttribute("TC24-Validar pago despues de haber realizado un pago exitoso monto 0 soles")]
         [NUnit.Framework.CategoryAttribute("TC24")]
-        public void ValidarPagoDespuesDeHaberRealizadoUnPagoExitosoMonto0Soles()
+        public void TC24_ValidarPagoDespuesDeHaberRealizadoUnPagoExitosoMonto0Soles()
         {
             string[] tagsOfScenario = new string[] {
                     "TC24"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validar pago despues de haber realizado un pago exitoso monto 0 soles", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC24-Validar pago despues de haber realizado un pago exitoso monto 0 soles", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 237
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -1175,14 +1177,14 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Subir imagen incorrecta desde galeria")]
+        [NUnit.Framework.DescriptionAttribute("TC26-Subir imagen incorrecta desde galeria")]
         [NUnit.Framework.CategoryAttribute("TC26")]
-        public void SubirImagenIncorrectaDesdeGaleria()
+        public void TC26_SubirImagenIncorrectaDesdeGaleria()
         {
             string[] tagsOfScenario = new string[] {
                     "TC26"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Subir imagen incorrecta desde galeria", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC26-Subir imagen incorrecta desde galeria", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 252
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -1254,14 +1256,14 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Boton aplicar descuento y monto")]
+        [NUnit.Framework.DescriptionAttribute("TC32-Boton aplicar descuento y monto")]
         [NUnit.Framework.CategoryAttribute("TC32")]
-        public void BotonAplicarDescuentoYMonto()
+        public void TC32_BotonAplicarDescuentoYMonto()
         {
             string[] tagsOfScenario = new string[] {
                     "TC32"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Boton aplicar descuento y monto", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC32-Boton aplicar descuento y monto", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 267
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -1496,14 +1498,16 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verificar al no seleccionar terminos y condiciones no se activar el boton pagar")]
+        [NUnit.Framework.DescriptionAttribute("TC38-Verificar al no seleccionar terminos y condiciones no se activar el boton pa" +
+            "gar")]
         [NUnit.Framework.CategoryAttribute("TC38")]
-        public void VerificarAlNoSeleccionarTerminosYCondicionesNoSeActivarElBotonPagar()
+        public void TC38_VerificarAlNoSeleccionarTerminosYCondicionesNoSeActivarElBotonPagar()
         {
             string[] tagsOfScenario = new string[] {
                     "TC38"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verificar al no seleccionar terminos y condiciones no se activar el boton pagar", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC38-Verificar al no seleccionar terminos y condiciones no se activar el boton pa" +
+                    "gar", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 318
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
