@@ -27,7 +27,7 @@ namespace MKPMobileProject.PageObjects.MiCuenta
         public MiCuentaPage(AndroidDriver<AppiumWebElement> driver)
         {
             this.Driver = driver;
-            _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
+            _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
             _wait.PollingInterval = TimeSpan.FromMilliseconds(10);
             action = new TouchAction(driver);
             actions = new Actions(driver);

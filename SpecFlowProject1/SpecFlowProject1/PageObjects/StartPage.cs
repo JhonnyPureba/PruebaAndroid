@@ -21,7 +21,7 @@ namespace SpecFlowMarketplaceMobileProject.PageObjects
         public StartPage(AndroidDriver<AppiumWebElement> driver)
         {
             this.Driver = driver;
-            _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
+            _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
             _wait.PollingInterval = TimeSpan.FromMilliseconds(10);
             PageFactory.InitElements(driver, this);
         }
