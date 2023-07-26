@@ -750,27 +750,24 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 150
- testRunner.Given("El usuario se logea al app", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 151
  testRunner.And("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 152
+#line 151
  testRunner.When("Selecciona boton Continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 153
+#line 152
  testRunner.When("Selecciona Subir codigo QR", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 154
+#line 153
  testRunner.When("Escanea QR correcto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 155
+#line 154
  testRunner.Then("Visualiza opcion Validar ticket de compra", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 156
+#line 155
  testRunner.When("Selecciona opcion Validar ticket de compra", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 157
+#line 156
  testRunner.Then("Visualiza modal Establecimientos validos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -786,7 +783,7 @@ this.FeatureBackground();
                     "TC16"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC16-Error de conexi�n al aplicar descuento", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 160
+#line 159
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -799,28 +796,28 @@ this.ScenarioInitialize(scenarioInfo);
 #line 2
 this.FeatureBackground();
 #line hidden
-#line 161
+#line 160
  testRunner.Given("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 162
+#line 161
  testRunner.When("Selecciona boton Continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 163
+#line 162
  testRunner.When("Selecciona Subir codigo QR", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 164
+#line 163
  testRunner.When("Escanea QR correcto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 165
+#line 164
  testRunner.When("Selecciona opcion Aplicar un descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 166
+#line 165
  testRunner.And("Se pierde conexion", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 167
+#line 166
  testRunner.And("Selecciona boton Aplicar descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 168
+#line 167
  testRunner.Then("Visualiza pantalla de error de conexion", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -836,7 +833,7 @@ this.FeatureBackground();
                     "TC17"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC17-Error de servicios al aplicar descuento", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 171
+#line 170
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -849,28 +846,28 @@ this.FeatureBackground();
 #line 2
 this.FeatureBackground();
 #line hidden
-#line 172
+#line 171
  testRunner.And("Aplicar Codigo de Error \"4\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 173
+#line 172
  testRunner.Given("Selecciona opcion parking directo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 174
+#line 173
  testRunner.When("Selecciona boton Continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 175
+#line 174
  testRunner.When("Selecciona Subir codigo QR", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 176
+#line 175
  testRunner.When("Escanea QR correcto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 177
+#line 176
  testRunner.When("Selecciona opcion Aplicar un descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 178
+#line 177
  testRunner.And("Selecciona boton Aplicar descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 179
+#line 178
  testRunner.Then("Verificar error de pantalla", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -888,7 +885,7 @@ this.FeatureBackground();
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC18-Visualizar establecimientos validos luego de error de no se aplico descuento" +
                     "", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 182
+#line 181
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -901,31 +898,31 @@ this.FeatureBackground();
 #line 2
 this.FeatureBackground();
 #line hidden
-#line 183
+#line 182
  testRunner.And("Aplicar Codigo de Error \"62\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 184
+#line 183
  testRunner.Given("Selecciona opcion parking directo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 185
+#line 184
  testRunner.When("Selecciona boton Continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 186
+#line 185
  testRunner.When("Selecciona Subir codigo QR", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 187
+#line 186
  testRunner.When("Escanea QR correcto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 188
+#line 187
  testRunner.When("Selecciona opcion Aplicar un descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 189
+#line 188
  testRunner.And("Selecciona boton Aplicar descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 190
+#line 189
  testRunner.When("Seleccionar Validar Ticket de compra luego de Error al aplicar descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 191
+#line 190
  testRunner.Then("Visualizar Establecimientos validos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -943,7 +940,7 @@ this.FeatureBackground();
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC19-Validar que al dar clic en bot�n continuar muestre pantalla de escanear qr o" +
                     " subir qr desde galeria", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 194
+#line 193
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -956,13 +953,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 2
 this.FeatureBackground();
 #line hidden
-#line 195
+#line 194
  testRunner.Given("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 196
+#line 195
  testRunner.When("Selecciona boton Continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 197
+#line 196
  testRunner.Then("Visualiza Subir codigo QR", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -978,7 +975,7 @@ this.FeatureBackground();
                     "TC20"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC20-Validar mensaje de conoce los establecimientos validos", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 200
+#line 199
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -991,28 +988,25 @@ this.ScenarioInitialize(scenarioInfo);
 #line 2
 this.FeatureBackground();
 #line hidden
+#line 200
+ testRunner.Given("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
 #line 201
- testRunner.Given("El usuario se logea al app", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 202
- testRunner.And("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 203
  testRunner.When("Selecciona boton Continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 204
+#line 202
  testRunner.When("Selecciona Subir codigo QR", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 205
+#line 203
  testRunner.When("Escanea QR correcto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 206
+#line 204
  testRunner.Then("Visualiza opcion Validar ticket de compra", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 207
+#line 205
  testRunner.When("Selecciona opcion Validar ticket de compra", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 208
+#line 206
  testRunner.Then("Visualiza modal Establecimientos validos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -1028,7 +1022,7 @@ this.FeatureBackground();
                     "TC23"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC23-Validar historial de pagos despues de haber realizado un pago exitoso", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 211
+#line 209
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1041,67 +1035,64 @@ this.ScenarioInitialize(scenarioInfo);
 #line 2
 this.FeatureBackground();
 #line hidden
-#line 212
- testRunner.Given("El usuario se logea al app", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 210
+ testRunner.Given("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 213
- testRunner.And("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 214
+#line 211
  testRunner.When("Selecciona boton Continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 215
+#line 212
  testRunner.When("Selecciona Subir codigo QR", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 216
+#line 213
  testRunner.When("Escanea QR correcto 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 217
+#line 214
  testRunner.When("Selecciona boton Pagar estacionamiento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 218
+#line 215
  testRunner.Then("Visualiza checkbox de terminos y condiciones", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 219
+#line 216
  testRunner.When("Marca checkbox de terminos y condiciones", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 220
+#line 217
  testRunner.When("Selecciona boton Pagar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 221
+#line 218
  testRunner.Then("Visualiza modal Importante", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 222
+#line 219
  testRunner.When("Selecciona boton Continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 223
+#line 220
  testRunner.Then("Visualiza modal Elige un medio de pago", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 224
+#line 221
  testRunner.When("Selecciona tarjeta como medio de pago", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 225
+#line 222
  testRunner.Then("Visualiza formulario Pago con tarjeta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 226
+#line 223
  testRunner.When("Llena formulario con los datos de la tarjeta con fondos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 227
+#line 224
  testRunner.And("Selecciona monto a pagar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 228
+#line 225
  testRunner.Then("Visualiza pantalla Pago exitoso", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 229
+#line 226
  testRunner.When("Realiza scroll hasta Ver mi historial de pagos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 230
+#line 227
  testRunner.Given("Selecciona opcion Ver mi historial de pagos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 231
+#line 228
  testRunner.Then("Visualiza Historial de pagos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 232
+#line 229
  testRunner.And("Visualiza que el ultimo monto pagado sea correcto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -1117,7 +1108,7 @@ this.FeatureBackground();
                     "TC24"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC24-Validar pago despues de haber realizado un pago exitoso monto 0 soles", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 235
+#line 232
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1130,40 +1121,37 @@ this.ScenarioInitialize(scenarioInfo);
 #line 2
 this.FeatureBackground();
 #line hidden
-#line 236
- testRunner.Given("El usuario se logea al app", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 233
+ testRunner.Given("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 237
- testRunner.And("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 238
+#line 234
  testRunner.When("Selecciona boton Continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 239
+#line 235
  testRunner.When("Selecciona Subir codigo QR", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 240
+#line 236
  testRunner.When("Escanea QR correcto 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 241
+#line 237
  testRunner.When("Selecciona boton Pagar estacionamiento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 242
+#line 238
  testRunner.Then("Visualiza checkbox de terminos y condiciones", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 243
+#line 239
  testRunner.When("Marca checkbox de terminos y condiciones", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 244
+#line 240
  testRunner.When("Selecciona boton Pagar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 245
+#line 241
  testRunner.Then("Visualiza modal Importante", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 246
+#line 242
  testRunner.When("Selecciona boton Continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 247
+#line 243
  testRunner.Then("Visualiza pantalla Pago exitoso", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -1179,7 +1167,7 @@ this.FeatureBackground();
                     "TC26"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC26-Subir imagen incorrecta desde galeria", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 250
+#line 246
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1192,16 +1180,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 2
 this.FeatureBackground();
 #line hidden
-#line 251
+#line 247
  testRunner.Given("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 252
+#line 248
  testRunner.When("Selecciona boton Continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 253
+#line 249
  testRunner.When("Selecciona Subir codigo QR", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 254
+#line 250
  testRunner.When("Escanea QR incorrecto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             }
@@ -1217,7 +1205,7 @@ this.FeatureBackground();
                     "TC27"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC27-Validar escanear qr  desde ticket de compra", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 257
+#line 253
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1230,20 +1218,17 @@ this.ScenarioInitialize(scenarioInfo);
 #line 2
 this.FeatureBackground();
 #line hidden
-#line 258
+#line 254
  testRunner.Given("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 259
+#line 255
  testRunner.When("Selecciona boton Continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 260
+#line 256
  testRunner.When("Selecciona Subir codigo QR", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 261
- testRunner.When("Escanea QR incorrecto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 262
- testRunner.Then("Visualiza mensaje UPS Error de imagen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 257
+ testRunner.When("Escanea QR correcto 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1258,7 +1243,7 @@ this.FeatureBackground();
                     "TC32"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC32-Boton aplicar descuento y monto", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 265
+#line 260
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1271,22 +1256,22 @@ this.ScenarioInitialize(scenarioInfo);
 #line 2
 this.FeatureBackground();
 #line hidden
-#line 266
+#line 261
  testRunner.Given("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 267
+#line 262
  testRunner.When("Selecciona boton Continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 268
+#line 263
  testRunner.When("Selecciona Subir codigo QR", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 269
+#line 264
  testRunner.When("Escanea QR correcto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 270
+#line 265
  testRunner.Then("Visualiza opcion Aplicar un descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 271
+#line 266
  testRunner.And("Visualiza monto a pagar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -1302,7 +1287,7 @@ this.FeatureBackground();
                     "TC33"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC33-Verificar al dar clic en aplicar descuento muestre un modal con imagen", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 274
+#line 269
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1315,22 +1300,22 @@ this.ScenarioInitialize(scenarioInfo);
 #line 2
 this.FeatureBackground();
 #line hidden
-#line 275
+#line 270
  testRunner.Given("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 276
+#line 271
  testRunner.When("Selecciona boton Continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 277
+#line 272
  testRunner.When("Selecciona Subir codigo QR", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 278
+#line 273
  testRunner.When("Escanea QR correcto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 279
+#line 274
  testRunner.When("Selecciona opcion Aplicar un descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 280
+#line 275
  testRunner.Then("Visualiza modal Aplicar un descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -1346,7 +1331,7 @@ this.FeatureBackground();
                     "TC34"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC34-Validar que al dar clic terminos y condiciones muestre modal", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 283
+#line 278
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1359,28 +1344,28 @@ this.ScenarioInitialize(scenarioInfo);
 #line 2
 this.FeatureBackground();
 #line hidden
-#line 284
+#line 279
  testRunner.Given("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 285
+#line 280
  testRunner.When("Selecciona boton Continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 286
+#line 281
  testRunner.When("Selecciona Subir codigo QR", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 287
+#line 282
  testRunner.When("Escanea QR correcto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 288
+#line 283
  testRunner.When("Selecciona opcion Aplicar un descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 289
+#line 284
  testRunner.Then("Visualiza modal Aplicar un descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 290
+#line 285
  testRunner.When("Selecciona link Conoce los terminos y condiciones", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 291
+#line 286
  testRunner.Then("Visualiza modal Terminos y Condiciones", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -1398,7 +1383,7 @@ this.FeatureBackground();
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC36-Verificar al dar clic en boton de aplicar descuento muestre monto a pagar y " +
                     "monto que ahorraste", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 294
+#line 289
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1411,28 +1396,28 @@ this.ScenarioInitialize(scenarioInfo);
 #line 2
 this.FeatureBackground();
 #line hidden
-#line 295
+#line 290
  testRunner.Given("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 296
+#line 291
  testRunner.When("Selecciona boton Continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 297
+#line 292
  testRunner.When("Selecciona Subir codigo QR", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 298
+#line 293
  testRunner.When("Escanea QR correcto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 299
+#line 294
  testRunner.When("Selecciona opcion Aplicar un descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 300
+#line 295
  testRunner.Then("Visualiza modal Aplicar un descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 301
+#line 296
  testRunner.When("Selecciona boton Aplicar descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 302
+#line 297
  testRunner.Then("Visualiza mensaje Ahorraste en tu pago de estacionamiento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -1450,7 +1435,7 @@ this.FeatureBackground();
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC37-Validar que al dar clic en bot�n de aplicar descuento muestre mensaje de \"fe" +
                     "licitaciones, se aplic� el descuento exitosamente\"", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 305
+#line 300
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1463,28 +1448,28 @@ this.ScenarioInitialize(scenarioInfo);
 #line 2
 this.FeatureBackground();
 #line hidden
-#line 306
+#line 301
  testRunner.Given("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 307
+#line 302
  testRunner.When("Selecciona boton Continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 308
+#line 303
  testRunner.When("Selecciona Subir codigo QR", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 309
+#line 304
  testRunner.When("Escanea QR correcto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 310
+#line 305
  testRunner.When("Selecciona opcion Aplicar un descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 311
+#line 306
  testRunner.Then("Visualiza modal Aplicar un descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 312
+#line 307
  testRunner.When("Selecciona boton Aplicar descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 313
+#line 308
  testRunner.Then("Visualiza mensaje Felicitaciones se aplico el descuento exitosamente", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -1502,7 +1487,7 @@ this.FeatureBackground();
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC38-Verificar al no seleccionar terminos y condiciones no se activar el boton pa" +
                     "gar", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 316
+#line 311
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1515,22 +1500,22 @@ this.ScenarioInitialize(scenarioInfo);
 #line 2
 this.FeatureBackground();
 #line hidden
-#line 317
+#line 312
  testRunner.Given("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 318
+#line 313
  testRunner.When("Selecciona boton Continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 319
+#line 314
  testRunner.When("Selecciona Subir codigo QR", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 320
+#line 315
  testRunner.When("Escanea QR correcto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 321
+#line 316
  testRunner.When("Selecciona boton Pagar estacionamiento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 322
+#line 317
  testRunner.Then("Visualiza boton Pagar deshabilitado de estacionamiento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -1546,7 +1531,7 @@ this.FeatureBackground();
                     "TC39"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC39-Verificar que al marcar terminos y condiciones se active el boton de pagar", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 325
+#line 320
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1559,37 +1544,37 @@ this.ScenarioInitialize(scenarioInfo);
 #line 2
 this.FeatureBackground();
 #line hidden
-#line 326
+#line 321
  testRunner.Given("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 327
+#line 322
  testRunner.When("Selecciona boton Continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 328
+#line 323
  testRunner.When("Selecciona Subir codigo QR", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 329
+#line 324
  testRunner.When("Escanea QR correcto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 330
+#line 325
  testRunner.When("Selecciona opcion Aplicar un descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 331
+#line 326
  testRunner.Then("Visualiza modal Aplicar un descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 332
+#line 327
  testRunner.When("Selecciona boton Aplicar descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 333
+#line 328
  testRunner.Then("Visualiza monto con descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 334
+#line 329
  testRunner.And("Visualiza checkbox de terminos y condiciones", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 335
+#line 330
  testRunner.When("Marca checkbox de terminos y condiciones", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 336
+#line 331
  testRunner.Then("Visualiza boton Pagar habilitado", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -1607,7 +1592,7 @@ this.FeatureBackground();
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC40-Validar que al dar clic en pagar descuento aplicado muestre pantalla de ingr" +
                     "esar datos de la tarjeta y realiza pago exitoso", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 339
+#line 334
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1620,61 +1605,61 @@ this.ScenarioInitialize(scenarioInfo);
 #line 2
 this.FeatureBackground();
 #line hidden
-#line 340
+#line 335
  testRunner.Given("Selecciona opcion parking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 341
+#line 336
  testRunner.When("Selecciona boton Continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 342
+#line 337
  testRunner.When("Selecciona Subir codigo QR", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 343
- testRunner.When("Escanea QR correcto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 338
+ testRunner.When("Escanea QR correcto 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 344
+#line 339
  testRunner.When("Selecciona opcion Aplicar un descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 345
+#line 340
  testRunner.Then("Visualiza modal Aplicar un descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 346
+#line 341
  testRunner.When("Selecciona boton Aplicar descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 347
+#line 342
  testRunner.Then("Visualiza monto con descuento", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 348
+#line 343
  testRunner.And("Visualiza checkbox de terminos y condiciones", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 349
+#line 344
  testRunner.When("Marca checkbox de terminos y condiciones", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 350
+#line 345
  testRunner.When("Selecciona boton Pagar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 351
+#line 346
  testRunner.Then("Visualiza modal Importante", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 352
+#line 347
  testRunner.When("Selecciona boton Continuar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 353
+#line 348
  testRunner.Then("Visualiza modal Elige un medio de pago", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 354
+#line 349
  testRunner.When("Selecciona tarjeta como medio de pago", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 355
+#line 350
  testRunner.Then("Visualiza formulario Pago con tarjeta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 356
+#line 351
  testRunner.When("Llena formulario con los datos de la tarjeta con fondos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 357
+#line 352
  testRunner.And("Selecciona monto a pagar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 358
+#line 353
  testRunner.Then("Visualiza pantalla Pago exitoso", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

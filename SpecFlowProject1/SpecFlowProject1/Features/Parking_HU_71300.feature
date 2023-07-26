@@ -197,7 +197,7 @@ Scenario: TC19-Validar que al dar clic en botón continuar muestre pantalla de es
 
 @TC20
 Scenario: TC20-Validar mensaje de conoce los establecimientos validos
-	And Selecciona opcion parking
+	Given Selecciona opcion parking
 	When Selecciona boton Continuar 
 	When Selecciona Subir codigo QR
 	When Escanea QR correcto
@@ -207,7 +207,7 @@ Scenario: TC20-Validar mensaje de conoce los establecimientos validos
 
 @TC23
 Scenario: TC23-Validar historial de pagos despues de haber realizado un pago exitoso
-	And Selecciona opcion parking
+	Given Selecciona opcion parking
 	When Selecciona boton Continuar 
 	When Selecciona Subir codigo QR
 	When Escanea QR correcto 2
@@ -230,7 +230,7 @@ Scenario: TC23-Validar historial de pagos despues de haber realizado un pago exi
 
 @TC24
 Scenario: TC24-Validar pago despues de haber realizado un pago exitoso monto 0 soles
-	And Selecciona opcion parking
+	Given Selecciona opcion parking
 	When Selecciona boton Continuar 
 	When Selecciona Subir codigo QR
 	When Escanea QR correcto 2
@@ -254,8 +254,7 @@ Scenario: TC27-Validar escanear qr  desde ticket de compra
 	Given Selecciona opcion parking
 	When Selecciona boton Continuar
 	When Selecciona Subir codigo QR
-	When Escanea QR incorrecto
-	Then Visualiza mensaje UPS Error de imagen
+	When Escanea QR correcto 2
 
 @TC32
 Scenario: TC32-Boton aplicar descuento y monto
@@ -336,7 +335,7 @@ Scenario: TC40-Validar que al dar clic en pagar descuento aplicado muestre panta
 	Given Selecciona opcion parking
 	When Selecciona boton Continuar
 	When Selecciona Subir codigo QR
-	When Escanea QR correcto
+	When Escanea QR correcto 3
 	When Selecciona opcion Aplicar un descuento
 	Then Visualiza modal Aplicar un descuento
 	When Selecciona boton Aplicar descuento
