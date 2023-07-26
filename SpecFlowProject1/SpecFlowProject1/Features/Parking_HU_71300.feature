@@ -72,7 +72,6 @@ Scenario: TC08-Verificar al  seleccionar terminos y condiciones se active el bot
 	And Selecciona boton Pagar estacionamiento
 	When Marca checkbox de terminos y condiciones
 	Then Visualiza boton Pagar habilitado
-	When Selecciona boton Pagar
 
 @TC9
 Scenario: TC09-Pago exitoso y muestre datos correctos 
@@ -112,7 +111,6 @@ Scenario: TC10-Validar que si se hizo el cobro del pago muestre pantalla de ench
 
 @TC11
 Scenario: TC11-Validar que al hacer clic en el boton pagar  muestre la pantalla de error de servicios
-	Given El usuario se logea al app
 	And Aplicar Codigo de Error "7"
 	Given Selecciona opcion parking directo
 	When Selecciona boton Continuar 
@@ -149,7 +147,6 @@ Scenario: TC13-Validar que al dar clic en pagar estacionamiento desde pantalla d
 
 @TC14
 Scenario: TC14-Validar modal informativo de establecimientos validos en ticket de compra
-	Given El usuario se logea al app
 	And Selecciona opcion parking
 	When Selecciona boton Continuar 
 	When Selecciona Subir codigo QR
