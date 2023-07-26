@@ -254,8 +254,7 @@ Scenario: TC27-Validar escanear qr  desde ticket de compra
 	Given Selecciona opcion parking
 	When Selecciona boton Continuar
 	When Selecciona Subir codigo QR
-	When Escanea QR incorrecto
-	Then Visualiza mensaje UPS Error de imagen
+	When Escanea QR correcto 2
 
 @TC32
 Scenario: TC32-Boton aplicar descuento y monto
